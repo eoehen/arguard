@@ -49,3 +49,15 @@ jobs:
     - name: Test
       working-directory: ${{env.src-directory}}
       run: dotnet test --no-restore --verbosity normal
+    # dotnet pack nuget
+    - name: Pack
+      if: matrix.os == 'ubuntu-latest'
+      working-directory: ${{env.src-directory}}
+      run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
+    # upload artifact
+    - name: Upload Artifact
+      if: matrix.os == 'ubuntu-latest'
+      uses: actions/upload-artifact@v2
+      with:
+        name: nupkg
+        path: ./src/oehen.arguard/bin/Release/*.nupkg
