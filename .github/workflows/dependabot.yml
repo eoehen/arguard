@@ -1,0 +1,8 @@
+name: Dependabot
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/src"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
