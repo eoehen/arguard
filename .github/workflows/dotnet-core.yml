@@ -16,14 +16,15 @@ jobs:
 
     env:
       src-directory: ./src
+      dotnet-core-sdk-version: 3.1.403
 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Setup .NET Core
+    - name: Setup .NET Core ${{dotnet-core-sdk-version}}
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.403
+        dotnet-version: ${{dotnet-core-sdk-version}}
     - name: Install dependencies
       working-directory: ${{env.src-directory}}
       run: dotnet restore
