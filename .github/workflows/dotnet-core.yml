@@ -1,0 +1,35 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+
+    env:
+      src-directory: ./src
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.403
+    - name: Install dependencies
+      working-directory: ${{env.src-directory}}
+      run: dotnet restore
+    - name: Build
+      working-directory: ${{env.src-directory}}
+      run: dotnet build --configuration Release --no-restore
+    - name: Test
+      working-directory: ${{env.src-directory}}
+      run: dotnet test --no-restore --verbosity normal
