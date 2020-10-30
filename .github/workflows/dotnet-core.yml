@@ -20,16 +20,26 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0      
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.403
+    # dotnet restore
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.4
+      with:
+        versionSpec: '5.3.x'
+    # dotnet restore
     - name: Install dependencies
       working-directory: ${{env.src-directory}}
       run: dotnet restore
+    # dotnet build
     - name: Build
       working-directory: ${{env.src-directory}}
       run: dotnet build --configuration Release --no-restore
+    # dotnet test
     - name: Test
       working-directory: ${{env.src-directory}}
       run: dotnet test --no-restore --verbosity normal
