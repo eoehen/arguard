@@ -35,7 +35,7 @@ jobs:
       id: gitversion # step id used as reference for output values
       uses: gittools/actions/gitversion/execute@v0.9.4
     - run: |
-        echo "NuGetVersionV2: ${{ steps.gitversion.outputs.fullSemVer }}"
+        echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
         echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
     # dotnet restore
     - name: Install dependencies
