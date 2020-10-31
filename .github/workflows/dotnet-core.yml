@@ -56,7 +56,7 @@ jobs:
       run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
     # upload artifact
     - name: Push to nuget.org
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-latest' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop')
       run: dotnet nuget push ./src/oehen.arguard/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
     # upload artifact
     - name: Upload Artifact
