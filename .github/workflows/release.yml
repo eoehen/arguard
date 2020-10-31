@@ -20,10 +20,7 @@
   
         - name: Fetch all history for all tags and branches
           run: git fetch --prune --unshallow
-  
-        - name: Zip Release
-          run: zip -x '*.git*' -r release.zip . 
-  
+ 
         - name: Extract owner and repo
           uses: jungwinter/split@v1
           id: repo
@@ -68,6 +65,9 @@
         - name: Push to nuget.org
           run: dotnet nuget push ./src/oehen.arguard/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
 
+        - name: Zip nuget packages
+          run: zip -x './src/oehen.arguard/bin/Release/*.nupkg' -r nupkg.zip . 
+
         - name: Install GitReleaseManager
           uses: gittools/actions/gitreleasemanager/setup@v0.9.4
           with:
@@ -80,10 +80,9 @@
             owner: ${{ steps.repo.outputs._0 }}
             repository: ${{ steps.repo.outputs._1 }}
             milestone: ${{ steps.gitversion.outputs.majorMinorPatch }}
-            name: 'Release ${{ steps.gitversion.outputs.majorMinorPatch }}'
+            name: 'Release ${{ steps.gitversion.outputs.fullSemVer }}'
             assets:  |
-              release.zip
-              ./src/oehen.arguard/bin/Release/*.nupkg
+              nupkg.zip
 
         # we dont want to publish and close the release automatically
         # - name: Publish release with GitReleaseManager
