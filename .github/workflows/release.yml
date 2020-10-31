@@ -80,7 +80,7 @@
             owner: ${{ steps.repo.outputs._0 }}
             repository: ${{ steps.repo.outputs._1 }}
             milestone: ${{ steps.gitversion.outputs.majorMinorPatch }}
-            name: 'Release ${{ steps.gitversion.outputs.fullSemVer }}'
+            name: 'Release ${{ steps.gitversion.outputs.majorMinorPatch }}'
             assets:  |
               nupkg.zip
 
