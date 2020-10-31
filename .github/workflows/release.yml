@@ -61,9 +61,6 @@
         - name: Pack
           working-directory: ${{env.src-directory}}
           run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
-        # # upload artifact
-        # - name: Push to nuget.org
-        #   run: dotnet nuget push ./src/oehen.arguard/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
 
         - name: Zip nuget packages
           run: zip -x './src/oehen.arguard/bin/Release/*.nupkg' -r nupkg.zip . 
@@ -83,14 +80,6 @@
             name: 'Release ${{ steps.gitversion.outputs.majorMinorPatch }}'
             assets:  |
               nupkg.zip
-
-        - name: publish release with gitreleasemanager
-          uses: gittools/actions/gitreleasemanager/publish@v0.9.4
-          with:
-            token: ${{ secrets.github_token }}
-            owner: ${{ steps.repo.outputs._0 }}
-            repository: ${{ steps.repo.outputs._1 }}
-            tagname: ${{ steps.gitversion.outputs.majorminorpatch }}
   
         # we dont want to publish and close the release automatically
         # - name: Close release with GitReleaseManager
