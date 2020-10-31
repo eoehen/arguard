@@ -33,12 +33,11 @@
             versionSpec: '5.x'
   
         - name: Use GitVersion
+          id: gitversion # step id used as reference for output values
           uses: gittools/actions/gitversion/execute@v0.9.4
-          id: gitversion
-          
         - run: |
-          echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
-          echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+            echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+            echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
 
         - name: Setup .NET Core
           uses: actions/setup-dotnet@v1
