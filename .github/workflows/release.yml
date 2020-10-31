@@ -36,6 +36,15 @@
           uses: gittools/actions/gitversion/execute@v0.9.4
           id: gitversion
           
+        - run: |
+          echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+          echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+
+        - name: Setup .NET Core
+          uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: 3.1.403
+
         - name: Install GitReleaseManager
           uses: gittools/actions/gitreleasemanager/setup@v0.9.4
           with:
@@ -51,20 +60,21 @@
             name: 'Release ${{ steps.gitversion.outputs.majorMinorPatch }}'
             assets:  |
               release.zip
+
+        # we dont want to publish and close the release automatically
+        # - name: Publish release with GitReleaseManager
+        #   uses: gittools/actions/gitreleasemanager/publish@v0.9.4
+        #   with:
+        #     token: ${{ secrets.GITHUB_TOKEN }}
+        #     owner: ${{ steps.repo.outputs._0 }}
+        #     repository: ${{ steps.repo.outputs._1 }}
+        #     tagName: ${{ steps.gitversion.outputs.majorMinorPatch }}
   
-        - name: Publish release with GitReleaseManager
-          uses: gittools/actions/gitreleasemanager/publish@v0.9.4
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            owner: ${{ steps.repo.outputs._0 }}
-            repository: ${{ steps.repo.outputs._1 }}
-            tagName: ${{ steps.gitversion.outputs.majorMinorPatch }}
-  
-        - name: Close release with GitReleaseManager
-          uses: gittools/actions/gitreleasemanager/close@v0.9.4
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            owner: ${{ steps.repo.outputs._0 }}
-            repository: ${{ steps.repo.outputs._1 }}
-            milestone: ${{ steps.gitversion.outputs.majorMinorPatch }}
+        # - name: Close release with GitReleaseManager
+        #   uses: gittools/actions/gitreleasemanager/close@v0.9.4
+        #   with:
+        #     token: ${{ secrets.GITHUB_TOKEN }}
+        #     owner: ${{ steps.repo.outputs._0 }}
+        #     repository: ${{ steps.repo.outputs._1 }}
+        #     milestone: ${{ steps.gitversion.outputs.majorMinorPatch }}
   
