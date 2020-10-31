@@ -1,0 +1,67 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+
+    env:
+      src-directory: ./src
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0      
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.403
+    # dotnet restore
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.4
+      with:
+        versionSpec: '5.3.x'
+    - name: Use GitVersion
+      id: gitversion # step id used as reference for output values
+      uses: gittools/actions/gitversion/execute@v0.9.4
+    - run: |
+        echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+        echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+    # dotnet restore
+    - name: Install dependencies
+      working-directory: ${{env.src-directory}}
+      run: dotnet restore
+    # dotnet build
+    - name: Build
+      working-directory: ${{env.src-directory}}
+      run: dotnet build --configuration Release --no-restore
+    # dotnet test
+    - name: Test
+      working-directory: ${{env.src-directory}}
+      run: dotnet test --no-restore --verbosity normal
+    # dotnet pack nuget
+    - name: Pack
+      if: matrix.os == 'ubuntu-latest'
+      working-directory: ${{env.src-directory}}
+      run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
+    # upload artifact
+    - name: Push to nuget.org
+      if: matrix.os == 'ubuntu-latest'
+      run: dotnet nuget push ./src/oehen.arguard/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+    # upload artifact
+    - name: Upload Artifact
+      if: matrix.os == 'ubuntu-latest'
+      uses: actions/upload-artifact@v2
+      with:
+        name: nupkg
+        path: ./src/oehen.arguard/bin/Release/*.nupkg
