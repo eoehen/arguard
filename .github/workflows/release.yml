@@ -36,6 +36,15 @@
           uses: gittools/actions/gitversion/execute@v0.9.4
           id: gitversion
           
+        - run: |
+          echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+          echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+
+        - name: Setup .NET Core
+          uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: 3.1.403
+
         - name: Install GitReleaseManager
           uses: gittools/actions/gitreleasemanager/setup@v0.9.4
           with:
