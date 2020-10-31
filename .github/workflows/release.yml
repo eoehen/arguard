@@ -10,16 +10,17 @@
       name: Release
       if: startsWith(github.ref, 'refs/heads/release')
       runs-on: ubuntu-latest
+
+      env:
+        src-directory: ./src
+  
       steps:
         - name: Checkout repository
           uses: actions/checkout@v2
   
         - name: Fetch all history for all tags and branches
           run: git fetch --prune --unshallow
-  
-        - name: Zip Release
-          run: zip -x '*.git*' -r release.zip . 
-  
+ 
         - name: Extract owner and repo
           uses: jungwinter/split@v1
           id: repo
@@ -33,9 +34,37 @@
             versionSpec: '5.x'
   
         - name: Use GitVersion
+          id: gitversion # step id used as reference for output values
           uses: gittools/actions/gitversion/execute@v0.9.4
-          id: gitversion
-          
+        - run: |
+            echo "FullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}"
+            echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+
+        - name: Setup .NET Core
+          uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: 3.1.403
+
+        # dotnet restore
+        - name: Install dependencies
+          working-directory: ${{env.src-directory}}
+          run: dotnet restore
+        # dotnet build
+        - name: Build
+          working-directory: ${{env.src-directory}}
+          run: dotnet build --configuration Release --no-restore
+        # dotnet test
+        - name: Test
+          working-directory: ${{env.src-directory}}
+          run: dotnet test --no-restore --verbosity normal
+        # dotnet pack nuget
+        - name: Pack
+          working-directory: ${{env.src-directory}}
+          run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
+
+        - name: Zip nuget packages
+          run: zip -r nupkg.zip ./src/oehen.arguard/bin/Release/*.nupkg 
+
         - name: Install GitReleaseManager
           uses: gittools/actions/gitreleasemanager/setup@v0.9.4
           with:
@@ -50,21 +79,22 @@
             milestone: ${{ steps.gitversion.outputs.majorMinorPatch }}
             name: 'Release ${{ steps.gitversion.outputs.majorMinorPatch }}'
             assets:  |
-              release.zip
+              nupkg.zip
+
+        # - name: publish release with gitreleasemanager
+        #   uses: gittools/actions/gitreleasemanager/publish@v0.9.4
+        #   with:
+        #     token: ${{ secrets.github_token }}
+        #     owner: ${{ steps.repo.outputs._0 }}
+        #     repository: ${{ steps.repo.outputs._1 }}
+        #     tagname: ${{ steps.gitversion.outputs.majorminorpatch }}
   
-        - name: Publish release with GitReleaseManager
-          uses: gittools/actions/gitreleasemanager/publish@v0.9.4
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            owner: ${{ steps.repo.outputs._0 }}
-            repository: ${{ steps.repo.outputs._1 }}
-            tagName: ${{ steps.gitversion.outputs.majorMinorPatch }}
-  
-        - name: Close release with GitReleaseManager
-          uses: gittools/actions/gitreleasemanager/close@v0.9.4
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            owner: ${{ steps.repo.outputs._0 }}
-            repository: ${{ steps.repo.outputs._1 }}
-            milestone: ${{ steps.gitversion.outputs.majorMinorPatch }}
+        # we dont want to publish and close the release automatically
+        # - name: Close release with GitReleaseManager
+        #   uses: gittools/actions/gitreleasemanager/close@v0.9.4
+        #   with:
+        #     token: ${{ secrets.GITHUB_TOKEN }}
+        #     owner: ${{ steps.repo.outputs._0 }}
+        #     repository: ${{ steps.repo.outputs._1 }}
+        #     milestone: ${{ steps.gitversion.outputs.majorMinorPatch }}
   
