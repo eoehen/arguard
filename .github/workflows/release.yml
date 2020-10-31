@@ -57,13 +57,13 @@
         - name: Test
           working-directory: ${{env.src-directory}}
           run: dotnet test --no-restore --verbosity normal
-        # # dotnet pack nuget
-        # - name: Pack
-        #   working-directory: ${{env.src-directory}}
-        #   run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
-        # upload artifact
-        - name: Push to nuget.org
-          run: dotnet nuget push ./src/oehen.arguard/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        # dotnet pack nuget
+        - name: Pack
+          working-directory: ${{env.src-directory}}
+          run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
+        # # upload artifact
+        # - name: Push to nuget.org
+        #   run: dotnet nuget push ./src/oehen.arguard/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
 
         - name: Zip nuget packages
           run: zip -x './src/oehen.arguard/bin/Release/*.nupkg' -r nupkg.zip . 
