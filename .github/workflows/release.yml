@@ -85,12 +85,12 @@
               nupkg.zip
 
         - name: publish release with gitreleasemanager
-           uses: gittools/actions/gitreleasemanager/publish@v0.9.4
-           with:
-             token: ${{ secrets.github_token }}
-             owner: ${{ steps.repo.outputs._0 }}
-             repository: ${{ steps.repo.outputs._1 }}
-             tagname: ${{ steps.gitversion.outputs.majorminorpatch }}
+          uses: gittools/actions/gitreleasemanager/publish@v0.9.4
+          with:
+            token: ${{ secrets.github_token }}
+            owner: ${{ steps.repo.outputs._0 }}
+            repository: ${{ steps.repo.outputs._1 }}
+            tagname: ${{ steps.gitversion.outputs.majorminorpatch }}
   
         # we dont want to publish and close the release automatically
         # - name: Close release with GitReleaseManager
