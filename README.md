@@ -15,3 +15,7 @@ argument validator
 |Develop|Master|
 |:--:|:--:|
 |![CI](https://github.com/eoehen/arguard/workflows/CI/badge.svg?branch=develop)|![CI](https://github.com/eoehen/arguard/workflows/CI/badge.svg?branch=master)|
+
+## Release Status
+
+![Release](https://github.com/eoehen/arguard/workflows/Release/badge.svg?event=release)
