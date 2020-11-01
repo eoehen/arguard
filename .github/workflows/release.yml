@@ -62,6 +62,10 @@
           working-directory: ${{env.src-directory}}
           run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} oehen.arguard/oehen.arguard.csproj
 
+        # push nuget package
+        - name: Push to nuget.org
+          run: dotnet nuget push ./src/oehen.arguard/bin/Release/*nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
         - name: Zip nuget packages
           run: zip -r nupkg.zip ./src/oehen.arguard/bin/Release/*.nupkg 
 
