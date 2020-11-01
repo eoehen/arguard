@@ -1,12 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageId>oehen.arguard</PackageId>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Authors>oehen.net</Authors>
     <Company>oehen.net</Company>
     <PackageIcon>arguardlogo.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Argument;Parameter;Validation</PackageTags>
+    <summary>Argument validation extension library for .NET core.</summary>
+    <Description>
+      This library is an extension for the validation of arguments and parameters.
+    </Description>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryType>git</RepositoryType> 
+    <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
+    <copyright>Copyright © oehen.net</copyright>
+    <releaseNotes>https://github.com/eoehen/arguard/releases/</releaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
