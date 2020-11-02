@@ -1,0 +1,29 @@
+#load nuget:?package=Cake.Recipe&version=2.0.1
+
+Environment.SetVariableNames();
+
+BuildParameters.SetParameters(
+    context: Context,
+    buildSystem: BuildSystem,
+    sourceDirectoryPath: "./src",
+    title: "oehen.arguard",
+    repositoryOwner: "eoehen",
+    repositoryName: "oehen.arguard",
+    shouldRunDotNetCorePack: true,
+    shouldRunCodecov: true,
+    shouldRunDupFinder: false,
+    shouldRunInspectCode: false,
+    testFilePattern: "/**/*.test.csproj");
+
+BuildParameters.PrintParameters(Context);
+
+ToolSettings.SetToolSettings(
+    context: Context,
+    dupFinderExcludePattern: new string[] {
+    BuildParameters.RootDirectoryPath + "/src/oehen.arguard.test/*.cs",
+    BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs" },
+    testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[oehen.arguard]* -[*.tests]*",
+    testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
+    testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
+
+Build.RunDotNetCore();
