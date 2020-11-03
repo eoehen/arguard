@@ -8,7 +8,7 @@ BuildParameters.SetParameters(
     sourceDirectoryPath: "./src",
     title: "oehen.arguard",
     repositoryOwner: "eoehen",
-    repositoryName: "oehen.arguard",
+    repositoryName: "arguard",
     shouldRunDotNetCorePack: true,
     shouldRunCodecov: true,
     shouldRunDupFinder: false,
@@ -22,8 +22,6 @@ ToolSettings.SetToolSettings(
     dupFinderExcludePattern: new string[] {
     BuildParameters.RootDirectoryPath + "/src/oehen.arguard.test/*.cs",
     BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs" },
-    testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[oehen.arguard]* -[*.tests]*",
-    testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
-    testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
+    testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[*.tests]*" );
 
 Build.RunDotNetCore();

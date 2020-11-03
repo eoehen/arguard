@@ -16,6 +16,6 @@ argument validator
 |:--:|:--:|
 |![CI](https://github.com/eoehen/arguard/workflows/CI/badge.svg?branch=develop)|![CI](https://github.com/eoehen/arguard/workflows/CI/badge.svg?branch=master)|
 
-## Release Status
+## Code Coverage
 
-![Release](https://github.com/eoehen/arguard/workflows/Release/badge.svg?event=release)
+[![codecov](https://codecov.io/gh/eoehen/arguard/branch/develop/graph/badge.svg?token=9B8NT9L82D)](https://codecov.io/gh/eoehen/arguard)
