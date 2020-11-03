@@ -39,7 +39,7 @@ jobs:
       with:
         script-path: recipe.cake
         target: CI
-        verbosity: Normal
+        verbosity: Verbose
         cake-version: 0.38.4
         cake-bootstrap: true
 
@@ -56,22 +56,3 @@ jobs:
         if-no-files-found: warn
         name: package
         path: BuildArtifacts/Packages/**/*
-
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./BuildArtifacts/TestCoverage/coverlet/oehen-arguard.opencover.xml   
-        flags: unittests
-        env_vars: OS,PYTHON
-        name: codecov
-        fail_ci_if_error: true
-        path_to_write_report: ./BuildArtifacts/TestCoverage/coverlet/codecov_report.gz
-        verbose: true
-
-    - name: Publish codecov report
-      uses: actions/upload-artifact@v2
-      with:
-        if-no-files-found: warn
-        name: codecov
-        path: ./BuildArtifacts/TestCoverage/coverlet/*
