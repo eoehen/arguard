@@ -6,28 +6,34 @@ namespace oehen.arguard
 {
     public class ArgumentLessThanGuardTest
     {
-        [Fact]
-        public void ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentIsMinusTwo()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(-2)]
+        [InlineData(-3)]
+        [InlineData(-123456)]
+        public void ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(int argument)
         {
-            const int argument = -2;
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
                 argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
             });
             exception.Message.Should().Be("Argument is less or equal than 0. (Parameter 'argument')" +
-                                          Environment.NewLine + "Actual value was -2.");
+                                          Environment.NewLine + $"Actual value was {argument}.");
         }
 
-        [Fact]
-        public void ThrowIfIsLessThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentIsMinusTwo()
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(-2)]
+        [InlineData(-3)]
+        [InlineData(-123456)]
+        public void ThrowIfIsLessThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(int argument)
         {
-            const int argument = -2;
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
                 argument.ThrowIfIsLessThanZero(nameof(argument));
             });
             exception.Message.Should().Be("Argument is less than 0. (Parameter 'argument')" +
-                                          Environment.NewLine + "Actual value was -2.");
+                                          Environment.NewLine + $"Actual value was {argument}.");
         }
 
         [Fact]
@@ -53,10 +59,14 @@ namespace oehen.arguard
             Assert.Null(exception);
         }
 
-        [Fact]
-        public void ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(123456)]
+        [InlineData(int.MaxValue)]
+        public void ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(int argument)
         {
-            const int argument = 1;
             var exception = Record.Exception(() =>
             {
                 argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
@@ -64,10 +74,14 @@ namespace oehen.arguard
             Assert.Null(exception);
         }
 
-        [Fact]
-        public void ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(123456)]
+        [InlineData(int.MaxValue)]
+        public void ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(int argument)
         {
-            const int argument = 1;
             var exception = Record.Exception(() =>
             {
                 argument.ThrowIfIsLessThanZero(nameof(argument));
