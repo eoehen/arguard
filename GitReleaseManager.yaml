@@ -33,22 +33,18 @@
 #
 #    Your **[GitReleaseManager](https://github.com/GitTools/GitReleaseManager)** bot :package::rocket:
 ## The labels that will be used to include issues in release notes.
-#issue-labels-include:
-#- Bug
-#- Duplicate
-#- Enhancement
-#- Feature
-#- Help Wanted
-#- Improvement
-#- Invalid
-#- Question
-#- WontFix
+issue-labels-include:
+- Breaking change
+- Feature
+- Bug
+- Improvement
+- Documentation
+- Dependencies
 ## The labels that will NOT be used when including issues in release notes.
 #issue-labels-exclude:
 #- Internal Refactoring
 ## Overrides default pluralization and header names for specific labels.
-#issue-labels-alias:
-#- name: Documentation
-#  header: Documentation
-#  plural: Documentation
-#
+issue-labels-alias:
+  - name: Documentation
+    header: Documentation
+    plural: Documentation
