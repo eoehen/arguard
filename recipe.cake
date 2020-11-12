@@ -11,8 +11,8 @@ BuildParameters.SetParameters(
     repositoryName: "arguard",
     shouldRunDotNetCorePack: true,
     shouldRunCodecov: true,
-    shouldRunDupFinder: false,
-    shouldRunInspectCode: false,
+    shouldRunDupFinder: true,
+    shouldRunInspectCode: true,
     testFilePattern: "/**/*.test.csproj");
 
 BuildParameters.PrintParameters(Context);
