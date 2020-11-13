@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>oehen.arguard</PackageId>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <NeutralLanguage>en-US</NeutralLanguage>
