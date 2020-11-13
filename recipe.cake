@@ -22,8 +22,8 @@ BuildParameters.PrintParameters(Context);
 ToolSettings.SetToolSettings(
     context: Context,
     dupFinderExcludePattern: new string[] {
-    BuildParameters.RootDirectoryPath + "/src/oehen.arguard.test/*.cs",
-    BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs" },
+        BuildParameters.RootDirectoryPath + "/src/oehen.arguard.test/*.cs",
+        BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs" },
     testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[*.tests]*" );
 
 Build.RunDotNetCore();
