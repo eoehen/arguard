@@ -16,7 +16,9 @@ jobs:
 
     env:
       src-directory: ./src
-
+      # workaround for https://github.com/cake-contrib/Cake.Recipe/issues/724
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      
     steps:
     - name: Checkout
       uses: actions/checkout@v2.3.4
