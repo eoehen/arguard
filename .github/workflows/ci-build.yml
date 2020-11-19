@@ -2,6 +2,7 @@ name: CI-Build
 
 on:
   push:
+    tags: [ '*' ]
     branches: [ develop, master, release/*, hotfix/* ]
   pull_request:
     branches: [ develop ]
@@ -16,7 +17,11 @@ jobs:
 
     env:
       src-directory: ./src
-
+      # workaround for https://github.com/cake-contrib/Cake.Recipe/issues/724
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      NUGET_SOURCE: https://nuget.org/api/v2/package
+      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      
     steps:
     - name: Checkout
       uses: actions/checkout@v2.3.4
@@ -40,18 +45,20 @@ jobs:
         script-path: recipe.cake
         target: CI
         verbosity: Verbose
-        cake-version: 0.38.4
+        cake-version: 0.38.5
         cake-bootstrap: true
 
-    - name: Publish Issues-Report
+    - name: Upload Issues-Report artifact
       uses: actions/upload-artifact@v2
+      if: matrix.os == 'ubuntu-latest'
       with:
         if-no-files-found: warn
         name: issues
         path: BuildArtifacts/report.html
 
-    - name: Publish nuget packages
+    - name: Upload nuget packages artifact
       uses: actions/upload-artifact@v2
+      if: matrix.os == 'ubuntu-latest'
       with:
         if-no-files-found: warn
         name: package

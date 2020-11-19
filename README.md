@@ -14,7 +14,7 @@ argument validator
 
 |Develop|Master|
 |:--:|:--:|
-|![CI](https://github.com/eoehen/arguard/workflows/CI/badge.svg?branch=develop)|![CI](https://github.com/eoehen/arguard/workflows/CI/badge.svg?branch=master)|
+|![CI](https://github.com/eoehen/arguard/workflows/CI-Build/badge.svg?branch=develop)|![CI](https://github.com/eoehen/arguard/workflows/CI-Build/badge.svg?branch=master)|
 
 ## Code Coverage
 

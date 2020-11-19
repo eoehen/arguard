@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace oehen.arguard {
     using System;
     
@@ -22,6 +24,7 @@ namespace oehen.arguard {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [ExcludeFromCodeCoverage]
     internal class ExceptionMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
