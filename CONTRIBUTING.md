@@ -28,4 +28,3 @@ On OSX/Linux run:
 ```
 
 [GitFlow]: (http://nvie.com/posts/a-successful-git-branching-model/)
-[Cake.Recipe documentation]: https://cake-contrib.github.io/Cake.Recipe/docs/usage/creating-release
