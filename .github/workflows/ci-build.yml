@@ -72,3 +72,12 @@ jobs:
         if-no-files-found: warn
         name: NuGet Package
         path: BuildArtifacts/Packages/**/*
+    
+    - name: Push nuget package to github packages
+      uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
+      if: matrix.os == 'ubuntu-latest'
+      with:
+        nupkg-path:  'BuildArtifacts/Packages/**/*'
+        repo-owner:  'eoehen'
+        gh-user:  'eoehen'
+        token:  ${{ secrets.GITHUB_TOKEN }}
