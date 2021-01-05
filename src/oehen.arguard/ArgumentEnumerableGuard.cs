@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace oehen.arguard
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        [AssertionMethod]
         public static void ThrowIfIsNullOrEmpty<T>([ValidatedNotNull]this IEnumerable<T> argument, string nameOfArgument)
         {
             argument.ThrowIfNull(nameOfArgument);
