@@ -22,7 +22,7 @@ namespace oehen.arguard
             argument.ThrowIfNull(nameOfArgument);
             if (!argument.Any())
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessages.ResourceManager.GetString("ArgumentNullOrEmpty", CultureInfo.CurrentCulture));
+                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
         }
     }
 }
