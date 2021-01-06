@@ -5,6 +5,7 @@ using Xunit;
 
 namespace oehen.arguard
 {
+    [UseCulture("en-US")]
     public class ArgumentEnumerableGuardTest
     {
         [Fact]

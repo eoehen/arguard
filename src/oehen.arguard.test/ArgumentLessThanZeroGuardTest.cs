@@ -4,6 +4,7 @@ using Xunit;
 
 namespace oehen.arguard
 {
+    [UseCulture("en-US")]
     public class ArgumentLessThanZeroGuardTest
     {
         [Theory]
