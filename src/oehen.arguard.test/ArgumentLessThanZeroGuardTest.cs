@@ -36,7 +36,7 @@ namespace oehen.arguard
             Assert.Null(exception);
         }
 
-                [Fact]
+        [Fact]
         public void ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsZero()
         {
             const int argument = 0;

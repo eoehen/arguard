@@ -30,13 +30,14 @@ namespace oehen.arguard
         public static void ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)
         {
             if (argument < compareValue)
+            {
                 throw new ArgumentOutOfRangeException(
                     nameOfArgument,
                     argument,
                     string.Format(CultureInfo.CurrentCulture,
-                        ExceptionMessages.ResourceManager.GetString(
-                            "ThrowIfIsLessThan", CultureInfo.CurrentCulture) ?? "",
+                        ExceptionMessageResourceManager.GetMessage("ThrowIfIsLessThan"),
                         compareValue));
+            }
         }
 
         /// <summary>
@@ -60,13 +61,14 @@ namespace oehen.arguard
         public static void ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)
         {
             if (argument <= compareValue)
+            {
                 throw new ArgumentOutOfRangeException(
                     nameOfArgument,
                     argument,
                     string.Format(CultureInfo.CurrentCulture,
-                        ExceptionMessages.ResourceManager.GetString(
-                            "ThrowIfIsLessOrEqualThan", CultureInfo.CurrentCulture) ?? "",
+                        ExceptionMessageResourceManager.GetMessage("ThrowIfIsLessOrEqualThan"),
                         compareValue));
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace oehen.arguard
         {
             if (string.IsNullOrEmpty(argument))
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessages.ResourceManager.GetString("ArgumentNullOrEmpty", CultureInfo.CurrentCulture));
+                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
         }
 
         /// <summary>
@@ -32,8 +32,7 @@ namespace oehen.arguard
         {
             if (string.IsNullOrWhiteSpace(argument))
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessages.ResourceManager.GetString("ArgumentNullOrWhitespace",
-                        CultureInfo.CurrentCulture));
+                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrWhitespace"));
         }
     }
 }
