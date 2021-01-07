@@ -26,10 +26,11 @@ jobs:
       WYAM_DEPLOY_BRANCH: gh-pages
       
     steps:
-    - name: Checkout
+    - name: Checkout source
       uses: actions/checkout@v2.3.4
-      with:
-        fetch-depth: 0
+
+    - name: Fetch all tags and branches
+      run: git fetch --prune --unshallow
 
     - name: Setup .NET Core 2.1
       uses: actions/setup-dotnet@v1
@@ -47,7 +48,7 @@ jobs:
         path: tools
         key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
   
-    - name: Build project
+    - name: Build
       uses: cake-build/cake-action@v1
       with:
         script-path: recipe.cake
@@ -56,18 +57,18 @@ jobs:
         cake-version: 0.38.5
         cake-bootstrap: true
 
-    - name: Upload Issues-Report artifact
+    - name: Publish Issues-Report as build artifact
       uses: actions/upload-artifact@v2
       if: matrix.os == 'ubuntu-latest'
       with:
         if-no-files-found: warn
-        name: issues
+        name: Issue Report
         path: BuildArtifacts/report.html
 
-    - name: Upload nuget packages artifact
+    - name: Publish NuGet package as build artifact
       uses: actions/upload-artifact@v2
       if: matrix.os == 'ubuntu-latest'
       with:
         if-no-files-found: warn
-        name: package
+        name: NuGet Package
         path: BuildArtifacts/Packages/**/*
