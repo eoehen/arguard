@@ -1,5 +1,5 @@
-﻿using System;
-using System.Globalization;
+﻿using JetBrains.Annotations;
+using System;
 
 namespace oehen.arguard
 {
@@ -13,11 +13,12 @@ namespace oehen.arguard
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        [AssertionMethod]
         public static void ThrowIfIsNullOrEmpty([ValidatedNotNull]this string argument, string nameOfArgument)
         {
             if (string.IsNullOrEmpty(argument))
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessages.ResourceManager.GetString("ArgumentNullOrEmpty", CultureInfo.CurrentCulture));
+                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
         }
 
         /// <summary>
@@ -25,12 +26,12 @@ namespace oehen.arguard
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        [AssertionMethod]
         public static void ThrowIfIsNullOrWhiteSpace([ValidatedNotNull]this string argument, string nameOfArgument)
         {
             if (string.IsNullOrWhiteSpace(argument))
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessages.ResourceManager.GetString("ArgumentNullOrWhitespace",
-                        CultureInfo.CurrentCulture));
+                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrWhitespace"));
         }
     }
 }

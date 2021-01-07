@@ -4,6 +4,7 @@ using Xunit;
 
 namespace oehen.arguard
 {
+    [UseCulture("en-US")]
     public class ArgumentLessThanZeroGuardTest
     {
         [Theory]
@@ -36,7 +37,7 @@ namespace oehen.arguard
             Assert.Null(exception);
         }
 
-                [Fact]
+        [Fact]
         public void ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsZero()
         {
             const int argument = 0;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 
 namespace oehen.arguard
 {
@@ -12,6 +13,7 @@ namespace oehen.arguard
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        [AssertionMethod]
         public static void ThrowIfNull([ValidatedNotNull]this object argument, string nameOfArgument)
         {
             if (argument == null) 
