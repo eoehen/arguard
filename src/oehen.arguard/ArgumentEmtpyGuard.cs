@@ -1,6 +1,5 @@
 ﻿using JetBrains.Annotations;
 using System;
-using System.Globalization;
 
 namespace oehen.arguard
 {

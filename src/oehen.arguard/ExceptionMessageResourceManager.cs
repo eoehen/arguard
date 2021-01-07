@@ -3,8 +3,15 @@ using System.Globalization;
 
 namespace oehen.arguard
 {
+    /// <summary>
+    /// Exception message resource manager.
+    /// </summary>
     public static class ExceptionMessageResourceManager
     {
+        /// <summary>
+        /// Get all resource keys.
+        /// </summary>
+        /// <returns>List of resource keys.</returns>
         public static IEnumerable<string> GetAllKeys()
         {
             var keys = new List<string>();
@@ -12,11 +19,19 @@ namespace oehen.arguard
                 ExceptionMessages.ResourceManager.GetResourceSet(CultureInfo.CurrentCulture, true, true).GetEnumerator();
             while (enumerator.MoveNext())
             {
-                keys.Add(enumerator.Key.ToString());
+                if (enumerator.Key != null)
+                {
+                    keys.Add(enumerator.Key.ToString());
+                }
             }
             return keys;
         }
 
+        /// <summary>
+        /// Get localized message of <see cref="CultureInfo.CurrentCulture"/> 
+        /// </summary>
+        /// <param name="name">Resource key.</param>
+        /// <returns>Localized message.</returns>
         public static string GetMessage(string name)
         {
             return ExceptionMessages.ResourceManager.GetString(name, CultureInfo.CurrentCulture);
