@@ -2,7 +2,7 @@
 
 [![NuGet](https://img.shields.io/nuget/v/oehen.arguard.svg)](https://www.nuget.org/packages/oehen.arguard) [![NuGet Downloads](https://img.shields.io/nuget/dt/oehen.arguard.svg)](https://www.nuget.org/packages/oehen.arguard/)
 
-![oehen.arguard](docs/logo/arguardlogo_400x200.png)
+![oehen.arguard](docs/logo/arguardlogo_1000x400.png)
 
 oehen.arguard is a dotnet argument and parameter validator extension library.
 
