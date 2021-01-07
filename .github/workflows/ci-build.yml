@@ -59,7 +59,7 @@ jobs:
 
     - name: Publish Issues-Report as build artifact
       uses: actions/upload-artifact@v2
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'windows-latest'
       with:
         if-no-files-found: warn
         name: Issue Report
