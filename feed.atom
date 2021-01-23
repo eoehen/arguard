@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>http://eoehen.github.io/arguard</id>
+	<title>oehen.arguard</title>
+	<link rel="self" href="http://eoehen.github.io/arguard" />
+	<rights>2021</rights>
+	<updated>2021-01-23T16:58:58Z</updated>
+</feed>
