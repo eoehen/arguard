@@ -31,4 +31,16 @@ ToolSettings.SetToolSettings(
     testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs"
 );
 
+Task("Verify-Publish-Documentation")
+    .IsDependeeOf("Clean-Documentation")
+    .Does(() => {
+
+    Information(Context.EnvironmentVariable(Environment.WyamAccessTokenVariable));
+    Information(Context.EnvironmentVariable(Environment.WyamDeployRemoteVariable));
+    Information(Context.EnvironmentVariable(Environment.WyamDeployBranchVariable));
+
+    Information($"CanUseWyam : {BuildParameters.CanUseWyam}");
+
+});
+
 Build.RunDotNetCore();
