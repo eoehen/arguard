@@ -6,15 +6,11 @@ BuildParameters.SetParameters(
     context: Context,
     buildSystem: BuildSystem,
     preferredBuildProviderType: BuildProviderType.GitHubActions,
-    preferredBuildAgentOperatingSystem: PlatformFamily.Linux,
     sourceDirectoryPath: "./src",
     title: "oehen.arguard",
     repositoryOwner: "eoehen",
     repositoryName: "arguard",
     shouldRunDotNetCorePack: true,
-    shouldRunCodecov: true,
-    shouldRunDupFinder: true,
-    shouldRunInspectCode: true,
     testFilePattern: "/**/*.test.csproj");
 
 BuildParameters.PrintParameters(Context);
