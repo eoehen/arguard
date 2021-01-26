@@ -2,11 +2,18 @@ name: CI-Build
 
 on:
   push:
+  pull_request:
+    branches:
+      - master
+      - develop
+    paths-ignore:
+      - "README.md"
 
 jobs:
   build:
 
     runs-on: ${{ matrix.os }}
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
@@ -15,11 +22,17 @@ jobs:
       src-directory: ./src
       # workaround for https://github.com/cake-contrib/Cake.Recipe/issues/724
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      # GPR - PRERELEASE
+      GPR_SOURCE: ${{ secrets.GPR_SOURCE }}
+      GPR_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+      # NUGET - RELEASE
       NUGET_SOURCE: https://nuget.org/api/v2/package
       NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      # WYAM_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
-      # WYAM_DEPLOY_REMOTE: https://github.com/eoehen/arguard
-      # WYAM_DEPLOY_BRANCH: gh-pages
+      # WYAM - DOCUMENTATION
+      WYAM_ACCESS_TOKEN: ${{ secrets.WYAM_ACCESS_TOKEN }}
+      WYAM_DEPLOY_REMOTE: ${{ github.event.repository.html_url }}
+      WYAM_DEPLOY_BRANCH: gh-pages
       
     steps:
     - name: Checkout the repository
@@ -47,7 +60,7 @@ jobs:
         key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
   
     # Build
-    - name: Build
+    - name: Build Project
       uses: cake-build/cake-action@v1
       with:
         script-path: recipe.cake

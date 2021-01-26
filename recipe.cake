@@ -1,4 +1,4 @@
-#load nuget:?package=Cake.Recipe&version=2.1.0
+#load nuget:https://pkgs.dev.azure.com/cake-contrib/Home/_packaging/addins%40Local/nuget/v3/index.json?package=Cake.Recipe&version=2.2.0-alpha0019&prerelease
 
 Environment.SetVariableNames();
 
@@ -6,15 +6,11 @@ BuildParameters.SetParameters(
     context: Context,
     buildSystem: BuildSystem,
     preferredBuildProviderType: BuildProviderType.GitHubActions,
-    preferredBuildAgentOperatingSystem: PlatformFamily.Linux,
     sourceDirectoryPath: "./src",
     title: "oehen.arguard",
     repositoryOwner: "eoehen",
     repositoryName: "arguard",
     shouldRunDotNetCorePack: true,
-    shouldRunCodecov: true,
-    shouldRunDupFinder: true,
-    shouldRunInspectCode: true,
     testFilePattern: "/**/*.test.csproj");
 
 BuildParameters.PrintParameters(Context);
