@@ -2,12 +2,9 @@ name: CI-Build
 
 on:
   push:
+    branches: [ develop, master, release/*, hotfix/* ]
   pull_request:
-    branches:
-      - master
-      - develop
-    paths-ignore:
-      - "README.md"
+    branches: [ develop ]
 
 jobs:
   build:
