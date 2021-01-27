@@ -1,8 +1,8 @@
-name: CI-Build
+name: PR-Build
 
 on:
-  push:
-    branches: [ develop, master, release/*, hotfix/* ]
+  pull_request:
+    branches: [ develop ]
 
 jobs:
   build:
@@ -16,17 +16,6 @@ jobs:
       src-directory: ./src
       # workaround for https://github.com/cake-contrib/Cake.Recipe/issues/724
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      # GPR - PRERELEASE
-      GPR_SOURCE: ${{ secrets.GPR_SOURCE }}
-      GPR_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-      # NUGET - RELEASE
-      NUGET_SOURCE: https://nuget.org/api/v2/package
-      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-      # WYAM - DOCUMENTATION
-      WYAM_ACCESS_TOKEN: ${{ secrets.WYAM_ACCESS_TOKEN }}
-      WYAM_DEPLOY_REMOTE: ${{ github.event.repository.html_url }}
-      WYAM_DEPLOY_BRANCH: gh-pages
       
     steps:
     - name: Checkout the repository
