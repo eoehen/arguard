@@ -6,6 +6,7 @@ BuildParameters.SetParameters(
     context: Context,
     buildSystem: BuildSystem,
     preferredBuildProviderType: BuildProviderType.GitHubActions,
+    preferredBuildAgentOperatingSystem: PlatformFamily.Linux,
     sourceDirectoryPath: "./src",
     title: "oehen.arguard",
     repositoryOwner: "eoehen",
