@@ -17,6 +17,8 @@
     </Description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <RepositoryType>git</RepositoryType> 
     <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
     <copyright>Copyright © oehen.net</copyright>
