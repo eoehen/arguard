@@ -1,30 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>oehen.arguard</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageId>oehen.arguard</PackageId>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Authors>oehen.net</Authors>
-    <Company>oehen.net</Company>
-    <PackageIcon>arguardlogo.png</PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>Argument;Parameter;Validation</PackageTags>
-    <summary>Argument validation extension library for .NET core.</summary>
-    <Description>
-      This library is an extension for the validation of arguments and parameters.
-    </Description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
     <RepositoryType>git</RepositoryType> 
-    <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
-    <copyright>Copyright © oehen.net</copyright>
-    <releaseNotes>https://github.com/eoehen/arguard/releases/</releaseNotes>
   </PropertyGroup>
-  
+
+  <!-- package properties -->
+  <PropertyGroup>
+    <Authors>oehen.net</Authors>
+    <Company>oehen.net</Company>
+    <summary>Argument validation extension library for .NET core.</summary>
+    <Description>
+      This library is an extension for the validation of arguments and parameters.
+    </Description>
+    <copyright>Copyright © oehen.net</copyright>
+    <PackageIcon>arguardlogo.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Argument;Parameter;Validation</PackageTags>
+    <PackageReleaseNotes>https://github.com/cake-contrib/Cake.StrongNameSigner/releases/tag/$(Version)</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+  <!-- package properties -->
+
   <PropertyGroup>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
   </PropertyGroup>
