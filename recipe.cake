@@ -11,8 +11,7 @@ BuildParameters.SetParameters(
     title: "oehen.arguard",
     repositoryOwner: "eoehen",
     repositoryName: "arguard",
-    shouldRunDotNetCorePack: true,
-    testFilePattern: "/**/*.Tests.csproj");
+    shouldRunDotNetCorePack: true);
 
 BuildParameters.PrintParameters(Context);
 
