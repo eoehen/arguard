@@ -39,76 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"ArgumentEmtpyGuard",
-            content:"ArgumentEmtpyGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
-            title:"ArgumentEmtpyGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"ExceptionMessageResourceManagerTest",
-            content:"ExceptionMessageResourceManagerTest",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ExceptionMessageResourceManagerTest',
-            title:"ExceptionMessageResourceManagerTest",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
-            title:"ArgumentEnumerableGuardTest",
-            content:"ArgumentEnumerableGuardTest",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuardTest',
-            title:"ArgumentEnumerableGuardTest",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
-            title:"ArgumentLessThanGuardTest",
-            content:"ArgumentLessThanGuardTest",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuardTest',
-            title:"ArgumentLessThanGuardTest",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
-            title:"ArgumentEmtpyGuardTest",
-            content:"ArgumentEmtpyGuardTest",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuardTest',
-            title:"ArgumentEmtpyGuardTest",
-            description:""
-        }
-    );
-    a(
-        {
-            id:5,
             title:"ArgumentNullGuard",
             content:"ArgumentNullGuard",
             description:'',
@@ -122,63 +52,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:6,
-            title:"ArgumentLessOrEqualThanZeroGuardTest",
-            content:"ArgumentLessOrEqualThanZeroGuardTest",
+            id:1,
+            title:"ArgumentEmtpyGuard",
+            content:"ArgumentEmtpyGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentLessOrEqualThanZeroGuardTest',
-            title:"ArgumentLessOrEqualThanZeroGuardTest",
+            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
+            title:"ArgumentEmtpyGuard",
             description:""
         }
     );
     a(
         {
-            id:7,
-            title:"ArgumentLessThanGuard",
-            content:"ArgumentLessThanGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
-            title:"ArgumentLessThanGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:8,
-            title:"ArgumentLessThanZeroGuardTest",
-            content:"ArgumentLessThanZeroGuardTest",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentLessThanZeroGuardTest',
-            title:"ArgumentLessThanZeroGuardTest",
-            description:""
-        }
-    );
-    a(
-        {
-            id:9,
-            title:"ExceptionMessageResourceManager",
-            content:"ExceptionMessageResourceManager",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ExceptionMessageResourceManager',
-            title:"ExceptionMessageResourceManager",
-            description:""
-        }
-    );
-    a(
-        {
-            id:10,
+            id:2,
             title:"ArgumentEnumerableGuard",
             content:"ArgumentEnumerableGuard",
             description:'',
@@ -192,7 +80,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:11,
+            id:3,
             title:"ValidatedNotNullAttribute",
             content:"ValidatedNotNullAttribute",
             description:'',
@@ -206,15 +94,29 @@ var searchModule = function() {
     );
     a(
         {
-            id:12,
-            title:"ArgumentNullGuardTest",
-            content:"ArgumentNullGuardTest",
+            id:4,
+            title:"ArgumentLessThanGuard",
+            content:"ArgumentLessThanGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentNullGuardTest',
-            title:"ArgumentNullGuardTest",
+            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
+            title:"ArgumentLessThanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"ExceptionMessageResourceManager",
+            content:"ExceptionMessageResourceManager",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ExceptionMessageResourceManager',
+            title:"ExceptionMessageResourceManager",
             description:""
         }
     );
