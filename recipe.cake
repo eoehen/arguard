@@ -12,7 +12,7 @@ BuildParameters.SetParameters(
     repositoryOwner: "eoehen",
     repositoryName: "arguard",
     shouldRunDotNetCorePack: true,
-    testFilePattern: "/**/*.test.csproj");
+    testFilePattern: "/**/*.Tests.csproj");
 
 BuildParameters.PrintParameters(Context);
 
@@ -20,10 +20,10 @@ ToolSettings.SetToolSettings(
     context: Context,
     dupFinderExcludePattern: new string[] 
     {
-        BuildParameters.RootDirectoryPath + "/src/oehen.arguard.test/*.cs",
+        BuildParameters.RootDirectoryPath + "/src/oehen.arguard.Tests/*.cs",
         BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs" 
     },
-    testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[*.tests]*",
+    testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[*.Tests]*",
     testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
     testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs"
 );

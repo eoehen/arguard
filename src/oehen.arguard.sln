@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oehen.arguard", "oehen.arguard\oehen.arguard.csproj", "{375B8B65-45C4-4B00-81BA-4D117B1552C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oehen.arguard.test", "oehen.arguard.test\oehen.arguard.test.csproj", "{8BDB2DAD-3C9C-4D1A-B644-C26BEE357388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oehen.arguard.test", "oehen.arguard.Tests\oehen.arguard.Tests.csproj", "{8BDB2DAD-3C9C-4D1A-B644-C26BEE357388}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
