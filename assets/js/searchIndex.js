@@ -39,62 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"ArgumentNullGuard",
-            content:"ArgumentNullGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
-            title:"ArgumentNullGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"ArgumentEmtpyGuard",
-            content:"ArgumentEmtpyGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
-            title:"ArgumentEmtpyGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
-            title:"ArgumentEnumerableGuard",
-            content:"ArgumentEnumerableGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
-            title:"ArgumentEnumerableGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
-            title:"ValidatedNotNullAttribute",
-            content:"ValidatedNotNullAttribute",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ValidatedNotNullAttribute',
-            title:"ValidatedNotNullAttribute",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
             title:"ArgumentLessThanGuard",
             content:"ArgumentLessThanGuard",
             description:'',
@@ -108,15 +52,43 @@ var searchModule = function() {
     );
     a(
         {
-            id:5,
-            title:"ExceptionMessageResourceManager",
-            content:"ExceptionMessageResourceManager",
+            id:1,
+            title:"ArgumentEnumerableGuard",
+            content:"ArgumentEnumerableGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ExceptionMessageResourceManager',
-            title:"ExceptionMessageResourceManager",
+            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
+            title:"ArgumentEnumerableGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
+            title:"ArgumentEmtpyGuard",
+            content:"ArgumentEmtpyGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
+            title:"ArgumentEmtpyGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:3,
+            title:"ArgumentNullGuard",
+            content:"ArgumentNullGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
+            title:"ArgumentNullGuard",
             description:""
         }
     );

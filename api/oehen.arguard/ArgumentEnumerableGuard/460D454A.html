@@ -74,6 +74,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
@@ -186,6 +187,11 @@
 	<pre><code>[AssertionMethod]
 public static void ThrowIfIsNullOrEmpty&lt;T&gt;(this IEnumerable&lt;T&gt; argument, string nameOfArgument)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <p>How to validate argument `enumerableArgument`.</p>
+    <pre><code class="cs">enumerableArgument.ThrowIfIsNullOrEmpty(nameof(enumerableArgument));</code></pre>
+    </div>
 
 
 	<h1 id="Attributes">Attributes</h1>

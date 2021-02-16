@@ -74,6 +74,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
 <p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -188,6 +189,11 @@
 	<pre><code>[AssertionMethod]
 public static void ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)</code></pre>
 
+	<h1 id="Examples">Examples</h1>
+	<div>
+    <p>Throws when the argument `intArgument` value is less or equal than 5.</p>
+    <pre><code class="cs">intArgument.ThrowIfIsLessOrEqualThan(nameof(intArgument), 5);</code></pre>
+    </div>
 
 
 	<h1 id="Attributes">Attributes</h1>
