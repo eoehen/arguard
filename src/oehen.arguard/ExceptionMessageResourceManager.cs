@@ -6,7 +6,7 @@ namespace oehen.arguard
     /// <summary>
     /// Exception message resource manager.
     /// </summary>
-    public static class ExceptionMessageResourceManager
+    internal static class ExceptionMessageResourceManager
     {
         /// <summary>
         /// Get all resource keys.
