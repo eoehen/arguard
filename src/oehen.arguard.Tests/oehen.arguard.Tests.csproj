@@ -7,7 +7,7 @@
 
     <RootNamespace>oehen.arguard</RootNamespace>
 
-    <AssemblyName>oehen.arguard.test</AssemblyName>
+    <AssemblyName>oehen.arguard.Tests</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
