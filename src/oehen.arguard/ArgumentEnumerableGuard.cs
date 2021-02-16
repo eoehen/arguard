@@ -15,6 +15,14 @@ namespace oehen.arguard
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        /// <example>
+        /// <para>How to validate argument `enumerableArgument`.</para>
+        /// <code>
+        /// <![CDATA[
+        ///     enumerableArgument.ThrowIfIsNullOrEmpty(nameof(enumerableArgument));
+        /// ]]>
+        /// </code>
+        /// </example>
         [AssertionMethod]
         public static void ThrowIfIsNullOrEmpty<T>([ValidatedNotNull]this IEnumerable<T> argument, string nameOfArgument)
         {
