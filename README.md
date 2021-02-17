@@ -1,5 +1,6 @@
 # oehen.arguard
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a5b2507f45fa4392a73d162648bf33f1)](https://app.codacy.com/gh/eoehen/arguard?utm_source=github.com&utm_medium=referral&utm_content=eoehen/arguard&utm_campaign=Badge_Grade_Settings)
 [![NuGet](https://img.shields.io/nuget/v/oehen.arguard.svg)](https://www.nuget.org/packages/oehen.arguard) [![NuGet Downloads](https://img.shields.io/nuget/dt/oehen.arguard.svg)](https://www.nuget.org/packages/oehen.arguard/)
 
 ![oehen.arguard](docs/logo/arguardlogo_1000x400.png)
