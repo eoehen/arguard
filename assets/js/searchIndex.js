@@ -39,14 +39,14 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"ArgumentLessThanGuard",
-            content:"ArgumentLessThanGuard",
+            title:"ArgumentNullGuard",
+            content:"ArgumentNullGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
-            title:"ArgumentLessThanGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
+            title:"ArgumentNullGuard",
             description:""
         }
     );
@@ -81,14 +81,14 @@ var searchModule = function() {
     a(
         {
             id:3,
-            title:"ArgumentNullGuard",
-            content:"ArgumentNullGuard",
+            title:"ArgumentLessThanGuard",
+            content:"ArgumentLessThanGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
-            title:"ArgumentNullGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
+            title:"ArgumentLessThanGuard",
             description:""
         }
     );
