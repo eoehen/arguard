@@ -25,8 +25,10 @@ namespace oehen.arguard
         public static void ThrowIfIsNullOrEmpty([ValidatedNotNull]this string argument, string nameOfArgument)
         {
             if (string.IsNullOrEmpty(argument))
+            {
                 throw new ArgumentNullException(nameOfArgument,
                     ExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
+            }
         }
 
         /// <summary>
@@ -46,8 +48,10 @@ namespace oehen.arguard
         public static void ThrowIfIsNullOrWhiteSpace([ValidatedNotNull]this string argument, string nameOfArgument)
         {
             if (string.IsNullOrWhiteSpace(argument))
+            {
                 throw new ArgumentNullException(nameOfArgument,
                     ExceptionMessageResourceManager.GetMessage("ArgumentNullOrWhitespace"));
+            }
         }
     }
 }
