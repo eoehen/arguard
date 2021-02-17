@@ -25,7 +25,9 @@ namespace oehen.arguard
         public static void ThrowIfNull([ValidatedNotNull]this object argument, string nameOfArgument)
         {
             if (argument == null) 
+            {
                 throw new ArgumentNullException(nameOfArgument);
+            }
         }
     }
 }

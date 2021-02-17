@@ -28,8 +28,10 @@ namespace oehen.arguard
         {
             argument.ThrowIfNull(nameOfArgument);
             if (!argument.Any())
+            {
                 throw new ArgumentNullException(nameOfArgument,
                     ExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
+            }
         }
     }
 }
