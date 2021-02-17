@@ -39,34 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"ArgumentNullGuard",
-            content:"ArgumentNullGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
-            title:"ArgumentNullGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"ArgumentEnumerableGuard",
-            content:"ArgumentEnumerableGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
-            title:"ArgumentEnumerableGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
             title:"ArgumentEmtpyGuard",
             content:"ArgumentEmtpyGuard",
             description:'',
@@ -80,7 +52,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:3,
+            id:1,
             title:"ArgumentLessThanGuard",
             content:"ArgumentLessThanGuard",
             description:'',
@@ -89,6 +61,34 @@ var searchModule = function() {
         {
             url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
             title:"ArgumentLessThanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
+            title:"ArgumentNullGuard",
+            content:"ArgumentNullGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
+            title:"ArgumentNullGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:3,
+            title:"ArgumentEnumerableGuard",
+            content:"ArgumentEnumerableGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
+            title:"ArgumentEnumerableGuard",
             description:""
         }
     );

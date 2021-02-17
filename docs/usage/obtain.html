@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentNullGuard Class</title>
+        <title>oehen.arguard - Obtain</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -56,8 +56,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li><a href="/arguard/docs">Documentation</a></li>
-        <li class="active"><a href="/arguard/api/oehen.arguard">API</a></li>
+                                    <li class="active"><a href="/arguard/docs">Documentation</a></li>
+        <li><a href="/arguard/api/oehen.arguard">API</a></li>
  
                         </ul>       
                     </div>
@@ -71,77 +71,37 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Methods">Methods</a></p>
-<p><a href="#ExtensionMethods">Extension Methods</a></p>
+        <div><p><a href="https://github.com/eoehen/oehen.arguard/tree/develop/docs/input/docs/usage/obtain.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#nuget">NuGet</a></p>
 <hr class="infobar-hidden">
 </div>
 
                 </section>
                 <section class="sidebar">    
                                      
-                    	
-	    <script src="/arguard/assets/js/lunr.min.js"></script>
-    <script src="/arguard/assets/js/searchIndex.js"></script>
-    <div class="sidebar-form">
-        <div class="input-group">
-            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
-            <span class="input-group-btn">
-                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
-            </span>
-        </div>
-    </div>
-    <div id="search-results">
-    </div>
-    <script>
-        function runSearch(query){
-            $("#search-results").empty();			
-            if( query.length < 2 ){
-                return;
-            }			
-            var results = searchModule.search("*" + query + "*");
-            var listHtml = "<ul class='sidebar-menu'>";	
-            listHtml += "<li class='header'>Type Results</li>";	
-            if(results.length == 0 ){
-                listHtml += "<li>No results found</li>";
-            } else {					
-                for(var i = 0; i < results.length; ++i){
-                    var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
-                }				
-            }
-            listHtml += "</ul>";				
-            $("#search-results").append(listHtml);
-        }
-
-        $(document).ready(function(){
-            $("#search").on('input propertychange paste', function() {
-                runSearch($("#search").val());
-            });
-        });
-
-        function htmlEscape(html) {
-            return document.createElement('div')
-                .appendChild(document.createTextNode(html))
-                .parentNode
-                .innerHTML;
-        }
-    </script>
-	
-    <hr>
+                    
 
                     <ul class="sidebar-menu">
                         
-			<li class="header">Namespace</li>
-		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
-		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentLessThanGuard">Argument<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
 
+                <li class="treeview">
+                    <a href="/arguard/docs/getting-started">Getting Started</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/arguard/docs/getting-started/whymaybe">Why does oehen.arguard exist?</a></li>
+                <li><a href="/arguard/docs/getting-started/principles">Core principles</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/arguard/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li class="selected"><a href="/arguard/docs/usage/obtain">Obtain</a></li>
+                <li><a href="/arguard/docs/usage/examples">Examples</a></li>
+
+                    </ul>
+                </li>
 
                     </ul>
                             
@@ -154,118 +114,17 @@
 
 
 
-<section class="content-header">
-	<h1>ArgumentNullGuard <small>Class</small></h1>
-</section>
-<section class="content">
-	
-	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-    Argument null validation.
-    </div>
+		<section class="content-header">
+			<h1>Obtain</h1>
+		</section>
+	<section class="content">
+		<h1 id="nuget">NuGet</h1>
+<p>Release and Beta versions of oehen.arguard are available from <a href="https://www.nuget.org/packages/oehen.arguard">nuget.org</a></p>
+<a class="btn btn-lg btn-success" href="https://www.nuget.org/packages/oehen.arguard" target="_blank">
+    <i class="fa fa-download fa-lg"></i> Get from nuget.org
+</a>
 
-		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-
-								<dt>Namespace</dt>
-								<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph BT
-	Type--&gt;Base0["object"]
-	Type["ArgumentNullGuard"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
-  			</div>
-		</div>
-
-	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentNullGuard</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentNullGuard/7688537C">ThrowIfNull<wbr>(object, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Throws an <code class="cs">System.ArgumentNullException</code> if <span name="argument" class="paramref">argument</span> is null.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
-
-			<h1 id="ExtensionMethods">Extension Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentNullGuard/7688537C">ThrowIfNull<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Throws an <code class="cs">System.ArgumentNullException</code> if <span name="argument" class="paramref">argument</span> is null.
-    </div>
-										<div><small><em>From <a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
-	
-</section>
+	</section>
                 
             </div>           
             
