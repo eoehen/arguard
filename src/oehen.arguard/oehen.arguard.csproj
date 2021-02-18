@@ -1,28 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>oehen.arguard</PackageId>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageId>oehen.arguard</PackageId>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <RepositoryType>git</RepositoryType> 
+  </PropertyGroup>
+
+  <!-- package properties -->
+  <PropertyGroup>
     <Authors>oehen.net</Authors>
     <Company>oehen.net</Company>
-    <PackageIcon>arguardlogo.png</PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>Argument;Parameter;Validation</PackageTags>
     <summary>Argument validation extension library for .NET core.</summary>
     <Description>
       This library is an extension for the validation of arguments and parameters.
     </Description>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <RepositoryType>git</RepositoryType> 
-    <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
     <copyright>Copyright © oehen.net</copyright>
-    <releaseNotes>https://github.com/eoehen/arguard/releases/</releaseNotes>
+    <PackageIcon>arguardlogo.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Argument;Parameter;Validation</PackageTags>
+    <PackageReleaseNotes>https://github.com/cake-contrib/Cake.StrongNameSigner/releases/tag/$(Version)</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
+    <PackageProjectUrl>https://eoehen.github.io/arguard/</PackageProjectUrl>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
-  
+  <!-- package properties -->
+
   <PropertyGroup>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
   </PropertyGroup>
@@ -41,9 +51,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="SecurityCodeScan" Version="3.5.3">
-      <PrivateAssets>all</PrivateAssets>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="SecurityCodeScan.VS2019" Version="5.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
 

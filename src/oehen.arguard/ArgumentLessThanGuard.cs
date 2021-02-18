@@ -14,6 +14,14 @@ namespace oehen.arguard
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        /// <example>
+        /// <para>Throws when the argument `intArgument` is less than 0.</para>
+        /// <code>
+        /// <![CDATA[
+        ///     intArgument.ThrowIfIsLessThanZero(nameof(intArgument));
+        /// ]]>
+        /// </code>
+        /// </example>
         [AssertionMethod]
         public static void ThrowIfIsLessThanZero(this int argument, string nameOfArgument)
         {
@@ -26,6 +34,14 @@ namespace oehen.arguard
         /// <param name="argument">Argument value.</param>
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        /// <example>
+        /// <para>Throws when the argument `intArgument` is less than 5.</para>
+        /// <code>
+        /// <![CDATA[
+        ///     intArgument.ThrowIfIsLessThan(nameof(intArgument), 5);
+        /// ]]>
+        /// </code>
+        /// </example>
         [AssertionMethod]
         public static void ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)
         {
@@ -45,6 +61,14 @@ namespace oehen.arguard
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        /// <example>
+        /// <para>Throws when the argument `intArgument` is less or equal than 0.</para>
+        /// <code>
+        /// <![CDATA[
+        ///     intArgument.ThrowIfIsLessOrEqualThanZero(nameof(intArgument));
+        /// ]]>
+        /// </code>
+        /// </example>
         [AssertionMethod]
         public static void ThrowIfIsLessOrEqualThanZero(this int argument, string nameOfArgument)
         {
@@ -57,6 +81,14 @@ namespace oehen.arguard
         /// <param name="argument">Argument value.</param>
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
+        /// <example>
+        /// <para>Throws when the argument `intArgument` value is less or equal than 5.</para>
+        /// <code>
+        /// <![CDATA[
+        ///     intArgument.ThrowIfIsLessOrEqualThan(nameof(intArgument), 5);
+        /// ]]>
+        /// </code>
+        /// </example>        
         [AssertionMethod]
         public static void ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)
         {

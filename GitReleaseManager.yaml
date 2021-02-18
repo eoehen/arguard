@@ -1,5 +1,5 @@
 ## Configuration values used when creating new releases
-#create:
+create:
 #  include-footer: true
 #  footer-heading: Where to get it
 #  footer-content: >-
@@ -8,9 +8,9 @@
 #    [chocolatey](https://chocolatey.org/packages/chocolateyGUI/{milestone})
 #  footer-includes-milestone: false
 #  milestone-replace-text: '{milestone}'
-#  include-sha-section: false
-#  sha-section-heading: SHA256 Hashes of the release artifacts
-#  sha-section-line-format: '- `{1}	{0}`'
+  include-sha-section: true
+  sha-section-heading: "SHA256 Hashes of the release artifacts"
+  sha-section-line-format: "- `{1}\t{0}`"
 #  allow-update-to-published: false
 ## Configuration values used when exporting release notes
 #export:
@@ -41,8 +41,8 @@ issue-labels-include:
 - Documentation
 - Dependencies
 ## The labels that will NOT be used when including issues in release notes.
-#issue-labels-exclude:
-#- Internal Refactoring
+issue-labels-exclude:
+- Build
 ## Overrides default pluralization and header names for specific labels.
 issue-labels-alias:
   - name: Documentation
