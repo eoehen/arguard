@@ -4,22 +4,33 @@ Title: Examples
 Description: Example usage of oehen.arguard
 ---
 
-# Usage of factory methods
+# Argument null validation example
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+This example throws an `ArgumentNullException` if the parameter `foo` is null.
+
+Example without oehen.arguard package
 
 ```csharp
-// Creation of a maybe for a declared reference type which could be instantiated or not.
-var foo = new Foo();
-var maybeFoo = Maybe.Some(foo);
+public void ExampleMethodWithoutArguard(object foo)
+{
+    if (foo is null)
+    {
+        throw new ArgumentNullException();
+    }
 
-// Creation of a maybe for a reference type which is null.
-var maybeFoo2 = Maybe.None<Foo>();
-
-// Creation of a maybe for a declared nullable value type which could be instantiated or not.
-int? number = 5;
-var maybeNumber = Maybe.SomeStruct<int>(number);
-
-// Creation of a maybe for a nullable value type which is null.
-var maybeNumber2 = Maybe.NoneStruct<int>();
+    // ...
+}
 ```
+
+Example with oehen.arguard package
+
+```csharp
+public void ExampleMethodWithArguard(object foo)
+{
+    foo.ThrowIfNull(nameof(foo));
+
+    // ...
+}
+```
+
+More examples in the API documentation.
