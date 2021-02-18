@@ -53,6 +53,20 @@ var searchModule = function() {
     a(
         {
             id:1,
+            title:"ArgumentEnumerableGuard",
+            content:"ArgumentEnumerableGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
+            title:"ArgumentEnumerableGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
             title:"ArgumentNullGuard",
             content:"ArgumentNullGuard",
             description:'',
@@ -66,7 +80,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:2,
+            id:3,
             title:"ArgumentEmtpyGuard",
             content:"ArgumentEmtpyGuard",
             description:'',
@@ -75,20 +89,6 @@ var searchModule = function() {
         {
             url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
             title:"ArgumentEmtpyGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
-            title:"ArgumentEnumerableGuard",
-            content:"ArgumentEnumerableGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
-            title:"ArgumentEnumerableGuard",
             description:""
         }
     );
