@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - Why does oehen.arguard exist?</title>
+        <title>oehen.arguard - Introduction</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -71,9 +71,10 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/eoehen/oehen.arguard/tree/develop/docs/input/docs/getting-started/whymaybe.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#features">Features</a></p>
-<p><a href="#advantages-over-similar-libraries">Advantages over similar libraries</a></p>
+        <div><p><a href="https://github.com/eoehen/oehen.arguard/tree/develop/docs/input/docs/documentation/introduction.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#introduction">Introduction</a></p>
+<p><a href="#advantages">Advantages</a></p>
+<p><a href="#implementation">Implementation</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -86,11 +87,11 @@
                         
 
                 <li class="treeview active">
-                    <a href="/arguard/docs/getting-started">Getting Started</a> <a href="#" class="expand"></a>
+                    <a href="/arguard/docs/documentation">Documentation</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
-                <li class="selected"><a href="/arguard/docs/getting-started/whymaybe">Why does oehen.arguard exist?</a></li>
-                <li><a href="/arguard/docs/getting-started/principles">Core principles</a></li>
+                <li class="selected"><a href="/arguard/docs/documentation/introduction">Introduction</a></li>
+                <li><a href="/arguard/docs/documentation/features">Features</a></li>
 
                     </ul>
                 </li>
@@ -98,7 +99,7 @@
                     <a href="/arguard/docs/usage">Usage</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
-                <li><a href="/arguard/docs/usage/obtain">Obtain</a></li>
+                <li><a href="/arguard/docs/usage/installation">Installation</a></li>
                 <li><a href="/arguard/docs/usage/examples">Examples</a></li>
 
                     </ul>
@@ -116,22 +117,24 @@
 
 
 		<section class="content-header">
-			<h1>Why does oehen.arguard exist?</h1>
+			<h1>Introduction</h1>
 		</section>
 	<section class="content">
-		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-<h1 id="features">Features</h1>
+		<h1 id="introduction">Introduction</h1>
+<p>The oehen.arguard is a .NET core extension nuget package for parameter validation.</p>
+<h1 id="advantages">Advantages</h1>
+<p>What is the benefit to validate parameters of public methods?</p>
 <ul>
-<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</li>
-<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</li>
-<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</li>
+<li>It identifies exactly what parameter of a method are incorrect.</li>
+<li>It makes the code fail on invalid input even if some other condition means that the value isn't dereferenced.</li>
+<li>It makes the exception occur before the method could have any other side-effects you might reach before the first dereference.</li>
+<li>It means you can be confident that if you pass the parameter into something else, you're not violating their contract.</li>
+<li>It documents your method's requirements with source code.</li>
+<li>Throw a <code>ArgumentNullException</code> instead <code>NullReferenceException</code> can help to find the responsible part is something with the parameter value.</li>
+<li>Parameter validation is expected by various code analysis systems.</li>
 </ul>
-<h1 id="advantages-over-similar-libraries">Advantages over similar libraries</h1>
-<ul>
-<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</li>
-<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</li>
-<li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</li>
-</ul>
+<h1 id="implementation">Implementation</h1>
+<p>All validation implementations are extended methods of the corresponding datatype.</p>
 
 	</section>
                 

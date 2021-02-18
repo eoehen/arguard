@@ -72,7 +72,7 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
         <div><p><a href="https://github.com/eoehen/oehen.arguard/tree/develop/docs/input/docs/usage/examples.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#usage-of-factory-methods">Usage of factory methods</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#argument-null-validation-example">Argument null validation example</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -85,11 +85,11 @@
                         
 
                 <li class="treeview">
-                    <a href="/arguard/docs/getting-started">Getting Started</a> <a href="#" class="expand"></a>
+                    <a href="/arguard/docs/documentation">Documentation</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
-                <li><a href="/arguard/docs/getting-started/whymaybe">Why does oehen.arguard exist?</a></li>
-                <li><a href="/arguard/docs/getting-started/principles">Core principles</a></li>
+                <li><a href="/arguard/docs/documentation/introduction">Introduction</a></li>
+                <li><a href="/arguard/docs/documentation/features">Features</a></li>
 
                     </ul>
                 </li>
@@ -97,7 +97,7 @@
                     <a href="/arguard/docs/usage">Usage</a> <a href="#" class="expand"></a>
                     <ul class="treeview-menu">
                         
-                <li><a href="/arguard/docs/usage/obtain">Obtain</a></li>
+                <li><a href="/arguard/docs/usage/installation">Installation</a></li>
                 <li class="selected"><a href="/arguard/docs/usage/examples">Examples</a></li>
 
                     </ul>
@@ -118,22 +118,28 @@
 			<h1>Examples</h1>
 		</section>
 	<section class="content">
-		<h1 id="usage-of-factory-methods">Usage of factory methods</h1>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-<pre><code class="language-csharp">// Creation of a maybe for a declared reference type which could be instantiated or not.
-var foo = new Foo();
-var maybeFoo = Maybe.Some(foo);
+		<h1 id="argument-null-validation-example">Argument null validation example</h1>
+<p>This example throws an <code>ArgumentNullException</code> if the parameter <code>foo</code> is null.</p>
+<p>Example without oehen.arguard package</p>
+<pre><code class="language-csharp">public void ExampleMethodWithoutArguard(object foo)
+{
+    if (foo is null)
+    {
+        throw new ArgumentNullException();
+    }
 
-// Creation of a maybe for a reference type which is null.
-var maybeFoo2 = Maybe.None&lt;Foo&gt;();
-
-// Creation of a maybe for a declared nullable value type which could be instantiated or not.
-int? number = 5;
-var maybeNumber = Maybe.SomeStruct&lt;int&gt;(number);
-
-// Creation of a maybe for a nullable value type which is null.
-var maybeNumber2 = Maybe.NoneStruct&lt;int&gt;();
+    // ...
+}
 </code></pre>
+<p>Example with oehen.arguard package</p>
+<pre><code class="language-csharp">public void ExampleMethodWithArguard(object foo)
+{
+    foo.ThrowIfNull(nameof(foo));
+
+    // ...
+}
+</code></pre>
+<p>More examples in the API documentation.</p>
 
 	</section>
                 
