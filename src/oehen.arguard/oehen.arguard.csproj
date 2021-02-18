@@ -27,6 +27,7 @@
     <PackageTags>Argument;Parameter;Validation</PackageTags>
     <PackageReleaseNotes>https://github.com/cake-contrib/Cake.StrongNameSigner/releases/tag/$(Version)</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
+    <PackageProjectUrl>https://eoehen.github.io/arguard/</PackageProjectUrl>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
