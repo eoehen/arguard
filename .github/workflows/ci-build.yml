@@ -76,7 +76,7 @@ jobs:
 
     - name: Publish NuGet package as build artifact
       uses: actions/upload-artifact@v2
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-18.04'
       with:
         if-no-files-found: warn
         name: NuGet Package
@@ -84,7 +84,7 @@ jobs:
 
     - name: Publish coverage artifact
       uses: actions/upload-artifact@v2
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-18.04'
       with:
         if-no-files-found: warn
         name: Coverage
@@ -93,7 +93,7 @@ jobs:
     # Publish external
     - name: Run codacy-coverage-reporter
       uses: codacy/codacy-coverage-reporter-action@master
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-18.04'
       with:
         project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
         coverage-reports: BuildArtifacts/TestCoverage/coverlet/*.xml
