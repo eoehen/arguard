@@ -50,7 +50,7 @@ jobs:
 
     # Caching Tools
     - name: Cache Tools
-      uses: actions/cache@v2.1.4
+      uses: actions/cache@v2.1.5
       with:
         path: tools
         key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
