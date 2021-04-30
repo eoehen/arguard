@@ -1,13 +1,7 @@
 version: 2
 updates:
-# Check update for used nuget packages
 - package-ecosystem: nuget
-  directory: "/src"
-  schedule:
-    interval: daily
-# Check updates for used github-actions
-- package-ecosystem: "github-actions"
   directory: "/"
   schedule:
-    interval: "daily"    
+    interval: daily
   open-pull-requests-limit: 10
