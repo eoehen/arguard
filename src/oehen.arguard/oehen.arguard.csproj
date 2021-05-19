@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>oehen.arguard</PackageId>
     <NeutralLanguage>en-US</NeutralLanguage>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,7 +10,8 @@
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
-    <RepositoryType>git</RepositoryType> 
+    <RepositoryType>git</RepositoryType>
+    <LangVersion>9</LangVersion> 
   </PropertyGroup>
 
   <!-- package properties -->
