@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Diagnostics.CodeAnalysis;
-
 namespace oehen.arguard {
     using System;
     
@@ -24,7 +22,6 @@ namespace oehen.arguard {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [ExcludeFromCodeCoverage]
     internal class ExceptionMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
@@ -82,6 +79,15 @@ namespace oehen.arguard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Argument is false..
+        /// </summary>
+        internal static string ThrowIfFalse {
+            get {
+                return ResourceManager.GetString("ThrowIfFalse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Argument is less or equal than {0}..
         /// </summary>
         internal static string ThrowIfIsLessOrEqualThan {
@@ -96,6 +102,15 @@ namespace oehen.arguard {
         internal static string ThrowIfIsLessThan {
             get {
                 return ResourceManager.GetString("ThrowIfIsLessThan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument is true..
+        /// </summary>
+        internal static string ThrowIfTrue {
+            get {
+                return ResourceManager.GetString("ThrowIfTrue", resourceCulture);
             }
         }
     }
