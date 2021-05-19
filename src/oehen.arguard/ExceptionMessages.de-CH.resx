@@ -129,4 +129,10 @@
   <data name="ThrowIfIsLessThan" xml:space="preserve">
     <value>Argument ist kleiner {0}.</value>
   </data>
+  <data name="ThrowIfTrue" xml:space="preserve">
+    <value>Argument ist true.</value>
+  </data>
+  <data name="ThrowIfFalse" xml:space="preserve">
+    <value>Argument ist false.</value>
+  </data>
 </root>
