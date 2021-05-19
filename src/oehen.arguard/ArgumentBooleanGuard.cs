@@ -24,9 +24,11 @@ namespace oehen.arguard
         public static void ThrowIfTrue(this bool argument, string nameOfArgument)
         {
             if (argument)
+            {
                 throw new ArgumentException(string.Format(CultureInfo.CurrentCulture,
                     ExceptionMessageResourceManager.GetMessage("ThrowIfTrue"),
                     nameOfArgument));
+            }
         }
 
         /// <summary>
@@ -45,9 +47,11 @@ namespace oehen.arguard
         public static void ThrowIfFalse(this bool argument, string nameOfArgument)
         {
             if (!argument)
+            {
                 throw new ArgumentException(string.Format(CultureInfo.CurrentCulture,
                     ExceptionMessageResourceManager.GetMessage("ThrowIfFalse"),
                     nameOfArgument));
+            }
         }
     }
 }

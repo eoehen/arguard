@@ -10,7 +10,7 @@ namespace oehen.arguard
         public void ArgumentBooleanGuardTest_ThrowIfTrue_When_argument_is_True_Then_Should_Throw_ArgumentException()
         {
             const bool argument = true;
-            Action act = () => argument.ThrowIfTrue(nameof(argument));;
+            Action act = () => argument.ThrowIfTrue(nameof(argument));
             act.Should().Throw<ArgumentException>();
         }
 
@@ -18,7 +18,7 @@ namespace oehen.arguard
         public void ArgumentBooleanGuardTest_ThrowIfFalse_When_argument_is_False_Then_Should_Throw_ArgumentException()
         {
             const bool argument = false;
-            Action act = () => argument.ThrowIfFalse(nameof(argument));;
+            Action act = () => argument.ThrowIfFalse(nameof(argument));
             act.Should().Throw<ArgumentException>();
         }
 
@@ -27,7 +27,7 @@ namespace oehen.arguard
             ArgumentBooleanGuardTest_ThrowIfTrue_When_argument_is_False_Then_Should_not_Throw_ArgumentException()
         {
             const bool argument = false;
-            Action act = () => argument.ThrowIfTrue(nameof(argument));;
+            Action act = () => argument.ThrowIfTrue(nameof(argument));
             act.Should().NotThrow<ArgumentException>();
         }
 
@@ -36,7 +36,7 @@ namespace oehen.arguard
             ArgumentBooleanGuardTest_ThrowIfFalse_When_argument_is_True_Then_Should_not_Throw_ArgumentException()
         {
             const bool argument = true;
-            Action act = () => argument.ThrowIfFalse(nameof(argument));;
+            Action act = () => argument.ThrowIfFalse(nameof(argument));
             act.Should().NotThrow<ArgumentException>();
         }
     }
