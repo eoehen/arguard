@@ -10,7 +10,7 @@ namespace oehen.arguard
         [Fact]
         public void ThrowIfIsNullOrEmpty_ShouldThrowArgumentNullException_If_StringArgumentIsNullOrEmpty()
         {
-            string argument = "";
+            const string argument = "";
             var exception = Assert.Throws<ArgumentNullException>(() =>
             {
                 // ReSharper disable once ExpressionIsAlwaysNull
@@ -22,7 +22,7 @@ namespace oehen.arguard
         [Fact]
         public void ThrowIfIsNullOrEmpty_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsStringValue()
         {
-            string argument = "not empty value";
+            const string argument = "not empty value";
             var exception = Record.Exception(() =>
             {
                 argument.ThrowIfIsNullOrEmpty(nameof(argument));
@@ -45,7 +45,7 @@ namespace oehen.arguard
         [Fact]
         public void ThrowIfIsNullOrWhiteSpace_ShouldThrowArgumentNullException_If_StringArgumentIsWhiteSpace()
         {
-            string argument = " ";
+            const string argument = " ";
             var exception = Assert.Throws<ArgumentNullException>(() =>
             {
                 // ReSharper disable once ExpressionIsAlwaysNull
@@ -57,7 +57,7 @@ namespace oehen.arguard
         [Fact]
         public void ThrowIfIsNullOrWhiteSpace_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsStringValue()
         {
-            string argument = "Hello";
+            const string argument = "Hello";
             var exception = Record.Exception(() =>
             {
                 argument.ThrowIfIsNullOrWhiteSpace(nameof(argument));
