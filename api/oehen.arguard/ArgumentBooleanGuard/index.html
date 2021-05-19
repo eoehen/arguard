@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentNullGuard Class</title>
+        <title>oehen.arguard - API - ArgumentBooleanGuard Class</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -137,11 +137,11 @@
 		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentLessThanGuard">Argument<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
+				<li><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
 
 
                     </ul>
@@ -156,14 +156,14 @@
 
 
 <section class="content-header">
-	<h1>ArgumentNullGuard <small>Class</small></h1>
+	<h1>ArgumentBooleanGuard <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Argument null validation.
+        Argument <code class="cs"><a href="/arguard">bool</a></code> validation.
     </div>
 
 		<div class="panel panel-default">
@@ -190,7 +190,7 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["object"]
-	Type["ArgumentNullGuard"]
+	Type["ArgumentBooleanGuard"]
 class Type type-node
 
 						</div>
@@ -200,7 +200,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentNullGuard</code></pre>
+	<pre><code>public static class ArgumentBooleanGuard</code></pre>
 
 
 
@@ -224,11 +224,21 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentNullGuard/7688537C">ThrowIfNull<wbr>(object, <wbr>string)<wbr></a></td>
+								<td><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard/2F427A35">ThrowIfFalse<wbr>(bool, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-    Throws an <code class="cs">System.ArgumentNullException</code> if <span name="argument" class="paramref">argument</span> is null.
+        Throws an <code class="cs">System.ArgumentException</code> if <span name="argument" class="paramref">argument</span> is false.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard/868AE52E">ThrowIfTrue<wbr>(bool, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+        Throws an <code class="cs">System.ArgumentException</code> if <span name="argument" class="paramref">argument</span> is true.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>

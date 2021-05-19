@@ -53,6 +53,20 @@ var searchModule = function() {
     a(
         {
             id:1,
+            title:"ArgumentBooleanGuard",
+            content:"ArgumentBooleanGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
+            title:"ArgumentBooleanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
             title:"ArgumentNullGuard",
             content:"ArgumentNullGuard",
             description:'',
@@ -66,7 +80,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:2,
+            id:3,
             title:"ArgumentLessThanGuard",
             content:"ArgumentLessThanGuard",
             description:'',
@@ -80,7 +94,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:3,
+            id:4,
             title:"TestMethod",
             content:"TestMethod",
             description:'',
@@ -94,7 +108,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:4,
+            id:5,
             title:"ArgumentEmtpyGuard",
             content:"ArgumentEmtpyGuard",
             description:'',
