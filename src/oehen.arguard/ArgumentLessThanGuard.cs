@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using System;
+﻿using System;
 using System.Globalization;
 
 namespace oehen.arguard
@@ -22,7 +21,6 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        [AssertionMethod]
         public static void ThrowIfIsLessThanZero(this int argument, string nameOfArgument)
         {
             argument.ThrowIfIsLessThan(0, nameOfArgument);
@@ -42,7 +40,6 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        [AssertionMethod]
         public static void ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)
         {
             if (argument < compareValue)
@@ -69,7 +66,6 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        [AssertionMethod]
         public static void ThrowIfIsLessOrEqualThanZero(this int argument, string nameOfArgument)
         {
             argument.ThrowIfIsLessOrEqualThan(0, nameOfArgument);
@@ -89,7 +85,6 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>        
-        [AssertionMethod]
         public static void ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)
         {
             if (argument <= compareValue)

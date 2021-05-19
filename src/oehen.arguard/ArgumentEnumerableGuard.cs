@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,7 +22,6 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        [AssertionMethod]
         public static void ThrowIfIsNullOrEmpty<T>([ValidatedNotNull]this IEnumerable<T> argument, string nameOfArgument)
         {
             argument.ThrowIfNull(nameOfArgument);
