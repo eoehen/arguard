@@ -14,13 +14,13 @@ namespace oehen.arguard
     /// <see cref="CultureInfo.CurrentUICulture" /> with another culture.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
-    class UseCultureAttribute : BeforeAfterTestAttribute
+    internal class UseCultureAttribute : BeforeAfterTestAttribute
     {
-        readonly Lazy<CultureInfo> culture;
-        readonly Lazy<CultureInfo> uiCulture;
+        private readonly Lazy<CultureInfo> culture;
+        private readonly Lazy<CultureInfo> uiCulture;
 
-        CultureInfo originalCulture;
-        CultureInfo originalUiCulture;
+        private CultureInfo originalCulture;
+        private CultureInfo originalUiCulture;
 
         /// <summary>
         /// Replaces the culture and UI culture of the current thread with
