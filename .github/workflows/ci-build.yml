@@ -5,6 +5,8 @@ on:
     paths-ignore:
       - "README.md"
     branches: [develop, master]
+    tags: 
+      - '*'
     
 jobs:
   build:
