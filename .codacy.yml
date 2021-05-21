@@ -1,5 +1,10 @@
 ---
 exclude_paths:
+  - "LICENSE"
+  - "build.*"
+  - "*.yml"
+  - "*.md"
+  - "*.cake"
   - "**/docs/**"
   - "**/src/oehen.arguard.Tests/**"
   - "**/src/oehen.arguard.example/**"
