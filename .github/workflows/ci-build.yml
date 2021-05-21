@@ -4,15 +4,15 @@ on:
   push:
     paths-ignore:
       - "README.md"
-  pull_request:
-
+    branches: [develop, master]
+    
 jobs:
   build:
 
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        os: [ ubuntu-18.04, windows-latest, macos-latest ]
 
     env:
       src-directory: ./src
@@ -50,7 +50,7 @@ jobs:
 
     # Caching Tools
     - name: Cache Tools
-      uses: actions/cache@v2.1.4
+      uses: actions/cache@v2.1.5
       with:
         path: tools
         key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
@@ -76,7 +76,7 @@ jobs:
 
     - name: Publish NuGet package as build artifact
       uses: actions/upload-artifact@v2
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-18.04'
       with:
         if-no-files-found: warn
         name: NuGet Package
@@ -84,7 +84,7 @@ jobs:
 
     - name: Publish coverage artifact
       uses: actions/upload-artifact@v2
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-18.04'
       with:
         if-no-files-found: warn
         name: Coverage
@@ -93,7 +93,7 @@ jobs:
     # Publish external
     - name: Run codacy-coverage-reporter
       uses: codacy/codacy-coverage-reporter-action@master
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'ubuntu-18.04'
       with:
         project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
         coverage-reports: BuildArtifacts/TestCoverage/coverlet/*.xml

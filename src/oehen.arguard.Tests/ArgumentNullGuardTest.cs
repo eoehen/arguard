@@ -45,7 +45,7 @@ namespace oehen.arguard
         [Fact]
         public void NotThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsNotNull()
         {
-            string argument = "Hello";
+            const string argument = "Hello";
             var exception = Record.Exception(() =>
             {
                 argument.ThrowIfNull(nameof(argument));
