@@ -1,5 +1,5 @@
 ---
 exclude_paths:
-  - "**/doc/**"
+  - "**/docs/**"
   - "**/src/oehen.arguard.Tests/**"
   - "**/src/oehen.arguard.example/**"
