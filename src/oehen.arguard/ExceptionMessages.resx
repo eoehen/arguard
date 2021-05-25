@@ -138,4 +138,7 @@
   <data name="ThrowIfFileNotExists" xml:space="preserve">
     <value>File path argument {0} not found.</value>
   </data>
+  <data name="ThrowIfDirectoryNotExists" xml:space="preserve">
+    <value>Directory path argument {0} not found.</value>
+  </data>
 </root>
