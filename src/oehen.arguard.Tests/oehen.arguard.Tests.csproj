@@ -34,4 +34,11 @@
     <ProjectReference Include="..\oehen.arguard\oehen.arguard.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="testfiles\ArgumentFilePathTestFile.txt" />
+    <Content Include="testfiles\ArgumentFilePathTestFile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

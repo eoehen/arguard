@@ -135,4 +135,7 @@
   <data name="ThrowIfFalse" xml:space="preserve">
     <value>Argument ist false.</value>
   </data>
+  <data name="ThrowIfFileNotExists" xml:space="preserve">
+    <value>File Pfad Argument {0} nicht gefunden.</value>
+  </data>
 </root>
