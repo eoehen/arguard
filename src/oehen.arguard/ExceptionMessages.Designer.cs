@@ -88,6 +88,15 @@ namespace oehen.arguard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File path argument {0} not found..
+        /// </summary>
+        internal static string ThrowIfFileNotExists {
+            get {
+                return ResourceManager.GetString("ThrowIfFileNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Argument is less or equal than {0}..
         /// </summary>
         internal static string ThrowIfIsLessOrEqualThan {
