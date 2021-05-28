@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
@@ -10,6 +9,10 @@
     <AssemblyName>oehen.arguard.Tests</AssemblyName>
 
     <LangVersion>8</LangVersion>
+
+    <OutputType>Library</OutputType>
+
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
