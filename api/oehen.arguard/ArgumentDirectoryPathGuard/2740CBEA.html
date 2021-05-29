@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - oehen.arguard.example Namespace</title>
+        <title>oehen.arguard - API - ArgumentDirectoryPathGuard.ThrowIfDirectoryNotExists(string, string) Method</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -71,7 +71,11 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -130,17 +134,14 @@
 
                     <ul class="sidebar-menu">
                         
-	<li class="header">Namespaces</li>   
+			<li class="header">Namespace</li>
+		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
+		<li class="header">Type</li>
+		<li><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Method Members</li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard/2740CBEA">Throw<wbr>If<wbr>Directory<wbr>Not<wbr>Exists<wbr>(string, <wbr>string)<wbr></a></li>
 
-				<li class="treeview active">
-				<a href="/arguard/api/oehen">oehen</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-			
-				<li class="treeview active">
-				<a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a> <a href="#" class="expand"></a>
-				<ul class="treeview-menu">
-						<li class=" selected"><a href="/arguard/api/oehen.arguard.example">oehen<wbr>.arguard<wbr>.example</a></li>
-</ul></li></ul></li>      
 
                     </ul>
                             
@@ -154,32 +155,87 @@
 
 
 <section class="content-header">
-	<h1>oehen<wbr>.arguard<wbr>.example <small>Namespace</small></h1>
+			<h3><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a>.</h3>
+	<h1>Throw<wbr>If<wbr>Directory<wbr>Not<wbr>Exists<wbr>(string, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+        Throws an <code class="cs">System.IO.DirectoryNotFoundException</code> if directory path in <span name="directoryPath" class="paramref">directoryPath</span> not
+        exists.
+    </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						
+						<dt>Namespace</dt>
+						<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></dd>		
+					
+				</dl>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public static void ThrowIfDirectoryNotExists(this string directoryPath, string nameOfArgument)</code></pre>
+
+	<h1 id="Examples">Examples</h1>
+	<div>
+        <p>Throws when the directory path in `argument` not exists.</p>
+        <pre><code class="cs">argument.ThrowIfDirectoryNotExists(nameof(argument));</code></pre>
+    </div>
 
 
-			<h1 id="ClassTypes">Class Types</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Class</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard.example/TestMethod">TestMethod</a></td>
-									<td></td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>directoryPath</td>
+						<td>string</td>
+						<td>Argument value.</td>
+					</tr>
+					<tr>
+						<td>nameOfArgument</td>
+						<td>string</td>
+						<td>Name of the argument.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
 
 	
 </section>
