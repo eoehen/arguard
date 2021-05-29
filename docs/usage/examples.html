@@ -120,7 +120,8 @@
 	<section class="content">
 		<h1 id="argument-null-validation-example">Argument null validation example</h1>
 <p>This example throws an <code>ArgumentNullException</code> if the parameter <code>foo</code> is null.</p>
-<p>Example without oehen.arguard package</p>
+<h2 id="previous-example">Previous example</h2>
+<p>Example for the previous argument validation:</p>
 <pre><code class="language-csharp">public void ExampleMethodWithoutArguard(object foo)
 {
     if (foo is null)
@@ -131,7 +132,8 @@
     // ...
 }
 </code></pre>
-<p>Example with oehen.arguard package</p>
+<h2 id="arguard-example">arguard example</h2>
+<p>Example argument validation with oehen.arguard library:</p>
 <pre><code class="language-csharp">public void ExampleMethodWithArguard(object foo)
 {
     foo.ThrowIfNull(nameof(foo));

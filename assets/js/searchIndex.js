@@ -39,28 +39,28 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"ArgumentBooleanGuard",
-            content:"ArgumentBooleanGuard",
+            title:"ArgumentDirectoryPathGuard",
+            content:"ArgumentDirectoryPathGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
-            title:"ArgumentBooleanGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard',
+            title:"ArgumentDirectoryPathGuard",
             description:""
         }
     );
     a(
         {
             id:1,
-            title:"ArgumentEmtpyGuard",
-            content:"ArgumentEmtpyGuard",
+            title:"ArgumentNullGuard",
+            content:"ArgumentNullGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
-            title:"ArgumentEmtpyGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
+            title:"ArgumentNullGuard",
             description:""
         }
     );
@@ -81,20 +81,6 @@ var searchModule = function() {
     a(
         {
             id:3,
-            title:"ArgumentNullGuard",
-            content:"ArgumentNullGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
-            title:"ArgumentNullGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
             title:"ArgumentLessThanGuard",
             content:"ArgumentLessThanGuard",
             description:'',
@@ -108,15 +94,29 @@ var searchModule = function() {
     );
     a(
         {
-            id:5,
-            title:"ArgumentDirectoryPathGuard",
-            content:"ArgumentDirectoryPathGuard",
+            id:4,
+            title:"ArgumentBooleanGuard",
+            content:"ArgumentBooleanGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard',
-            title:"ArgumentDirectoryPathGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
+            title:"ArgumentBooleanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"ArgumentEmtpyGuard",
+            content:"ArgumentEmtpyGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
+            title:"ArgumentEmtpyGuard",
             description:""
         }
     );
