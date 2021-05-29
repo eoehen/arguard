@@ -4,7 +4,7 @@ using System.Globalization;
 namespace oehen.arguard
 {
     /// <summary>
-    ///     Argument <see cref="bool" /> validation.
+    ///     Argument <see cref="bool" /> validator.
     /// </summary>
     public static class ArgumentBooleanGuard
     {
@@ -26,7 +26,7 @@ namespace oehen.arguard
             if (argument)
             {
                 throw new ArgumentException(string.Format(CultureInfo.CurrentCulture,
-                    ExceptionMessageResourceManager.GetMessage("ThrowIfTrue"),
+                    ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfTrue"),
                     nameOfArgument));
             }
         }
@@ -49,7 +49,7 @@ namespace oehen.arguard
             if (!argument)
             {
                 throw new ArgumentException(string.Format(CultureInfo.CurrentCulture,
-                    ExceptionMessageResourceManager.GetMessage("ThrowIfFalse"),
+                    ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfFalse"),
                     nameOfArgument));
             }
         }

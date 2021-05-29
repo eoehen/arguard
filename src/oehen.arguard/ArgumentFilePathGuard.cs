@@ -4,7 +4,7 @@ using System.IO;
 namespace oehen.arguard
 {
     /// <summary>
-    ///     Argument FilePath validation.
+    ///     Argument file path validator.
     /// </summary>
     public static class ArgumentFilePathGuard
     {
@@ -26,7 +26,7 @@ namespace oehen.arguard
             if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException(string.Format(CultureInfo.CurrentCulture,
-                    ExceptionMessageResourceManager.GetMessage("ThrowIfFileNotExists"),
+                    ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfFileNotExists"),
                     nameOfArgument), filePath);
             }
         }

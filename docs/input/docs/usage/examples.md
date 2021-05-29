@@ -8,7 +8,9 @@ Description: Example usage of oehen.arguard
 
 This example throws an `ArgumentNullException` if the parameter `foo` is null.
 
-Example without oehen.arguard package
+## Previous example
+
+Example for the previous argument validation:
 
 ```csharp
 public void ExampleMethodWithoutArguard(object foo)
@@ -22,7 +24,9 @@ public void ExampleMethodWithoutArguard(object foo)
 }
 ```
 
-Example with oehen.arguard package
+## arguard example
+
+Example argument validation with oehen.arguard library:
 
 ```csharp
 public void ExampleMethodWithArguard(object foo)
