@@ -6,7 +6,7 @@ Description: Introduction of oehen.arguard library
 
 # Introduction
 
-The oehen.arguard is a .NET core extension nuget package for parameter validation.
+The oehen.arguard is a .NET extension nuget library package for argument validation.
 
 # Advantages
 
@@ -22,4 +22,4 @@ What is the benefit to validate parameters of public methods?
 
 # Implementation
 
-All validation implementations are extended methods of the corresponding datatype.
+All validation implementations are extended methods starting with `[argument].Throw...` corresponded of the argument datatype.

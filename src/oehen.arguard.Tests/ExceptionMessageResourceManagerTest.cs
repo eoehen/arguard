@@ -21,10 +21,10 @@ namespace oehen.arguard
                 CultureInfo.CurrentCulture = new CultureInfo(cultureName);
             }
 
-            var keys = ExceptionMessageResourceManager.GetAllKeys();
+            var keys = ArgumentExceptionMessageResourceManager.GetAllKeys();
             foreach (var key in keys)
             {
-                var locMessage = ExceptionMessageResourceManager.GetMessage(key);
+                var locMessage = ArgumentExceptionMessageResourceManager.GetMessage(key);
                 locMessage.Should().NotBeNullOrEmpty();
             }
         }

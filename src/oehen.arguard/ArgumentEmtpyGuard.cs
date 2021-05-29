@@ -3,7 +3,7 @@
 namespace oehen.arguard
 {
     /// <summary>
-    /// String argument null or empty validation.
+    /// <see cref="object"/> argument validator.
     /// </summary>
     public static class ArgumentEmtpyGuard
     {
@@ -20,12 +20,12 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrEmpty([ValidatedNotNull]this string argument, string nameOfArgument)
+        public static void ThrowIfIsNullOrEmpty([ArgumentValidatedNotNull]this string argument, string nameOfArgument)
         {
             if (string.IsNullOrEmpty(argument))
             {
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
+                    ArgumentExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
             }
         }
 
@@ -42,12 +42,12 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrWhiteSpace([ValidatedNotNull]this string argument, string nameOfArgument)
+        public static void ThrowIfIsNullOrWhiteSpace([ArgumentValidatedNotNull]this string argument, string nameOfArgument)
         {
             if (string.IsNullOrWhiteSpace(argument))
             {
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrWhitespace"));
+                    ArgumentExceptionMessageResourceManager.GetMessage("ArgumentNullOrWhitespace"));
             }
         }
     }
