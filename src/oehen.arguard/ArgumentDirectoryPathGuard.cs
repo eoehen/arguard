@@ -4,7 +4,7 @@ using System.IO;
 namespace oehen.arguard
 {
     /// <summary>
-    ///     Argument FilePath validation.
+    ///     Argument directory path validator.
     /// </summary>
     public static class ArgumentDirectoryPathGuard
     {
@@ -27,7 +27,7 @@ namespace oehen.arguard
             if (!Directory.Exists(directoryPath))
             {
                 throw new DirectoryNotFoundException(string.Format(CultureInfo.CurrentCulture,
-                    ExceptionMessageResourceManager.GetMessage("ThrowIfDirectoryNotExists"),
+                    ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfDirectoryNotExists"),
                     nameOfArgument));
             }
         }

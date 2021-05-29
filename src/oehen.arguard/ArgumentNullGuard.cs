@@ -3,7 +3,7 @@
 namespace oehen.arguard
 {
     /// <summary>
-    /// Argument null validation.
+    /// <see cref="object"/> argument null validator.
     /// </summary>
     public static class ArgumentNullGuard
     {
@@ -20,7 +20,7 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>        
-        public static void ThrowIfNull([ValidatedNotNull]this object argument, string nameOfArgument)
+        public static void ThrowIfNull([ArgumentValidatedNotNull]this object argument, string nameOfArgument)
         {
             if (argument == null) 
             {

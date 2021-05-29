@@ -5,7 +5,7 @@ using System.Linq;
 namespace oehen.arguard
 {
     /// <summary>
-    /// Enumerable argument null or empty validator.
+    /// <see cref="Enumerable"/> argument validator.
     /// </summary>
     public static class ArgumentEnumerableGuard
     {
@@ -22,13 +22,13 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrEmpty<T>([ValidatedNotNull]this IEnumerable<T> argument, string nameOfArgument)
+        public static void ThrowIfIsNullOrEmpty<T>([ArgumentValidatedNotNull]this IEnumerable<T> argument, string nameOfArgument)
         {
             argument.ThrowIfNull(nameOfArgument);
             if (!argument.Any())
             {
                 throw new ArgumentNullException(nameOfArgument,
-                    ExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
+                    ArgumentExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
             }
         }
     }

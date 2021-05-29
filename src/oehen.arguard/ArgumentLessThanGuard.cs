@@ -4,7 +4,7 @@ using System.Globalization;
 namespace oehen.arguard
 {
     /// <summary>
-    /// Integer argument validation.
+    /// <see cref="int"/> argument validator.
     /// </summary>
     public static class ArgumentLessThanGuard
     {
@@ -48,7 +48,7 @@ namespace oehen.arguard
                     nameOfArgument,
                     argument,
                     string.Format(CultureInfo.CurrentCulture,
-                        ExceptionMessageResourceManager.GetMessage("ThrowIfIsLessThan"),
+                        ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfIsLessThan"),
                         compareValue));
             }
         }
@@ -93,7 +93,7 @@ namespace oehen.arguard
                     nameOfArgument,
                     argument,
                     string.Format(CultureInfo.CurrentCulture,
-                        ExceptionMessageResourceManager.GetMessage("ThrowIfIsLessOrEqualThan"),
+                        ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfIsLessOrEqualThan"),
                         compareValue));
             }
         }
