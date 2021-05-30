@@ -147,4 +147,19 @@
   <data name="ThrowIfNotTypeOf" xml:space="preserve">
     <value>Argument {0} is not type of {1}.</value>
   </data>
+  <data name="ThrowIfNotToday" xml:space="preserve">
+    <value>Argument {0} is not today.</value>
+  </data>
+  <data name="ThrowIfLessThanToday" xml:space="preserve">
+    <value>Argument {0} is later than today.</value>
+  </data>
+  <data name="ThrowIfLaterThanToday" xml:space="preserve">
+    <value>Argument {0} is less than today.</value>
+  </data>
+  <data name="ThrowIfIsLessThanNow" xml:space="preserve">
+    <value>Argument {0} is less than now.</value>
+  </data>
+  <data name="ThrowIfIsLaterThanNow" xml:space="preserve">
+    <value>Argument {0} is later than now.</value>
+  </data>
 </root>
