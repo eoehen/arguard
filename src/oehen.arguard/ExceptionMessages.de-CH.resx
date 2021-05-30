@@ -156,4 +156,10 @@
   <data name="ThrowIfLessThanToday" xml:space="preserve">
     <value>Argument {0} is später als heute.</value>
   </data>
+  <data name="ThrowIfIsLaterThanNow" xml:space="preserve">
+    <value>Argument {0} ist später als jetzt.</value>
+  </data>
+  <data name="ThrowIfIsLessThanNow" xml:space="preserve">
+    <value>Argument {0} ist früher als jetzt.</value>
+  </data>
 </root>
