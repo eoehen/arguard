@@ -23,10 +23,7 @@ namespace oehen.arguard
         public void ThrowIfIsNullOrEmpty_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsStringValue()
         {
             const string argument = "not empty value";
-            var exception = Record.Exception(() =>
-            {
-                argument.ThrowIfIsNullOrEmpty(nameof(argument));
-            });
+            var exception = Record.Exception(() => { argument.ThrowIfIsNullOrEmpty(nameof(argument)); });
             Assert.Null(exception);
         }
 
@@ -58,12 +55,8 @@ namespace oehen.arguard
         public void ThrowIfIsNullOrWhiteSpace_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsStringValue()
         {
             const string argument = "Hello";
-            var exception = Record.Exception(() =>
-            {
-                argument.ThrowIfIsNullOrWhiteSpace(nameof(argument));
-            });
+            var exception = Record.Exception(() => { argument.ThrowIfIsNullOrWhiteSpace(nameof(argument)); });
             Assert.Null(exception);
         }
-
     }
 }

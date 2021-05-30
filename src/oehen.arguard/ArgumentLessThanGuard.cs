@@ -4,18 +4,18 @@ using System.Globalization;
 namespace oehen.arguard
 {
     /// <summary>
-    /// <see cref="int"/> argument validator.
+    ///     <see cref="int" /> argument validator.
     /// </summary>
     public static class ArgumentLessThanGuard
     {
         /// <summary>
-        /// Throws an <see cref="ArgumentOutOfRangeException"/> exception if the <paramref name="argument"/> is less than 0.
+        ///     Throws an <see cref="ArgumentOutOfRangeException" /> exception if the <paramref name="argument" /> is less than 0.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        /// <para>Throws when the argument `intArgument` is less than 0.</para>
-        /// <code>
+        ///     <para>Throws when the argument `intArgument` is less than 0.</para>
+        ///     <code>
         /// <![CDATA[
         ///     intArgument.ThrowIfIsLessThanZero(nameof(intArgument));
         /// ]]>
@@ -27,14 +27,15 @@ namespace oehen.arguard
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentOutOfRangeException"/> exception if the <paramref name="argument"/> is less than <paramref name="compareValue"/>.
+        ///     Throws an <see cref="ArgumentOutOfRangeException" /> exception if the <paramref name="argument" /> is less than
+        ///     <paramref name="compareValue" />.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        /// <para>Throws when the argument `intArgument` is less than 5.</para>
-        /// <code>
+        ///     <para>Throws when the argument `intArgument` is less than 5.</para>
+        ///     <code>
         /// <![CDATA[
         ///     intArgument.ThrowIfIsLessThan(nameof(intArgument), 5);
         /// ]]>
@@ -54,13 +55,14 @@ namespace oehen.arguard
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentOutOfRangeException"/> exception if the <paramref name="argument"/> is less or equal than 0.
+        ///     Throws an <see cref="ArgumentOutOfRangeException" /> exception if the <paramref name="argument" /> is less or equal
+        ///     than 0.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        /// <para>Throws when the argument `intArgument` is less or equal than 0.</para>
-        /// <code>
+        ///     <para>Throws when the argument `intArgument` is less or equal than 0.</para>
+        ///     <code>
         /// <![CDATA[
         ///     intArgument.ThrowIfIsLessOrEqualThanZero(nameof(intArgument));
         /// ]]>
@@ -72,19 +74,20 @@ namespace oehen.arguard
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentOutOfRangeException"/> exception if the <paramref name="argument"/> is less or equal than <paramref name="compareValue"/>.
+        ///     Throws an <see cref="ArgumentOutOfRangeException" /> exception if the <paramref name="argument" /> is less or equal
+        ///     than <paramref name="compareValue" />.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        /// <para>Throws when the argument `intArgument` value is less or equal than 5.</para>
-        /// <code>
+        ///     <para>Throws when the argument `intArgument` value is less or equal than 5.</para>
+        ///     <code>
         /// <![CDATA[
         ///     intArgument.ThrowIfIsLessOrEqualThan(nameof(intArgument), 5);
         /// ]]>
         /// </code>
-        /// </example>        
+        /// </example>
         public static void ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)
         {
             if (argument <= compareValue)

@@ -12,7 +12,8 @@ namespace oehen.arguard
         [InlineData(-2)]
         [InlineData(-3)]
         [InlineData(-123456)]
-        public void ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(int argument)
+        public void ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(
+            int argument)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -40,12 +41,10 @@ namespace oehen.arguard
         [InlineData(3)]
         [InlineData(123456)]
         [InlineData(int.MaxValue)]
-        public void ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(int argument)
+        public void ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(
+            int argument)
         {
-            var exception = Record.Exception(() =>
-            {
-                argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
-            });
+            var exception = Record.Exception(() => { argument.ThrowIfIsLessOrEqualThanZero(nameof(argument)); });
             Assert.Null(exception);
         }
     }

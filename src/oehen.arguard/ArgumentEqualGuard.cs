@@ -18,7 +18,7 @@ namespace oehen.arguard
         /// <param name="compareArgument">Compare argument object.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when <paramref name="argument" /> and <paramref name="compareArgument"/> are not equal.</para>
+        ///     <para>Throws when <paramref name="argument" /> and <paramref name="compareArgument" /> are not equal.</para>
         ///     <code>
         /// <![CDATA[
         ///     argument.ThrowIfNotEqual(nameof(argument), compareArgument);

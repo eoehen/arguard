@@ -9,13 +9,14 @@ namespace oehen.arguard
     public static class ArgumentTypeGuard
     {
         /// <summary>
-        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not type of <typeparamref name="T"/>.
+        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not type of
+        ///     <typeparamref name="T" />.
         /// </summary>
         /// <typeparam name="T">Expected argument type.</typeparam>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when <paramref name="argument"/> is not type of <typeparamref name="T"/>.</para>
+        ///     <para>Throws when <paramref name="argument" /> is not type of <typeparamref name="T" />.</para>
         ///     <code>
         /// <![CDATA[
         ///     argument.ThrowIfNotTypeOf<T>(nameof(argument));
@@ -33,14 +34,15 @@ namespace oehen.arguard
         }
 
         /// <summary>
-        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not type of <paramref name="type"/>.
+        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not type of
+        ///     <paramref name="type" />.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="type">Compare type.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <exception cref="InvalidOperationException"></exception>
         /// <example>
-        ///     <para>Throws when <paramref name="argument"/> is not type of <paramref name="type"/>.</para>
+        ///     <para>Throws when <paramref name="argument" /> is not type of <paramref name="type" />.</para>
         ///     <code>
         /// <![CDATA[
         ///     argument.ThrowIfNotTypeOf(nameof(argument), typeof(String));

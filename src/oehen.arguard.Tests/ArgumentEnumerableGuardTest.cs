@@ -26,10 +26,7 @@ namespace oehen.arguard
             {
                 "entry one"
             };
-            var exception = Record.Exception(() =>
-            {
-                argument.ThrowIfIsNullOrEmpty(nameof(argument));
-            });
+            var exception = Record.Exception(() => { argument.ThrowIfIsNullOrEmpty(nameof(argument)); });
             Assert.Null(exception);
         }
 
@@ -42,12 +39,8 @@ namespace oehen.arguard
                 "entry two",
                 "entry three"
             };
-            var exception = Record.Exception(() =>
-            {
-                argument.ThrowIfIsNullOrEmpty(nameof(argument));
-            });
+            var exception = Record.Exception(() => { argument.ThrowIfIsNullOrEmpty(nameof(argument)); });
             Assert.Null(exception);
         }
-
     }
 }

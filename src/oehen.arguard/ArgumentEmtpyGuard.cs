@@ -3,24 +3,24 @@
 namespace oehen.arguard
 {
     /// <summary>
-    /// <see cref="object"/> argument validator.
+    ///     <see cref="object" /> argument validator.
     /// </summary>
     public static class ArgumentEmtpyGuard
     {
         /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the <paramref name="argument"/> is null or empty.
+        ///     Throws an <see cref="ArgumentNullException" /> if the <paramref name="argument" /> is null or empty.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        /// <para>How to validate argument `stringArgument`.</para>
-        /// <code>
+        ///     <para>How to validate argument `stringArgument`.</para>
+        ///     <code>
         /// <![CDATA[
         ///     stringArgument.ThrowIfIsNullOrEmpty(nameof(stringArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrEmpty([ArgumentValidatedNotNull]this string argument, string nameOfArgument)
+        public static void ThrowIfIsNullOrEmpty([ArgumentValidatedNotNull] this string argument, string nameOfArgument)
         {
             if (string.IsNullOrEmpty(argument))
             {
@@ -30,19 +30,20 @@ namespace oehen.arguard
         }
 
         /// <summary>
-        /// Throws an <see cref="ArgumentNullException"/> if the <paramref name="argument"/> is null or whitespace.
+        ///     Throws an <see cref="ArgumentNullException" /> if the <paramref name="argument" /> is null or whitespace.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        /// <para>How to validate argument `stringArgument`.</para>
-        /// <code>
+        ///     <para>How to validate argument `stringArgument`.</para>
+        ///     <code>
         /// <![CDATA[
         ///     stringArgument.ThrowIfIsNullOrWhiteSpace(nameof(stringArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrWhiteSpace([ArgumentValidatedNotNull]this string argument, string nameOfArgument)
+        public static void ThrowIfIsNullOrWhiteSpace([ArgumentValidatedNotNull] this string argument,
+            string nameOfArgument)
         {
             if (string.IsNullOrWhiteSpace(argument))
             {
