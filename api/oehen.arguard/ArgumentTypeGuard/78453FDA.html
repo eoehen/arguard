@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentLessThanGuard Class</title>
+        <title>oehen.arguard - API - ArgumentTypeGuard.ThrowIfNotTypeOf&lt;T&gt;(object, string) Method</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -73,8 +73,10 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Methods">Methods</a></p>
-<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#TypeParameters">Type Parameters</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -135,17 +137,12 @@
                         
 			<li class="header">Namespace</li>
 		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
+		<li class="header">Type</li>
+		<li><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEqualGuard">ArgumentEqualGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a></li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentLessThanGuard">Argument<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></li>
+			<li class="header">Method Members</li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard/78453FDA">ThrowIfNotTypeOf<wbr>&lt;T&gt;<wbr><wbr>(object, <wbr>string)<wbr></a></li>
+				<li><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard/AA1B2AF1">ThrowIfNotTypeOf<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>Type, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -160,154 +157,103 @@
 
 
 <section class="content-header">
-	<h1>Argument<wbr>Less<wbr>Than<wbr>Guard <small>Class</small></h1>
+			<h3><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a>.</h3>
+	<h1>ThrowIfNotTypeOf<wbr>&lt;T&gt;<wbr><wbr>(object, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    <code class="cs">System.Int32</code> argument validator.
+        Throws an <code class="cs">System.InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is not type of <span name="T" class="typeparamref">T</span>.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-
-								<dt>Namespace</dt>
-								<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph BT
-	Type--&gt;Base0["object"]
-	Type["ArgumentLessThanGuard"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						
+						<dt>Namespace</dt>
+						<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></dd>		
+					
+				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentLessThanGuard</code></pre>
+	<pre><code>public static void ThrowIfNotTypeOf&lt;T&gt;(this object argument, string nameOfArgument)</code></pre>
 
-
-
-
-
-
-
-
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLessThanGuard/F798E226">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>(int, <wbr>int, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less or equal than <span name="compareValue" class="paramref">compareValue</span>.
+	<h1 id="Examples">Examples</h1>
+	<div>
+        <p>Throws when <span name="argument" class="paramref">argument</span> is not type of <span name="T" class="typeparamref">T</span>.</p>
+        <pre><code class="cs">argument.ThrowIfNotTypeOf&lt;T&gt;(nameof(argument));</code></pre>
     </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLessThanGuard/A9BD2D33">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>Zero<wbr>(int, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less or equal than 0.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLessThanGuard/91AB455A">ThrowIfIsLessThan<wbr>(int, <wbr>int, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than <span name="compareValue" class="paramref">compareValue</span>.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLessThanGuard/B758CAC3">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Than<wbr>Zero<wbr>(int, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than 0.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 
-			<h1 id="ExtensionMethods">Extension Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard/78453FDA">ThrowIfNotTypeOf<wbr>&lt;T&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is not type of <span name="T" class="typeparamref">T</span>.
-    </div>
-										<div><small><em>From <a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentNullGuard/7688537C">ThrowIfNull<wbr>(string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-    Throws an <code class="cs">System.ArgumentNullException</code> if <span name="argument" class="paramref">argument</span> is null.
-    </div>
-										<div><small><em>From <a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
+
+	<h1 id="TypeParameters">Type Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr id="typeparam-T">
+						<td>T</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>argument</td>
+						<td>object</td>
+						<td>Argument value.</td>
+					</tr>
+					<tr>
+						<td>nameOfArgument</td>
+						<td>string</td>
+						<td>Name of the argument.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
 
 	
 </section>
