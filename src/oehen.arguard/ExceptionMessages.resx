@@ -141,4 +141,10 @@
   <data name="ThrowIfDirectoryNotExists" xml:space="preserve">
     <value>Directory path argument {0} not found.</value>
   </data>
+  <data name="ThrowIfNotEqual" xml:space="preserve">
+    <value>Argument {0} is not equal to compare argument.</value>
+  </data>
+  <data name="ThrowIfNotTypeOf" xml:space="preserve">
+    <value>Argument {0} is not type of {1}.</value>
+  </data>
 </root>

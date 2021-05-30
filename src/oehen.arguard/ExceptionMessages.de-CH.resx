@@ -141,4 +141,10 @@
   <data name="ThrowIfDirectoryNotExists" xml:space="preserve">
     <value>Ordner Pfad Argument {0} nicht gefunden.</value>
   </data>
+  <data name="ThrowIfNotEqual" xml:space="preserve">
+    <value>Argument {0} ist nicht dem Vergleichsargument.</value>
+  </data>
+  <data name="ThrowIfNotTypeOf" xml:space="preserve">
+    <value>Argument {0} ist kein {1} Datentyp.</value>
+  </data>
 </root>
