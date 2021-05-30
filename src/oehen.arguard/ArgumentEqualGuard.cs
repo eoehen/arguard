@@ -10,7 +10,7 @@ namespace oehen.arguard
     {
         /// <summary>
         ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not equal
-        ///     <param name="compareArgument"></param>
+        ///     <paramref name="compareArgument"></paramref>
         ///     .
         /// </summary>
         /// <typeparam name="T">Generic argument type.</typeparam>
