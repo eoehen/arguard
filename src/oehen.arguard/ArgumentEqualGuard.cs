@@ -9,13 +9,13 @@ namespace oehen.arguard
     public static class ArgumentEqualGuard
     {
         /// <summary>
-        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not equal <param name="compareArgument"></param>.
+        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not equal <paramref name="compareArgument"/>.
         /// </summary>
         /// <param name="argument">Argument value.</param>
-        /// <param name="compareArgument">Compare object.</param>
+        /// <param name="compareArgument">Compare argument object.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the argument `argument` and `compareArgument` are not equal.</para>
+        ///     <para>Throws when <paramref name="argument" /> and <paramref name="compareArgument"/> are not equal.</para>
         ///     <code>
         /// <![CDATA[
         ///     argument.ThrowIfNotEqual(nameof(argument), compareArgument);
