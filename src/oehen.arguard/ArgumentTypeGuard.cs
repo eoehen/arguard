@@ -11,6 +11,7 @@ namespace oehen.arguard
         /// <summary>
         ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not type of <typeparamref name="T"/>.
         /// </summary>
+        /// <typeparam name="T">Expected argument type.</typeparam>
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
@@ -30,14 +31,13 @@ namespace oehen.arguard
                     nameOfArgument, typeof(T).Name));
             }
         }
-        
+
         /// <summary>
         ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not type of <paramref name="type"/>.
         /// </summary>
         /// <param name="argument">Argument value.</param>
         /// <param name="type">Compare type.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
-        /// <typeparam name="T"></typeparam>
         /// <exception cref="InvalidOperationException"></exception>
         /// <example>
         ///     <para>Throws when <paramref name="argument"/> is not type of <paramref name="type"/>.</para>
