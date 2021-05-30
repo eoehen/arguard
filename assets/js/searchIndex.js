@@ -53,6 +53,20 @@ var searchModule = function() {
     a(
         {
             id:1,
+            title:"ArgumentTypeGuard",
+            content:"ArgumentTypeGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentTypeGuard',
+            title:"ArgumentTypeGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
             title:"ArgumentNullGuard",
             content:"ArgumentNullGuard",
             description:'',
@@ -66,49 +80,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:2,
-            title:"ArgumentEqualGuard",
-            content:"ArgumentEqualGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEqualGuard',
-            title:"ArgumentEqualGuard",
-            description:""
-        }
-    );
-    a(
-        {
             id:3,
-            title:"ArgumentEnumerableGuard",
-            content:"ArgumentEnumerableGuard",
+            title:"ArgumentFilePathGuard",
+            content:"ArgumentFilePathGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
-            title:"ArgumentEnumerableGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentFilePathGuard',
+            title:"ArgumentFilePathGuard",
             description:""
         }
     );
     a(
         {
             id:4,
-            title:"ArgumentLessThanGuard",
-            content:"ArgumentLessThanGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
-            title:"ArgumentLessThanGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:5,
             title:"ArgumentBooleanGuard",
             content:"ArgumentBooleanGuard",
             description:'',
@@ -122,15 +108,29 @@ var searchModule = function() {
     );
     a(
         {
-            id:6,
-            title:"ArgumentTypeGuard",
-            content:"ArgumentTypeGuard",
+            id:5,
+            title:"ArgumentLessThanGuard",
+            content:"ArgumentLessThanGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentTypeGuard',
-            title:"ArgumentTypeGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
+            title:"ArgumentLessThanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:6,
+            title:"ArgumentEqualGuard",
+            content:"ArgumentEqualGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentEqualGuard',
+            title:"ArgumentEqualGuard",
             description:""
         }
     );
@@ -151,14 +151,14 @@ var searchModule = function() {
     a(
         {
             id:8,
-            title:"ArgumentFilePathGuard",
-            content:"ArgumentFilePathGuard",
+            title:"ArgumentEnumerableGuard",
+            content:"ArgumentEnumerableGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentFilePathGuard',
-            title:"ArgumentFilePathGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentEnumerableGuard',
+            title:"ArgumentEnumerableGuard",
             description:""
         }
     );
