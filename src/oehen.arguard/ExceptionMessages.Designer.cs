@@ -124,11 +124,38 @@ namespace oehen.arguard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Argument {0} is less than today..
+        /// </summary>
+        internal static string ThrowIfLaterThanToday {
+            get {
+                return ResourceManager.GetString("ThrowIfLaterThanToday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument {0} is later than today..
+        /// </summary>
+        internal static string ThrowIfLessThanToday {
+            get {
+                return ResourceManager.GetString("ThrowIfLessThanToday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Argument {0} is not equal to compare argument..
         /// </summary>
         internal static string ThrowIfNotEqual {
             get {
                 return ResourceManager.GetString("ThrowIfNotEqual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Argument {0} is not today..
+        /// </summary>
+        internal static string ThrowIfNotToday {
+            get {
+                return ResourceManager.GetString("ThrowIfNotToday", resourceCulture);
             }
         }
         
