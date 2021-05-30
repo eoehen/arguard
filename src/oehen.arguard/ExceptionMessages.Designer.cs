@@ -124,6 +124,15 @@ namespace oehen.arguard {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Argument {0} is not equal to compare argument..
+        /// </summary>
+        internal static string ThrowIfNotEqual {
+            get {
+                return ResourceManager.GetString("ThrowIfNotEqual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Argument is true..
         /// </summary>
         internal static string ThrowIfTrue {
