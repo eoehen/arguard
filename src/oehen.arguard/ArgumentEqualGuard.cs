@@ -9,8 +9,11 @@ namespace oehen.arguard
     public static class ArgumentEqualGuard
     {
         /// <summary>
-        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not equal <paramref name="compareArgument"/>.
+        ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is not equal
+        ///     <param name="compareArgument"></param>
+        ///     .
         /// </summary>
+        /// <typeparam name="T">Generic argument type.</typeparam>
         /// <param name="argument">Argument value.</param>
         /// <param name="compareArgument">Compare argument object.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
