@@ -67,34 +67,6 @@ var searchModule = function() {
     a(
         {
             id:2,
-            title:"ArgumentBooleanGuard",
-            content:"ArgumentBooleanGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
-            title:"ArgumentBooleanGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
-            title:"ArgumentDirectoryPathGuard",
-            content:"ArgumentDirectoryPathGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard',
-            title:"ArgumentDirectoryPathGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:4,
             title:"ArgumentNullGuard",
             content:"ArgumentNullGuard",
             description:'',
@@ -108,7 +80,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:5,
+            id:3,
             title:"ArgumentFilePathGuard",
             content:"ArgumentFilePathGuard",
             description:'',
@@ -122,7 +94,49 @@ var searchModule = function() {
     );
     a(
         {
+            id:4,
+            title:"ArgumentEqualGuard",
+            content:"ArgumentEqualGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentEqualGuard',
+            title:"ArgumentEqualGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"ArgumentBooleanGuard",
+            content:"ArgumentBooleanGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
+            title:"ArgumentBooleanGuard",
+            description:""
+        }
+    );
+    a(
+        {
             id:6,
+            title:"ArgumentDirectoryPathGuard",
+            content:"ArgumentDirectoryPathGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard',
+            title:"ArgumentDirectoryPathGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:7,
             title:"ArgumentLessThanGuard",
             content:"ArgumentLessThanGuard",
             description:'',
