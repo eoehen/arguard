@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentDirectoryPathGuard Class</title>
+        <title>oehen.arguard - API - ArgumentDateTimeNowGuard Class</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -138,9 +138,9 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard">Argument<wbr>Date<wbr>Time<wbr>Now<wbr>Guard</a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard">Argument<wbr>Date<wbr>Time<wbr>Now<wbr>Guard</a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard">Argument<wbr>Date<wbr>Time<wbr>Today<wbr>Guard</a></li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
+				<li><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentEqualGuard">ArgumentEqualGuard</a></li>
@@ -162,14 +162,14 @@
 
 
 <section class="content-header">
-	<h1>Argument<wbr>Directory<wbr>Path<wbr>Guard <small>Class</small></h1>
+	<h1>Argument<wbr>Date<wbr>Time<wbr>Now<wbr>Guard <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-        Argument directory path validator.
+        Argument <code class="cs">System.DateTime.Now</code> validator.
     </div>
 
 		<div class="panel panel-default">
@@ -196,7 +196,7 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["object"]
-	Type["ArgumentDirectoryPathGuard"]
+	Type["ArgumentDateTimeNowGuard"]
 class Type type-node
 
 						</div>
@@ -206,7 +206,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentDirectoryPathGuard</code></pre>
+	<pre><code>public static class ArgumentDateTimeNowGuard</code></pre>
 
 
 
@@ -230,12 +230,23 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard/2740CBEA">Throw<wbr>If<wbr>Directory<wbr>Not<wbr>Exists<wbr>(string, <wbr>string)<wbr></a></td>
+								<td><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard/4EDBBB61">Throw<wbr>If<wbr>Is<wbr>Later<wbr>Than<wbr>Now<wbr>(DateTime, <wbr>string)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
-        Throws an <code class="cs">System.IO.DirectoryNotFoundException</code> if directory path in <span name="directoryPath" class="paramref">directoryPath</span> not
-        exists.
+        Throws an <code class="cs">System.InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is
+        later than<code class="cs">System.DateTime.Now</code>.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard/CA6094FE">ThrowIfIsLessThanNow<wbr>(DateTime, <wbr>string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+        Throws an <code class="cs">System.InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is
+        less than<code class="cs">System.DateTime.Now</code>.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
