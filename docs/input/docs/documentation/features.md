@@ -14,10 +14,11 @@ This library supports parameter validation for the follow data types:
 * Null or empty validation for enumeration data types.
 * True or false validation for boolean data types.
 * File or directory path validation.
+* DateTime now and today validation.
 
 # Supported frameworks:
 
-This library is based on the target framework .NET Standard 2.0 and 2.1.
+This library is based on the target framework .NET Standard 2.0.
 
 [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
 
