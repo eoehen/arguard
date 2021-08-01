@@ -3,7 +3,7 @@
 namespace oehen.arguard
 {
     /// <summary>
-    ///     <see cref="object" /> argument validator.
+    ///     <see cref="string"/>> argument validator.
     /// </summary>
     public static class ArgumentEmtpyGuard
     {
