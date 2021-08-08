@@ -20,7 +20,8 @@ ToolSettings.SetToolSettings(
     dupFinderExcludePattern: new string[] 
     {
         BuildParameters.RootDirectoryPath + "/src/oehen.arguard.Tests/*.cs",
-        BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs" 
+        BuildParameters.RootDirectoryPath + "/src/oehen.arguard.Tests/obj/**/*.*",
+        BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs",
     },
     testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[*.Tests]* -[*.example]*",
     testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
