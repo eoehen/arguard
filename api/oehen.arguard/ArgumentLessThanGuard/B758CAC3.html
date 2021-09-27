@@ -184,12 +184,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void ThrowIfIsLessThanZero(this int argument, string nameOfArgument)</code></pre>
+	<pre><code>public static int ThrowIfIsLessThanZero(this int argument, string nameOfArgument)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
         <p>Throws when the argument `intArgument` is less than 0.</p>
-        <pre><code class="cs">intArgument.ThrowIfIsLessThanZero(nameof(intArgument));</code></pre>
+        <pre><code class="cs">var localVar = intArgument.ThrowIfIsLessThanZero(nameof(intArgument));</code></pre>
     </div>
 
 
@@ -231,7 +231,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>int</td>
 					<td></td>
 				</tr>
 			</tbody></table>

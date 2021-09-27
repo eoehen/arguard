@@ -182,12 +182,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void ThrowIfIsNullOrEmpty&lt;T&gt;(this IEnumerable&lt;T&gt; argument, string nameOfArgument)</code></pre>
+	<pre><code>public static IEnumerable&lt;T&gt; ThrowIfIsNullOrEmpty&lt;T&gt;(this IEnumerable&lt;T&gt; argument, string nameOfArgument)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
         <p>How to validate argument `enumerableArgument`.</p>
-        <pre><code class="cs">enumerableArgument.ThrowIfIsNullOrEmpty(nameof(enumerableArgument));</code></pre>
+        <pre><code class="cs">var localVar = enumerableArgument.ThrowIfIsNullOrEmpty(nameof(enumerableArgument));</code></pre>
     </div>
 
 
@@ -246,7 +246,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
 					<td></td>
 				</tr>
 			</tbody></table>

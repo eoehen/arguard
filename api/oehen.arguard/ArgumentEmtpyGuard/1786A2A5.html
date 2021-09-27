@@ -182,12 +182,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void ThrowIfIsNullOrEmpty(this string argument, string nameOfArgument)</code></pre>
+	<pre><code>public static string ThrowIfIsNullOrEmpty(this string argument, string nameOfArgument)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
         <p>How to validate argument `stringArgument`.</p>
-        <pre><code class="cs">stringArgument.ThrowIfIsNullOrEmpty(nameof(stringArgument));</code></pre>
+        <pre><code class="cs">var localVar = stringArgument.ThrowIfIsNullOrEmpty(nameof(stringArgument));</code></pre>
     </div>
 
 
@@ -229,7 +229,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>string</td>
 					<td></td>
 				</tr>
 			</tbody></table>

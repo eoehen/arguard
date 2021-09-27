@@ -185,12 +185,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static void ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)</code></pre>
+	<pre><code>public static int ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
         <p>Throws when the argument `intArgument` is less than 5.</p>
-        <pre><code class="cs">intArgument.ThrowIfIsLessThan(nameof(intArgument), 5);</code></pre>
+        <pre><code class="cs">var localVar = intArgument.ThrowIfIsLessThan(nameof(intArgument), 5);</code></pre>
     </div>
 
 
@@ -237,7 +237,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>void</td>
+					<td>int</td>
 					<td></td>
 				</tr>
 			</tbody></table>
