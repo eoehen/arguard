@@ -18,11 +18,11 @@ namespace oehen.arguard
         ///     <para>Throws when the directory path in `argument` not exists.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfDirectoryNotExists(nameof(argument));
+        ///     var localVar = argument.ThrowIfDirectoryNotExists(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfDirectoryNotExists(this string directoryPath, string nameOfArgument)
+        public static string ThrowIfDirectoryNotExists(this string directoryPath, string nameOfArgument)
         {
             if (!Directory.Exists(directoryPath))
             {
@@ -30,6 +30,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfDirectoryNotExists"),
                     nameOfArgument));
             }
+
+            return directoryPath;
         }
     }
 }

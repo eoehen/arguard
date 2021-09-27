@@ -21,11 +21,11 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> and <paramref name="compareArgument" /> are not equal.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfNotEqual(nameof(argument), compareArgument);
+        ///     var localVar = argument.ThrowIfNotEqual(nameof(argument), compareArgument);
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfNotEqual<T>(this T argument, T compareArgument, string nameOfArgument)
+        public static T ThrowIfNotEqual<T>(this T argument, T compareArgument, string nameOfArgument)
         {
             if (!argument.Equals(compareArgument))
             {
@@ -33,6 +33,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfNotEqual"),
                     nameOfArgument));
             }
+
+            return argument;
         }
     }
 }

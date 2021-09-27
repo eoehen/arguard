@@ -20,6 +20,8 @@ public void ExampleMethodWithoutArguard(object foo)
         throw new ArgumentNullException();
     }
 
+    this.localVar = foo;
+
     // ...
 }
 ```
@@ -31,7 +33,7 @@ Example argument validation with oehen.arguard library:
 ```csharp
 public void ExampleMethodWithArguard(object foo)
 {
-    foo.ThrowIfNull(nameof(foo));
+    this.localVar = foo.ThrowIfNull(nameof(foo));
 
     // ...
 }

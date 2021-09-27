@@ -16,17 +16,19 @@ namespace oehen.arguard
         ///     <para>How to validate argument `stringArgument`.</para>
         ///     <code>
         /// <![CDATA[
-        ///     stringArgument.ThrowIfIsNullOrEmpty(nameof(stringArgument));
+        ///     var localVar = stringArgument.ThrowIfIsNullOrEmpty(nameof(stringArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrEmpty([ArgumentValidatedNotNull] this string argument, string nameOfArgument)
+        public static string ThrowIfIsNullOrEmpty([ArgumentValidatedNotNull] this string argument, string nameOfArgument)
         {
             if (string.IsNullOrEmpty(argument))
             {
                 throw new ArgumentNullException(nameOfArgument,
                     ArgumentExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
             }
+
+            return argument;
         }
 
         /// <summary>
@@ -38,11 +40,11 @@ namespace oehen.arguard
         ///     <para>How to validate argument `stringArgument`.</para>
         ///     <code>
         /// <![CDATA[
-        ///     stringArgument.ThrowIfIsNullOrWhiteSpace(nameof(stringArgument));
+        ///     var localVar = stringArgument.ThrowIfIsNullOrWhiteSpace(nameof(stringArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrWhiteSpace([ArgumentValidatedNotNull] this string argument,
+        public static string ThrowIfIsNullOrWhiteSpace([ArgumentValidatedNotNull] this string argument,
             string nameOfArgument)
         {
             if (string.IsNullOrWhiteSpace(argument))
@@ -50,6 +52,8 @@ namespace oehen.arguard
                 throw new ArgumentNullException(nameOfArgument,
                     ArgumentExceptionMessageResourceManager.GetMessage("ArgumentNullOrWhitespace"));
             }
+
+            return argument;
         }
     }
 }

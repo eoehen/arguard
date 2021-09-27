@@ -17,11 +17,11 @@ namespace oehen.arguard
         ///     <para>Throws when the file path in `argument` not exists.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfFileNotExists(nameof(argument));
+        ///     var localVar = argument.ThrowIfFileNotExists(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfFileNotExists(this string filePath, string nameOfArgument)
+        public static string ThrowIfFileNotExists(this string filePath, string nameOfArgument)
         {
             if (!File.Exists(filePath))
             {
@@ -29,6 +29,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfFileNotExists"),
                     nameOfArgument), filePath);
             }
+
+            return filePath;
         }
     }
 }

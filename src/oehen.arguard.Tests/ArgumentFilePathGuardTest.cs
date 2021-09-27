@@ -42,5 +42,14 @@ namespace oehen.arguard
             Action act = () => argument.ThrowIfFileNotExists(nameof(argument));
             act.Should().NotThrow<FileNotFoundException>();
         }
+        
+        [Fact]
+        public void
+            ArgumentFilePathGuardTest_ThrowIfFileNotExists_When_FilePath_Exists_Then_Should_Return_ArgumentValue()
+        {
+            const string argument = @"./testfiles/ArgumentFilePathTestFile.txt";
+            var result = argument.ThrowIfFileNotExists(nameof(argument));
+            result.Should().Be(argument);
+        }
     }
 }
