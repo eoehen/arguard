@@ -19,18 +19,20 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> is not type of <typeparamref name="T" />.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfNotTypeOf<T>(nameof(argument));
+        ///     var localVar = argument.ThrowIfNotTypeOf<T>(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfNotTypeOf<T>(this object argument, string nameOfArgument)
+        public static T ThrowIfNotTypeOf<T>(this object argument, string nameOfArgument)
         {
-            if (!(argument is T))
+            if (!(argument is T typedArgument))
             {
                 throw new InvalidOperationException(string.Format(CultureInfo.CurrentCulture,
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfNotTypeOf"),
                     nameOfArgument, typeof(T).Name));
             }
+
+            return typedArgument;
         }
 
         /// <summary>
@@ -45,11 +47,11 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> is not type of <paramref name="type" />.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfNotTypeOf(nameof(argument), typeof(String));
+        ///     var localVar = argument.ThrowIfNotTypeOf(nameof(argument), typeof(String));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfNotTypeOf<T>(this T argument, Type type, string nameOfArgument)
+        public static T ThrowIfNotTypeOf<T>(this T argument, Type type, string nameOfArgument)
         {
             if (typeof(T) != type)
             {
@@ -57,6 +59,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfNotTypeOf"),
                     nameOfArgument, typeof(T).Name));
             }
+
+            return argument;
         }
     }
 }

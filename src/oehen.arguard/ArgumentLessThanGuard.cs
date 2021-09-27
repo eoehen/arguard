@@ -17,13 +17,13 @@ namespace oehen.arguard
         ///     <para>Throws when the argument `intArgument` is less than 0.</para>
         ///     <code>
         /// <![CDATA[
-        ///     intArgument.ThrowIfIsLessThanZero(nameof(intArgument));
+        ///     var localVar = intArgument.ThrowIfIsLessThanZero(nameof(intArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLessThanZero(this int argument, string nameOfArgument)
+        public static int ThrowIfIsLessThanZero(this int argument, string nameOfArgument)
         {
-            argument.ThrowIfIsLessThan(0, nameOfArgument);
+            return argument.ThrowIfIsLessThan(0, nameOfArgument);
         }
 
         /// <summary>
@@ -37,11 +37,11 @@ namespace oehen.arguard
         ///     <para>Throws when the argument `intArgument` is less than 5.</para>
         ///     <code>
         /// <![CDATA[
-        ///     intArgument.ThrowIfIsLessThan(nameof(intArgument), 5);
+        ///     var localVar = intArgument.ThrowIfIsLessThan(nameof(intArgument), 5);
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)
+        public static int ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)
         {
             if (argument < compareValue)
             {
@@ -52,6 +52,7 @@ namespace oehen.arguard
                         ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfIsLessThan"),
                         compareValue));
             }
+            return argument;
         }
 
         /// <summary>
@@ -64,13 +65,13 @@ namespace oehen.arguard
         ///     <para>Throws when the argument `intArgument` is less or equal than 0.</para>
         ///     <code>
         /// <![CDATA[
-        ///     intArgument.ThrowIfIsLessOrEqualThanZero(nameof(intArgument));
+        ///     var localVar = .ThrowIfIsLessOrEqualThanZero(nameof(intArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLessOrEqualThanZero(this int argument, string nameOfArgument)
+        public static int ThrowIfIsLessOrEqualThanZero(this int argument, string nameOfArgument)
         {
-            argument.ThrowIfIsLessOrEqualThan(0, nameOfArgument);
+            return argument.ThrowIfIsLessOrEqualThan(0, nameOfArgument);
         }
 
         /// <summary>
@@ -84,11 +85,11 @@ namespace oehen.arguard
         ///     <para>Throws when the argument `intArgument` value is less or equal than 5.</para>
         ///     <code>
         /// <![CDATA[
-        ///     intArgument.ThrowIfIsLessOrEqualThan(nameof(intArgument), 5);
+        ///     var localVar = intArgument.ThrowIfIsLessOrEqualThan(nameof(intArgument), 5);
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)
+        public static int ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)
         {
             if (argument <= compareValue)
             {
@@ -99,6 +100,8 @@ namespace oehen.arguard
                         ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfIsLessOrEqualThan"),
                         compareValue));
             }
+
+            return argument;
         }
     }
 }

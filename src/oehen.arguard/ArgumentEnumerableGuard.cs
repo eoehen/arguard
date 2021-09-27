@@ -18,19 +18,22 @@ namespace oehen.arguard
         ///     <para>How to validate argument `enumerableArgument`.</para>
         ///     <code>
         /// <![CDATA[
-        ///     enumerableArgument.ThrowIfIsNullOrEmpty(nameof(enumerableArgument));
+        ///     var localVar = enumerableArgument.ThrowIfIsNullOrEmpty(nameof(enumerableArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNullOrEmpty<T>([ArgumentValidatedNotNull] this IEnumerable<T> argument,
+        public static IEnumerable<T> ThrowIfIsNullOrEmpty<T>([ArgumentValidatedNotNull] this IEnumerable<T> argument,
             string nameOfArgument)
         {
-            argument.ThrowIfNull(nameOfArgument);
-            if (!argument.Any())
+            var argumentAsArray = argument.ToArray();
+            argumentAsArray.ThrowIfNull(nameOfArgument);
+            if (!argumentAsArray.Any())
             {
                 throw new ArgumentNullException(nameOfArgument,
                     ArgumentExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));
             }
+
+            return argumentAsArray;
         }
     }
 }

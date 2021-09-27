@@ -20,7 +20,7 @@ namespace oehen.arguard
         }
 
         [Fact]
-        public void NotThrowException_If_IEnumerableHasOneEntry()
+        public void ThrowIfIsNullOrEmpty_When_IEnumerable_Has_One_Entry_Should_Not_Throw_ArgumentException()
         {
             IEnumerable<string> argument = new List<string>
             {
@@ -31,7 +31,18 @@ namespace oehen.arguard
         }
 
         [Fact]
-        public void NotThrowException_If_IEnumerableHasManyEntry()
+        public void ThrowIfIsNullOrEmpty_When_IEnumerable_Has_One_Entry_Should_Return_ArgumentValue()
+        {
+            IEnumerable<string> argument = new List<string>
+            {
+                "entry one"
+            };
+            var result = argument.ThrowIfIsNullOrEmpty(nameof(argument));
+            result.Should().BeEquivalentTo(argument);
+        }
+        
+        [Fact]
+        public void ThrowIfIsNullOrEmpty_When_IEnumerable_Has_Many_Entries_Should_Not_Throw_ArgumentException()
         {
             IEnumerable<string> argument = new List<string>
             {
@@ -41,6 +52,19 @@ namespace oehen.arguard
             };
             var exception = Record.Exception(() => { argument.ThrowIfIsNullOrEmpty(nameof(argument)); });
             Assert.Null(exception);
+        }
+        
+        [Fact]
+        public void ThrowIfIsNullOrEmpty_When_IEnumerable_Has_Many_Entries_Should_Return_ArgumentValue()
+        {
+            IEnumerable<string> argument = new List<string>
+            {
+                "entry one",
+                "entry two",
+                "entry three"
+            };
+            var result = argument.ThrowIfIsNullOrEmpty(nameof(argument));
+            result.Should().BeEquivalentTo(argument);
         }
     }
 }

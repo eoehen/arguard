@@ -18,7 +18,7 @@ This library supports parameter validation for the follow data types:
 
 # Supported frameworks:
 
-This library is based on the target framework .NET Standard 2.0.
+This library is based on the target framework .NET Standard 2.0 and .NET Standard 2.1.
 
 [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
 

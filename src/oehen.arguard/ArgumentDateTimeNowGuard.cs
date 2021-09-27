@@ -18,11 +18,11 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> is less than <see cref="DateTime.Now"/>.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfIsLessThanNow(nameof(argument));
+        ///     var localVar = argument.ThrowIfIsLessThanNow(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLessThanNow(this DateTime argument, string nameOfArgument)
+        public static DateTime ThrowIfIsLessThanNow(this DateTime argument, string nameOfArgument)
         {
             if (argument.Date < DateTime.Now)
             {
@@ -30,6 +30,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfIsLessThanNow"),
                     nameOfArgument));
             }
+
+            return argument;
         }
         
         /// <summary>
@@ -42,11 +44,11 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> is later than <see cref="DateTime.Now"/>.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfIsLaterThanNow(nameof(argument));
+        ///     var localVar = argument.ThrowIfIsLaterThanNow(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLaterThanNow(this DateTime argument, string nameOfArgument)
+        public static DateTime ThrowIfIsLaterThanNow(this DateTime argument, string nameOfArgument)
         {
             if (argument.Date > DateTime.Now)
             {
@@ -54,6 +56,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfIsLaterThanNow"),
                     nameOfArgument));
             }
+
+            return argument;
         }
     }
 }
