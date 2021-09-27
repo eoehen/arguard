@@ -15,7 +15,17 @@ namespace oehen.arguard
             Action act = () => argument.ThrowIfNotEqual(compareValue, nameof(argument));
             act.Should().NotThrow<InvalidOperationException>();
         }
-
+        
+        [Fact]
+        public void
+            ThrowIfNotEqual_When_String_Argument_Is_Same_As_CompareArgument_Should_Return_ArgumentValue()
+        {
+            var argument = "xxxxx";
+            var compareValue = argument;
+            var result = argument.ThrowIfNotEqual(compareValue, nameof(argument));
+            result.Should().Be(argument);
+        }
+        
         [Fact]
         public void
             ThrowIfNotEqual_When_String_Argument_Is_Not_Same_As_CompareArgument_Should_Throw_InvalidOperationException()

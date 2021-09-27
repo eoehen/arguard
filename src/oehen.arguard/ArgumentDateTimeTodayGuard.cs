@@ -18,11 +18,11 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> is not <see cref="DateTime.Today"/>.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfNotToday(nameof(argument));
+        ///     var localVar = argument.ThrowIfNotToday(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsNotToday(this DateTime argument, string nameOfArgument)
+        public static DateTime ThrowIfIsNotToday(this DateTime argument, string nameOfArgument)
         {
             if (argument.Date != DateTime.Today)
             {
@@ -30,6 +30,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfNotToday"),
                     nameOfArgument));
             }
+
+            return argument;
         }
         
         /// <summary>
@@ -42,11 +44,11 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> is less than <see cref="DateTime.Today"/>.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfLessThanToday(nameof(argument));
+        ///     var localVar = argument.ThrowIfLessThanToday(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLessThanToday(this DateTime argument, string nameOfArgument)
+        public static DateTime ThrowIfIsLessThanToday(this DateTime argument, string nameOfArgument)
         {
             if (argument.Date < DateTime.Today)
             {
@@ -54,8 +56,10 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfLessThanToday"),
                     nameOfArgument));
             }
+
+            return argument;
         }
-        
+
         /// <summary>
         ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is
         ///     later than<see cref="DateTime.Today"/>.
@@ -66,11 +70,11 @@ namespace oehen.arguard
         ///     <para>Throws when <paramref name="argument" /> is later than <see cref="DateTime.Today"/>.</para>
         ///     <code>
         /// <![CDATA[
-        ///     argument.ThrowIfNotLaterThanToday(nameof(argument));
+        ///     var localVar = argument.ThrowIfNotLaterThanToday(nameof(argument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfIsLaterThanToday(this DateTime argument, string nameOfArgument)
+        public static DateTime ThrowIfIsLaterThanToday(this DateTime argument, string nameOfArgument)
         {
             if (argument.Date > DateTime.Today)
             {
@@ -78,6 +82,8 @@ namespace oehen.arguard
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfLaterThanToday"),
                     nameOfArgument));
             }
+
+            return argument;
         }
     }
 }

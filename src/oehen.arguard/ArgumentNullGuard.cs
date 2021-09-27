@@ -16,16 +16,18 @@ namespace oehen.arguard
         ///     <para>Throws when the argument `objArgument` is null.</para>
         ///     <code>
         /// <![CDATA[
-        ///     objArgument.ThrowIfNull(nameof(objArgument));
+        ///     var localVar = objArgument.ThrowIfNull(nameof(objArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static void ThrowIfNull([ArgumentValidatedNotNull] this object argument, string nameOfArgument)
+        public static T ThrowIfNull<T>([ArgumentValidatedNotNull] this T argument, string nameOfArgument)
         {
             if (argument == null)
             {
                 throw new ArgumentNullException(nameOfArgument);
             }
+
+            return argument;
         }
     }
 }

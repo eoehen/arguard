@@ -51,5 +51,14 @@ namespace oehen.arguard
             Action act = () => argument.ThrowIfDirectoryNotExists(nameof(argument));
             act.Should().NotThrow<DirectoryNotFoundException>();
         }
+        
+        [Fact]
+        public void
+            ArgumentDirectoryPathGuardTest_ThrowIfDirectoryNotExists_When_DirectoryPath_Exists_Then_Should_Return_ArgumentValue()
+        {
+            const string argument = @"./testfiles";
+            var result = argument.ThrowIfDirectoryNotExists(nameof(argument));
+            result.Should().Be(argument);
+        }
     }
 }
