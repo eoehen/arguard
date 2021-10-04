@@ -16,9 +16,41 @@ Package [oehen.arguard](https://www.nuget.org/packages/oehen.arguard) is publish
 
 ## Usage
 
-How to throw an `NullArgumentException` if the argument `apple` is null:
+### Usage in a constructor
 
-`apple.ThrowIfNull(nameof(apple));`
+This example shows a solution to check constructor parameter and assign them to local fields in one line.
+
+```c#
+    public class ClassA
+    {
+        private readonly string _text;
+        private readonly int _number;
+
+        public ClassA(string name, int number)
+        {
+            // name should not be null or whitespace
+            _text_ = text.ThrowIfIsNullOrWhiteSpace(nameof(text));
+
+            // number should be greater than zero
+            _number = number.ThrowIfIsLessThanZero(nameof(number));
+
+            // ...
+        }
+    }
+```
+
+### Usage in a method
+
+This example shows a solution to check the parameter of a public method.
+
+```c#
+    public void DoSomethingWithThisApple(Apple apple)
+    {
+        apple.ThrowIfNull(nameof(apple));
+
+        // ...
+    }
+```
 
 ## Documentation
 
