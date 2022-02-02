@@ -11,7 +11,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <RepositoryType>git</RepositoryType>
-    <LangVersion>8</LangVersion>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
 
   <!-- package properties -->

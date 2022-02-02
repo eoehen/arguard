@@ -8,7 +8,7 @@
 
     <AssemblyName>oehen.arguard.Tests</AssemblyName>
 
-    <LangVersion>8</LangVersion>
+    <LangVersion>10</LangVersion>
 
     <OutputType>Library</OutputType>
 
