@@ -100,12 +100,3 @@ jobs:
         if-no-files-found: warn
         name: Coverage
         path: BuildArtifacts/TestCoverage/coverlet/*.xml
-
-    # Publish external
-    - name: Run codacy-coverage-reporter
-      uses: codacy/codacy-coverage-reporter-action@master
-      if: matrix.os == 'ubuntu-18.04'
-      with:
-        project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-        coverage-reports: BuildArtifacts/TestCoverage/coverlet/*.xml
-
