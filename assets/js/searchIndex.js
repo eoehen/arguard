@@ -39,48 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"ArgumentNullGuard",
-            content:"ArgumentNullGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
-            title:"ArgumentNullGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
-            title:"ArgumentFilePathGuard",
-            content:"ArgumentFilePathGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentFilePathGuard',
-            title:"ArgumentFilePathGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:2,
-            title:"ArgumentLessThanGuard",
-            content:"ArgumentLessThanGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
-            title:"ArgumentLessThanGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:3,
             title:"ArgumentDateTimeNowGuard",
             content:"ArgumentDateTimeNowGuard",
             description:'',
@@ -94,7 +52,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:4,
+            id:1,
+            title:"ArgumentBooleanGuard",
+            content:"ArgumentBooleanGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
+            title:"ArgumentBooleanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
             title:"ArgumentEqualGuard",
             content:"ArgumentEqualGuard",
             description:'',
@@ -108,21 +80,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:5,
-            title:"ArgumentDateTimeTodayGuard",
-            content:"ArgumentDateTimeTodayGuard",
+            id:3,
+            title:"ArgumentFilePathGuard",
+            content:"ArgumentFilePathGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard',
-            title:"ArgumentDateTimeTodayGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentFilePathGuard',
+            title:"ArgumentFilePathGuard",
             description:""
         }
     );
     a(
         {
-            id:6,
+            id:4,
             title:"ArgumentEmtpyGuard",
             content:"ArgumentEmtpyGuard",
             description:'',
@@ -136,7 +108,21 @@ var searchModule = function() {
     );
     a(
         {
-            id:7,
+            id:5,
+            title:"ArgumentTypeGuard",
+            content:"ArgumentTypeGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentTypeGuard',
+            title:"ArgumentTypeGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:6,
             title:"ArgumentDirectoryPathGuard",
             content:"ArgumentDirectoryPathGuard",
             description:'',
@@ -150,15 +136,29 @@ var searchModule = function() {
     );
     a(
         {
-            id:8,
-            title:"ArgumentBooleanGuard",
-            content:"ArgumentBooleanGuard",
+            id:7,
+            title:"ArgumentNullGuard",
+            content:"ArgumentNullGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
-            title:"ArgumentBooleanGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
+            title:"ArgumentNullGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:8,
+            title:"ArgumentDateTimeTodayGuard",
+            content:"ArgumentDateTimeTodayGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard',
+            title:"ArgumentDateTimeTodayGuard",
             description:""
         }
     );
@@ -179,14 +179,14 @@ var searchModule = function() {
     a(
         {
             id:10,
-            title:"ArgumentTypeGuard",
-            content:"ArgumentTypeGuard",
+            title:"ArgumentLessThanGuard",
+            content:"ArgumentLessThanGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentTypeGuard',
-            title:"ArgumentTypeGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentLessThanGuard',
+            title:"ArgumentLessThanGuard",
             description:""
         }
     );
