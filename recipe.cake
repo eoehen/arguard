@@ -1,4 +1,4 @@
-#load nuget:?package=Cake.Recipe&version=2.2.1
+#load nuget:?package=Cake.Recipe&version=3.0.0
 
 Environment.SetVariableNames();
 
@@ -11,18 +11,13 @@ BuildParameters.SetParameters(
     title: "oehen.arguard",
     repositoryOwner: "eoehen",
     repositoryName: "arguard",
+    shouldRunCoveralls: false, // Disabled because it's currently failing
     shouldRunDotNetCorePack: true);
 
 BuildParameters.PrintParameters(Context);
 
 ToolSettings.SetToolSettings(
     context: Context,
-    dupFinderExcludePattern: new string[] 
-    {
-        BuildParameters.RootDirectoryPath + "/src/oehen.arguard.Tests/*.cs",
-        BuildParameters.RootDirectoryPath + "/src/oehen.arguard.Tests/obj/**/*.*",
-        BuildParameters.RootDirectoryPath + "/src/oehen.arguard/**/*.AssemblyInfo.cs",
-    },
     testCoverageFilter: "+[*]* -[xunit.*]* -[FluentAssertions]* -[Cake.Core]* -[*.Tests]* -[*.example]*",
     testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
     testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs"
