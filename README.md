@@ -16,7 +16,7 @@ Package [oehen.arguard](https://www.nuget.org/packages/oehen.arguard) is publish
 
 ## Documentation
 
-Read [readme]() or [Documentation](https://eoehen.github.io/arguard/)
+Read [readme](src/oehen.arguard/readme.md) or [Documentation](https://eoehen.github.io/arguard/)
 The latest documentation can find at [https://eoehen.github.io/arguard/](https://eoehen.github.io/arguard/).
 
 ## Information
