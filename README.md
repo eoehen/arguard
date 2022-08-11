@@ -73,9 +73,23 @@ To build this package we are using [Cake.Recipe](https://github.com/cake-contrib
 
 On Windows PowerShell run:
 
-`dotnet cake .\recipe.cake --bootstrap`
+`.\build.ps1`
 
-`dotnet cake .\recipe.cake`
+### New Release
+
+- Prepare [Milestone](https://github.com/eoehen/arguard/milestones) for releasing.
+- Create and switch to gitflow release branch.
+- Set `GITHUB_TOKEN` environment variable.
+
+> `$Env:GITHUB_TOKEN="{token}"`
+
+- Run `Cake.Recipe` for creating release notes.
+
+> `.\build.ps1 --target=releasenotes`
+
+- Check release notes.
+- Merge gitflow release branche to develop and master.
+- Finish the created [release](https://github.com/eoehen/arguard/releases) version on github.
 
 ## Code Coverage & Quality
 
