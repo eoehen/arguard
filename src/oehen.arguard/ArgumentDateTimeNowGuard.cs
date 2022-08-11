@@ -33,7 +33,7 @@ namespace oehen.arguard
 
             return argument;
         }
-        
+
         /// <summary>
         ///     Throws an <see cref="InvalidOperationException" /> if <paramref name="argument" /> is
         ///     later than<see cref="DateTime.Now"/>.

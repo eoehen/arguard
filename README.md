@@ -14,46 +14,9 @@ Package [oehen.arguard](https://www.nuget.org/packages/oehen.arguard) is publish
 
 `dotnet add package oehen.arguard --version <VERSION>`
 
-## Usage
-
-### Usage in a constructor
-
-This example shows a solution to check constructor parameter and assign them to local fields in one line.
-
-```c#
-    public class ClassA
-    {
-        private readonly string _text;
-        private readonly int _number;
-
-        public ClassA(string name, int number)
-        {
-            // name should not be null or whitespace
-            _text_ = text.ThrowIfIsNullOrWhiteSpace(nameof(text));
-
-            // number should be greater than zero
-            _number = number.ThrowIfIsLessThanZero(nameof(number));
-
-            // ...
-        }
-    }
-```
-
-### Usage in a method
-
-This example shows a solution to check the parameter of a public method.
-
-```c#
-    public void DoSomethingWithThisApple(Apple apple)
-    {
-        apple.ThrowIfNull(nameof(apple));
-
-        // ...
-    }
-```
-
 ## Documentation
 
+Read [readme](src/oehen.arguard/readme.md) or [Documentation](https://eoehen.github.io/arguard/)
 The latest documentation can find at [https://eoehen.github.io/arguard/](https://eoehen.github.io/arguard/).
 
 ## Information
@@ -73,9 +36,23 @@ To build this package we are using [Cake.Recipe](https://github.com/cake-contrib
 
 On Windows PowerShell run:
 
-`dotnet cake .\recipe.cake --bootstrap`
+`.\build.ps1`
 
-`dotnet cake .\recipe.cake`
+### New Release
+
+- Prepare [Milestone](https://github.com/eoehen/arguard/milestones) for releasing.
+- Create and switch to gitflow release branch.
+- Set `GITHUB_TOKEN` environment variable.
+
+> `$Env:GITHUB_TOKEN="{token}"`
+
+- Run `Cake.Recipe` for creating release notes.
+
+> `.\build.ps1 --target=releasenotes`
+
+- Check release notes.
+- Merge gitflow release branche to develop and master.
+- Finish the created [release](https://github.com/eoehen/arguard/releases) version on github.
 
 ## Code Coverage & Quality
 

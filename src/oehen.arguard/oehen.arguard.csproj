@@ -19,6 +19,7 @@
     <Authors>oehen.net</Authors>
     <Company>oehen.net</Company>
     <summary>Argument validation extension library for .NET core.</summary>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
     <Description>
       This library is an extension for the validation of arguments and parameters.
     </Description>
@@ -44,6 +45,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="readme.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 
   <ItemGroup>
