@@ -6,7 +6,7 @@ namespace oehen.arguard
     /// <summary>
     ///     <see cref="int" /> argument validator.
     /// </summary>
-    public static class ArgumentLessThanGuard
+    public static class ArgumentIntLessThanGuard
     {
         /// <summary>
         ///     Throws an <see cref="ArgumentOutOfRangeException" /> exception if the <paramref name="argument" /> is less than 0.
