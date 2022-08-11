@@ -5,7 +5,7 @@ using Xunit;
 namespace oehen.arguard
 {
     [UseCulture("en-US")]
-    public class ArgumentLessOrEqualThanZeroGuardTest
+    public class ArgumentIntLessOrEqualThanZeroGuardTest
     {
         [Theory]
         [InlineData(-1)]

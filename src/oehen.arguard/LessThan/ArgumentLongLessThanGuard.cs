@@ -4,9 +4,9 @@ using System.Globalization;
 namespace oehen.arguard
 {
     /// <summary>
-    ///     <see cref="int" /> argument validator.
+    ///     <see cref="long" /> argument validator.
     /// </summary>
-    public static class ArgumentLessThanGuard
+    public static class ArgumentLongLessThanGuard
     {
         /// <summary>
         ///     Throws an <see cref="ArgumentOutOfRangeException" /> exception if the <paramref name="argument" /> is less than 0.
@@ -14,14 +14,14 @@ namespace oehen.arguard
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the argument `intArgument` is less than 0.</para>
+        ///     <para>Throws when the long argument `longArgument` is less than 0.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = intArgument.ThrowIfIsLessThanZero(nameof(intArgument));
+        ///     var localVar = longArgument.ThrowIfIsLessThanZero(nameof(longArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static int ThrowIfIsLessThanZero(this int argument, string nameOfArgument)
+        public static long ThrowIfIsLessThanZero(this long argument, string nameOfArgument)
         {
             return argument.ThrowIfIsLessThan(0, nameOfArgument);
         }
@@ -34,14 +34,14 @@ namespace oehen.arguard
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the argument `intArgument` is less than 5.</para>
+        ///     <para>Throws when the long argument `longArgument` is less than 5.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = intArgument.ThrowIfIsLessThan(nameof(intArgument), 5);
+        ///     var localVar = longArgument.ThrowIfIsLessThan(nameof(longArgument), 5);
         /// ]]>
         /// </code>
         /// </example>
-        public static int ThrowIfIsLessThan(this int argument, int compareValue, string nameOfArgument)
+        public static long ThrowIfIsLessThan(this long argument, int compareValue, string nameOfArgument)
         {
             if (argument < compareValue)
             {
@@ -62,14 +62,14 @@ namespace oehen.arguard
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the argument `intArgument` is less or equal than 0.</para>
+        ///     <para>Throws when the long argument `longArgument` is less or equal than 0.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = .ThrowIfIsLessOrEqualThanZero(nameof(intArgument));
+        ///     var localVar = .ThrowIfIsLessOrEqualThanZero(nameof(longArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static int ThrowIfIsLessOrEqualThanZero(this int argument, string nameOfArgument)
+        public static long ThrowIfIsLessOrEqualThanZero(this long argument, string nameOfArgument)
         {
             return argument.ThrowIfIsLessOrEqualThan(0, nameOfArgument);
         }
@@ -82,14 +82,14 @@ namespace oehen.arguard
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the argument `intArgument` value is less or equal than 5.</para>
+        ///     <para>Throws when the long argument `longArgument` value is less or equal than 5.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = intArgument.ThrowIfIsLessOrEqualThan(nameof(intArgument), 5);
+        ///     var localVar = longArgument.ThrowIfIsLessOrEqualThan(nameof(longArgument), 5);
         /// ]]>
         /// </code>
         /// </example>
-        public static int ThrowIfIsLessOrEqualThan(this int argument, int compareValue, string nameOfArgument)
+        public static long ThrowIfIsLessOrEqualThan(this long argument, int compareValue, string nameOfArgument)
         {
             if (argument <= compareValue)
             {

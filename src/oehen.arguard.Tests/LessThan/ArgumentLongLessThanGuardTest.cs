@@ -5,7 +5,7 @@ using Xunit;
 namespace oehen.arguard
 {
     [UseCulture("en-US")]
-    public class ArgumentLessThanGuardTest
+    public class ArgumentLongLessThanGuardTest
     {
         [Theory]
         [InlineData(-1, 0)]
@@ -14,7 +14,7 @@ namespace oehen.arguard
         [InlineData(5, 5)]
         public void
             ThrowIfIsLessOrEqualThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessOrEqualThanTheCompareValue(
-                int argument, int compareValue)
+                long argument, int compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -30,7 +30,7 @@ namespace oehen.arguard
         [InlineData(-3, 5)]
         public void
             ThrowIfIsLessThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessThanTheCompareValue(
-                int argument, int compareValue)
+                long argument, int compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -47,7 +47,7 @@ namespace oehen.arguard
         [InlineData(3, 3)]
         public void
             ThrowIfIsLessThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterThanTheCompareValue(
-                int argument, int compareValue)
+                long argument, int compareValue)
         {
             var exception = Record.Exception(() => { argument.ThrowIfIsLessThan(compareValue, nameof(argument)); });
             Assert.Null(exception);
@@ -59,7 +59,7 @@ namespace oehen.arguard
         [InlineData(5, 3)]
         public void
             ThrowIfIsLessOrEqualThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterOrEqualThanTheCompareValue(
-                int argument, int compareValue)
+                long argument, int compareValue)
         {
             var exception = Record.Exception(() =>
             {
