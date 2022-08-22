@@ -39,28 +39,28 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"ArgumentFilePathGuard",
-            content:"ArgumentFilePathGuard",
+            title:"ArgumentDirectoryPathGuard",
+            content:"ArgumentDirectoryPathGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentFilePathGuard',
-            title:"ArgumentFilePathGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard',
+            title:"ArgumentDirectoryPathGuard",
             description:""
         }
     );
     a(
         {
             id:1,
-            title:"ArgumentEmtpyGuard",
-            content:"ArgumentEmtpyGuard",
+            title:"ArgumentNullGuard",
+            content:"ArgumentNullGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
-            title:"ArgumentEmtpyGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
+            title:"ArgumentNullGuard",
             description:""
         }
     );
@@ -95,62 +95,6 @@ var searchModule = function() {
     a(
         {
             id:4,
-            title:"ArgumentLongLessThanGuard",
-            content:"ArgumentLongLessThanGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentLongLessThanGuard',
-            title:"ArgumentLongLessThanGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:5,
-            title:"ArgumentEqualGuard",
-            content:"ArgumentEqualGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentEqualGuard',
-            title:"ArgumentEqualGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:6,
-            title:"ArgumentTypeGuard",
-            content:"ArgumentTypeGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentTypeGuard',
-            title:"ArgumentTypeGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:7,
-            title:"ArgumentBooleanGuard",
-            content:"ArgumentBooleanGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
-            title:"ArgumentBooleanGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:8,
             title:"ArgumentEnumerableGuard",
             content:"ArgumentEnumerableGuard",
             description:'',
@@ -164,21 +108,7 @@ var searchModule = function() {
     );
     a(
         {
-            id:9,
-            title:"ArgumentDirectoryPathGuard",
-            content:"ArgumentDirectoryPathGuard",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard',
-            title:"ArgumentDirectoryPathGuard",
-            description:""
-        }
-    );
-    a(
-        {
-            id:10,
+            id:5,
             title:"ArgumentDateTimeTodayGuard",
             content:"ArgumentDateTimeTodayGuard",
             description:'',
@@ -192,15 +122,99 @@ var searchModule = function() {
     );
     a(
         {
-            id:11,
-            title:"ArgumentNullGuard",
-            content:"ArgumentNullGuard",
+            id:6,
+            title:"ArgumentEqualGuard",
+            content:"ArgumentEqualGuard",
             description:'',
             tags:''
         },
         {
-            url:'/arguard/api/oehen.arguard/ArgumentNullGuard',
-            title:"ArgumentNullGuard",
+            url:'/arguard/api/oehen.arguard/ArgumentEqualGuard',
+            title:"ArgumentEqualGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:7,
+            title:"ArgumentDecimalLessThanGuard",
+            content:"ArgumentDecimalLessThanGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentDecimalLessThanGuard',
+            title:"ArgumentDecimalLessThanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:8,
+            title:"ArgumentBooleanGuard",
+            content:"ArgumentBooleanGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentBooleanGuard',
+            title:"ArgumentBooleanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:9,
+            title:"ArgumentFilePathGuard",
+            content:"ArgumentFilePathGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentFilePathGuard',
+            title:"ArgumentFilePathGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:10,
+            title:"ArgumentEmtpyGuard",
+            content:"ArgumentEmtpyGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentEmtpyGuard',
+            title:"ArgumentEmtpyGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:11,
+            title:"ArgumentLongLessThanGuard",
+            content:"ArgumentLongLessThanGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentLongLessThanGuard',
+            title:"ArgumentLongLessThanGuard",
+            description:""
+        }
+    );
+    a(
+        {
+            id:12,
+            title:"ArgumentTypeGuard",
+            content:"ArgumentTypeGuard",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/arguard/api/oehen.arguard/ArgumentTypeGuard',
+            title:"ArgumentTypeGuard",
             description:""
         }
     );
