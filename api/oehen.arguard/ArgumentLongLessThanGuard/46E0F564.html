@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentLongLessThanGuard.ThrowIfIsLessOrEqualThan(long, int, string) Method</title>
+        <title>oehen.arguard - API - ArgumentLongLessThanGuard.ThrowIfIsLessThan(long, long, string) Method</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -140,9 +140,9 @@
 		<li><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard">Argument<wbr>Long<wbr>Less<wbr>Than<wbr>Guard</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/FA582253">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>(long, <wbr>int, <wbr>string)<wbr></a></li>
+				<li><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/92DD1DF4">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>(long, <wbr>long, <wbr>string)<wbr></a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/BFBBFE63">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>Zero<wbr>(long, <wbr>string)<wbr></a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/2E65CAC3">ThrowIfIsLessThan<wbr>(long, <wbr>int, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/46E0F564">ThrowIfIsLessThan<wbr>(long, <wbr>long, <wbr>string)<wbr></a></li>
 				<li><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/26E9FA93">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Than<wbr>Zero<wbr>(long, <wbr>string)<wbr></a></li>
 
 
@@ -159,15 +159,15 @@
 
 <section class="content-header">
 			<h3><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard">Argument<wbr>Long<wbr>Less<wbr>Than<wbr>Guard</a>.</h3>
-	<h1>Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>(long, <wbr>int, <wbr>string)<wbr> <small>Method</small></h1>
+	<h1>ThrowIfIsLessThan<wbr>(long, <wbr>long, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less or equal
-        than <span name="compareValue" class="paramref">compareValue</span>.
+        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than
+        <span name="compareValue" class="paramref">compareValue</span>.
     </div>
 
 		<div class="panel panel-default">
@@ -185,12 +185,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static long ThrowIfIsLessOrEqualThan(this long argument, int compareValue, string nameOfArgument)</code></pre>
+	<pre><code>public static long ThrowIfIsLessThan(this long argument, long compareValue, string nameOfArgument)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-        <p>Throws when the long argument `longArgument` value is less or equal than 5.</p>
-        <pre><code class="cs">var localVar = longArgument.ThrowIfIsLessOrEqualThan(nameof(longArgument), 5);</code></pre>
+        <p>Throws when the long argument `longArgument` is less than 5.</p>
+        <pre><code class="cs">var localVar = longArgument.ThrowIfIsLessThan(nameof(longArgument), 5);</code></pre>
     </div>
 
 
@@ -214,7 +214,7 @@
 					</tr>
 					<tr>
 						<td>compareValue</td>
-						<td>int</td>
+						<td>long</td>
 						<td>Value to compare.</td>
 					</tr>
 					<tr>
