@@ -41,7 +41,7 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        public static long ThrowIfIsLessThan(this long argument, int compareValue, string nameOfArgument)
+        public static long ThrowIfIsLessThan(this long argument, long compareValue, string nameOfArgument)
         {
             if (argument < compareValue)
             {
@@ -89,7 +89,7 @@ namespace oehen.arguard
         /// ]]>
         /// </code>
         /// </example>
-        public static long ThrowIfIsLessOrEqualThan(this long argument, int compareValue, string nameOfArgument)
+        public static long ThrowIfIsLessOrEqualThan(this long argument, long compareValue, string nameOfArgument)
         {
             if (argument <= compareValue)
             {
