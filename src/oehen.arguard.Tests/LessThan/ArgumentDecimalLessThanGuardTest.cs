@@ -5,16 +5,16 @@ using Xunit;
 namespace oehen.arguard
 {
     [UseCulture("en-US")]
-    public class ArgumentLongLessThanGuardTest
+    public class ArgumentDecimalLessThanGuardTest
     {
         [Theory]
-        [InlineData(-1, 0)]
-        [InlineData(2, 3)]
-        [InlineData(-3, 5)]
-        [InlineData(5, 5)]
+        [InlineData(-1.23, 0.23)]
+        [InlineData(2.23, 3.23)]
+        [InlineData(-3.23, 5.23)]
+        [InlineData(5.23, 5.23)]
         public void
-            Long_ThrowIfIsLessOrEqualThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessOrEqualThanTheCompareValue(
-                long argument, long compareValue)
+            Decimal_ThrowIfIsLessOrEqualThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessOrEqualThanTheCompareValue(
+                decimal argument, decimal compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -25,12 +25,12 @@ namespace oehen.arguard
         }
 
         [Theory]
-        [InlineData(-1, 0)]
-        [InlineData(2, 3)]
-        [InlineData(-3, 5)]
+        [InlineData(-1.23, 0.23)]
+        [InlineData(2.23, 3.23)]
+        [InlineData(-3.23, 5.23)]
         public void
-            Long_ThrowIfIsLessThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessThanTheCompareValue(
-                long argument, long compareValue)
+            Decimal_ThrowIfIsLessThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessThanTheCompareValue(
+                decimal argument, decimal compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -41,25 +41,25 @@ namespace oehen.arguard
         }
 
         [Theory]
-        [InlineData(11, 2)]
-        [InlineData(3, 2)]
-        [InlineData(5, 3)]
-        [InlineData(3, 3)]
+        [InlineData(11.23, 2.23)]
+        [InlineData(3.23, 2.23)]
+        [InlineData(5.23, 3.23)]
+        [InlineData(3.23, 3.23)]
         public void
-            Long_ThrowIfIsLessThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterThanTheCompareValue(
-                long argument, long compareValue)
+            Decimal_ThrowIfIsLessThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterThanTheCompareValue(
+                decimal argument, decimal compareValue)
         {
             var exception = Record.Exception(() => { argument.ThrowIfIsLessThan(compareValue, nameof(argument)); });
             Assert.Null(exception);
         }
 
         [Theory]
-        [InlineData(11, 2)]
-        [InlineData(3, 2)]
-        [InlineData(5, 3)]
+        [InlineData(11.23, 2.23)]
+        [InlineData(3.23, 2.23)]
+        [InlineData(5.23, 3.23)]
         public void
-            Long_ThrowIfIsLessOrEqualThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterOrEqualThanTheCompareValue(
-                long argument, long compareValue)
+            Decimal_ThrowIfIsLessOrEqualThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterOrEqualThanTheCompareValue(
+                decimal argument, decimal compareValue)
         {
             var exception = Record.Exception(() =>
             {

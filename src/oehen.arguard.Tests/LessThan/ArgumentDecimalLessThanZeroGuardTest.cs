@@ -5,14 +5,14 @@ using Xunit;
 namespace oehen.arguard
 {
     [UseCulture("en-US")]
-    public class ArgumentLongLessThanZeroGuardTest
+    public class ArgumentDecimalLessThanZeroGuardTest
     {
         [Theory]
-        [InlineData(-1)]
-        [InlineData(-2)]
-        [InlineData(-3)]
-        [InlineData(-123456)]
-        public void Long_ThrowIfIsLessThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(long argument)
+        [InlineData(-1.33)]
+        [InlineData(-2.55)]
+        [InlineData(-3.5889)]
+        [InlineData(-123456.789)]
+        public void Decimal_ThrowIfIsLessThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(decimal argument)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -23,22 +23,21 @@ namespace oehen.arguard
         }
 
         [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
-        [InlineData(3)]
+        [InlineData(1.33)]
+        [InlineData(2.55)]
+        [InlineData(3.5889)]
         [InlineData(123456)]
-        [InlineData(int.MaxValue)]
-        public void Long_ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(
-            long argument)
+        public void Decimal_ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(
+            decimal argument)
         {
             var exception = Record.Exception(() => { argument.ThrowIfIsLessThanZero(nameof(argument)); });
             Assert.Null(exception);
         }
 
         [Fact]
-        public void Long_ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsZero()
+        public void Decimal_ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsZero()
         {
-            const int argument = 0;
+            const decimal argument = 0;
             var exception = Record.Exception(() => { argument.ThrowIfIsLessThanZero(nameof(argument)); });
             Assert.Null(exception);
         }

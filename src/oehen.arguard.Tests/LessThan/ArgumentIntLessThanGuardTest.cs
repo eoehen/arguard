@@ -13,7 +13,7 @@ namespace oehen.arguard
         [InlineData(-3, 5)]
         [InlineData(5, 5)]
         public void
-            ThrowIfIsLessOrEqualThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessOrEqualThanTheCompareValue(
+            Int_ThrowIfIsLessOrEqualThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessOrEqualThanTheCompareValue(
                 int argument, int compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -29,7 +29,7 @@ namespace oehen.arguard
         [InlineData(2, 3)]
         [InlineData(-3, 5)]
         public void
-            ThrowIfIsLessThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessThanTheCompareValue(
+            Int_ThrowIfIsLessThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessThanTheCompareValue(
                 int argument, int compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -46,7 +46,7 @@ namespace oehen.arguard
         [InlineData(5, 3)]
         [InlineData(3, 3)]
         public void
-            ThrowIfIsLessThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterThanTheCompareValue(
+            Int_ThrowIfIsLessThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterThanTheCompareValue(
                 int argument, int compareValue)
         {
             var exception = Record.Exception(() => { argument.ThrowIfIsLessThan(compareValue, nameof(argument)); });
@@ -58,7 +58,7 @@ namespace oehen.arguard
         [InlineData(3, 2)]
         [InlineData(5, 3)]
         public void
-            ThrowIfIsLessOrEqualThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterOrEqualThanTheCompareValue(
+            Int_ThrowIfIsLessOrEqualThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterOrEqualThanTheCompareValue(
                 int argument, int compareValue)
         {
             var exception = Record.Exception(() =>

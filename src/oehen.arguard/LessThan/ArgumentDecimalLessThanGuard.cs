@@ -4,9 +4,9 @@ using System.Globalization;
 namespace oehen.arguard
 {
     /// <summary>
-    ///     <see cref="long" /> argument validator.
+    ///     <see cref="decimal" /> argument validator.
     /// </summary>
-    public static class ArgumentLongLessThanGuard
+    public static class ArgumentDecimalLessThanGuard
     {
         /// <summary>
         ///     Throws an <see cref="ArgumentOutOfRangeException" /> exception if the <paramref name="argument" /> is less than 0.
@@ -14,14 +14,14 @@ namespace oehen.arguard
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the long argument `longArgument` is less than 0.</para>
+        ///     <para>Throws when the decimal argument `decimalArgument` is less than 0.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = longArgument.ThrowIfIsLessThanZero(nameof(longArgument));
+        ///     var localVar = decimalArgument.ThrowIfIsLessThanZero(nameof(decimalArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static long ThrowIfIsLessThanZero(this long argument, string nameOfArgument)
+        public static decimal ThrowIfIsLessThanZero(this decimal argument, string nameOfArgument)
         {
             return argument.ThrowIfIsLessThan(0, nameOfArgument);
         }
@@ -34,14 +34,14 @@ namespace oehen.arguard
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the long argument `longArgument` is less than 5.</para>
+        ///     <para>Throws when the decimal argument `decimalArgument` is less than 5.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = longArgument.ThrowIfIsLessThan(nameof(longArgument), 5);
+        ///     var localVar = decimalArgument.ThrowIfIsLessThan(nameof(decimalArgument), 5);
         /// ]]>
         /// </code>
         /// </example>
-        public static long ThrowIfIsLessThan(this long argument, long compareValue, string nameOfArgument)
+        public static decimal ThrowIfIsLessThan(this decimal argument, decimal compareValue, string nameOfArgument)
         {
             if (argument < compareValue)
             {
@@ -62,14 +62,14 @@ namespace oehen.arguard
         /// <param name="argument">Argument value.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the long argument `longArgument` is less or equal than 0.</para>
+        ///     <para>Throws when the decimal argument `decimalArgument` is less or equal than 0.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = .ThrowIfIsLessOrEqualThanZero(nameof(longArgument));
+        ///     var localVar = .ThrowIfIsLessOrEqualThanZero(nameof(decimalArgument));
         /// ]]>
         /// </code>
         /// </example>
-        public static long ThrowIfIsLessOrEqualThanZero(this long argument, string nameOfArgument)
+        public static decimal ThrowIfIsLessOrEqualThanZero(this decimal argument, string nameOfArgument)
         {
             return argument.ThrowIfIsLessOrEqualThan(0, nameOfArgument);
         }
@@ -82,14 +82,14 @@ namespace oehen.arguard
         /// <param name="compareValue">Value to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
-        ///     <para>Throws when the long argument `longArgument` value is less or equal than 5.</para>
+        ///     <para>Throws when the decimal argument `decimalArgument` value is less or equal than 5.</para>
         ///     <code>
         /// <![CDATA[
-        ///     var localVar = longArgument.ThrowIfIsLessOrEqualThan(nameof(longArgument), 5);
+        ///     var localVar = decimalArgument.ThrowIfIsLessOrEqualThan(nameof(decimalArgument), 5);
         /// ]]>
         /// </code>
         /// </example>
-        public static long ThrowIfIsLessOrEqualThan(this long argument, long compareValue, string nameOfArgument)
+        public static decimal ThrowIfIsLessOrEqualThan(this decimal argument, decimal compareValue, string nameOfArgument)
         {
             if (argument <= compareValue)
             {

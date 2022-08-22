@@ -5,15 +5,15 @@ using Xunit;
 namespace oehen.arguard
 {
     [UseCulture("en-US")]
-    public class ArgumentIntLessOrEqualThanZeroGuardTest
+    public class ArgumentDecimalLessOrEqualThanZeroGuardTest
     {
         [Theory]
-        [InlineData(-1)]
-        [InlineData(-2)]
-        [InlineData(-3)]
-        [InlineData(-123456)]
-        public void Int_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(
-            int argument)
+        [InlineData(-1.33)]
+        [InlineData(-2.55)]
+        [InlineData(-3.5889)]
+        [InlineData(-123456.789)]
+        public void Decimal_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(
+            decimal argument)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -24,9 +24,9 @@ namespace oehen.arguard
         }
 
         [Fact]
-        public void Int_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentIsZero()
+        public void Decimal_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentIsZero()
         {
-            const int argument = 0;
+            const decimal argument = 0;
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
                 argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
@@ -36,13 +36,13 @@ namespace oehen.arguard
         }
 
         [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
-        [InlineData(3)]
-        [InlineData(123456)]
+        [InlineData(1.23)]
+        [InlineData(2.23)]
+        [InlineData(3.23)]
+        [InlineData(123456.23)]
         [InlineData(int.MaxValue)]
-        public void Int_ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(
-            int argument)
+        public void Decimal_ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(
+            decimal argument)
         {
             var exception = Record.Exception(() => { argument.ThrowIfIsLessOrEqualThanZero(nameof(argument)); });
             Assert.Null(exception);
