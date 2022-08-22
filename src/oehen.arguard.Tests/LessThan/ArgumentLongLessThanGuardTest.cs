@@ -13,7 +13,7 @@ namespace oehen.arguard
         [InlineData(-3, 5)]
         [InlineData(5, 5)]
         public void
-            ThrowIfIsLessOrEqualThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessOrEqualThanTheCompareValue(
+            Long_ThrowIfIsLessOrEqualThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessOrEqualThanTheCompareValue(
                 long argument, long compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -29,7 +29,7 @@ namespace oehen.arguard
         [InlineData(2, 3)]
         [InlineData(-3, 5)]
         public void
-            ThrowIfIsLessThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessThanTheCompareValue(
+            Long_ThrowIfIsLessThanCompareValue_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsLessThanTheCompareValue(
                 long argument, long compareValue)
         {
             var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -46,7 +46,7 @@ namespace oehen.arguard
         [InlineData(5, 3)]
         [InlineData(3, 3)]
         public void
-            ThrowIfIsLessThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterThanTheCompareValue(
+            Long_ThrowIfIsLessThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterThanTheCompareValue(
                 long argument, long compareValue)
         {
             var exception = Record.Exception(() => { argument.ThrowIfIsLessThan(compareValue, nameof(argument)); });
@@ -58,7 +58,7 @@ namespace oehen.arguard
         [InlineData(3, 2)]
         [InlineData(5, 3)]
         public void
-            ThrowIfIsLessOrEqualThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterOrEqualThanTheCompareValue(
+            Long_ThrowIfIsLessOrEqualThanCompareValue_ShouldNotThrowArgumentOutOfRangeException_IfArgumentValueIsGreaterOrEqualThanTheCompareValue(
                 long argument, long compareValue)
         {
             var exception = Record.Exception(() =>

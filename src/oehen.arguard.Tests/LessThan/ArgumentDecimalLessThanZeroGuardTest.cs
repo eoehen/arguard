@@ -37,7 +37,7 @@ namespace oehen.arguard
         [Fact]
         public void Decimal_ThrowIfIsLessThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsZero()
         {
-            const int argument = 0;
+            const decimal argument = 0;
             var exception = Record.Exception(() => { argument.ThrowIfIsLessThanZero(nameof(argument)); });
             Assert.Null(exception);
         }
