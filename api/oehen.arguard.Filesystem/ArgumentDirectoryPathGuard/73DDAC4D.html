@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentFilePathGuard.ThrowIfFileNotExists(string, string) Method</title>
+        <title>oehen.arguard - API - ArgumentDirectoryPathGuard.ThrowIfDirectoryNotExists(string, string) Method</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -135,12 +135,12 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
+		<li><a href="/arguard/api/oehen.arguard.Filesystem">oehen<wbr>.arguard<wbr>.Filesystem</a></li>
 		<li class="header">Type</li>
-		<li><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a></li>
+		<li><a href="/arguard/api/oehen.arguard.Filesystem/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard/E731AB2D">ThrowIfFileNotExists<wbr>(string, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard.Filesystem/ArgumentDirectoryPathGuard/73DDAC4D">Throw<wbr>If<wbr>Directory<wbr>Not<wbr>Exists<wbr>(string, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -155,15 +155,16 @@
 
 
 <section class="content-header">
-			<h3><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a>.</h3>
-	<h1>ThrowIfFileNotExists<wbr>(string, <wbr>string)<wbr> <small>Method</small></h1>
+			<h3><a href="/arguard/api/oehen.arguard.Filesystem/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a>.</h3>
+	<h1>Throw<wbr>If<wbr>Directory<wbr>Not<wbr>Exists<wbr>(string, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-        Throws an <code class="cs">System.IO.FileNotFoundException</code> if <span name="filePath" class="paramref">filePath</span> filepath not exists.
+        Throws an <code class="cs">System.IO.DirectoryNotFoundException</code> if directory path in <span name="directoryPath" class="paramref">directoryPath</span> not
+        exists.
     </div>
 
 		<div class="panel panel-default">
@@ -171,22 +172,22 @@
 				<dl class="dl-horizontal">	
 						
 						<dt>Namespace</dt>
-						<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
+						<dd><a href="/arguard/api/oehen.arguard.Filesystem">oehen<wbr>.arguard<wbr>.Filesystem</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a></dd>		
+						<dd><a href="/arguard/api/oehen.arguard.Filesystem/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static string ThrowIfFileNotExists(this string filePath, string nameOfArgument)</code></pre>
+	<pre><code>public static string ThrowIfDirectoryNotExists(this string directoryPath, string nameOfArgument)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-        <p>Throws when the file path in `argument` not exists.</p>
-        <pre><code class="cs">var localVar = argument.ThrowIfFileNotExists(nameof(argument));</code></pre>
+        <p>Throws when the directory path in `argument` not exists.</p>
+        <pre><code class="cs">var localVar = argument.ThrowIfDirectoryNotExists(nameof(argument));</code></pre>
     </div>
 
 
@@ -204,7 +205,7 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>filePath</td>
+						<td>directoryPath</td>
 						<td>string</td>
 						<td>Argument value.</td>
 					</tr>

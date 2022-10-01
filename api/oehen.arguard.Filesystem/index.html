@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentEnumerableGuard Class</title>
+        <title>oehen.arguard - API - oehen.arguard.Filesystem Namespace</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -71,10 +71,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Methods">Methods</a></p>
-<p><a href="#ExtensionMethods">Extension Methods</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#ClassTypes">Class Types</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -133,19 +130,19 @@
 
                     <ul class="sidebar-menu">
                         
-			<li class="header">Namespace</li>
-		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
-		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard">Argument<wbr>Date<wbr>Time<wbr>Now<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard">Argument<wbr>Date<wbr>Time<wbr>Today<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEqualGuard">ArgumentEqualGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></li>
+	<li class="header">Namespaces</li>   
 
+				<li class="treeview active">
+				<a href="/arguard/api/oehen">oehen</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+			
+				<li class="treeview active">
+				<a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/arguard/api/oehen.arguard.Between">oehen<wbr>.arguard<wbr>.Between</a></li>
+			<li class=" selected"><a href="/arguard/api/oehen.arguard.Filesystem">oehen<wbr>.arguard<wbr>.Filesystem</a></li>
+			<li><a href="/arguard/api/oehen.arguard.LessThan">oehen<wbr>.arguard<wbr>.LessThan</a></li>
+</ul></li></ul></li>      
 
                     </ul>
                             
@@ -159,110 +156,35 @@
 
 
 <section class="content-header">
-	<h1>Argument<wbr>Enumerable<wbr>Guard <small>Class</small></h1>
+	<h1>oehen<wbr>.arguard<wbr>.Filesystem <small>Namespace</small></h1>
 </section>
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-        <code class="cs">Enumerable</code> argument validator.
-    </div>
-
-		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-
-								<dt>Namespace</dt>
-								<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph BT
-	Type--&gt;Base0["object"]
-	Type["ArgumentEnumerableGuard"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
-  			</div>
-		</div>
-
-	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentEnumerableGuard</code></pre>
+	
 
 
-
-
-
-
-
-
-
-
-
-			<h1 id="Methods">Methods</h1>
+			<h1 id="ClassTypes">Class Types</h1>
 			<div class="box">
 				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
+					<table class="table table-striped table-hover two-cols">
 						<thead>
 							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
+								<th>Class</th>
+									<th>Summary</th>
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard/460D454A">ThrowIfIsNullOrEmpty<wbr>&lt;T&gt;<wbr><wbr>(IEnumerable<wbr>&lt;T&gt;<wbr>, <wbr>string)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;T&gt;<wbr></td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.ArgumentNullException</code> if the <span name="argument" class="paramref">argument</span> is null or empty.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
+								<td><a href="/arguard/api/oehen.arguard.Filesystem/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></td>
+									<td>
+        Argument directory path validator.
+    </td>
 							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
-
-			<h1 id="ExtensionMethods">Extension Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
 							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard/78453FDA">ThrowIfNotTypeOf<wbr>&lt;T&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>T</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is not type of
-        <span name="T" class="typeparamref">T</span>.
-    </div>
-										<div><small><em>From <a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></em></small></div>
-								</td>
+								<td><a href="/arguard/api/oehen.arguard.Filesystem/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a></td>
+									<td>
+        Argument file path validator.
+    </td>
 							</tr>
 					</tbody></table>
 				</div>
