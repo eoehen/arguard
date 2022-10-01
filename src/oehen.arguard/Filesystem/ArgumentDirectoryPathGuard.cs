@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.IO;
 
-namespace oehen.arguard
+namespace oehen.arguard.Filesystem
 {
     /// <summary>
     ///     Argument directory path validator.
