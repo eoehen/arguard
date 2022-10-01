@@ -22,7 +22,7 @@ namespace oehen.arguard
         /// </example>
         public static T ThrowIfNull<T>([ArgumentValidatedNotNull] this T argument, string nameOfArgument)
         {
-            if (argument == null)
+            if (object.Equals(argument, default(T)))
             {
                 throw new ArgumentNullException(nameOfArgument);
             }
