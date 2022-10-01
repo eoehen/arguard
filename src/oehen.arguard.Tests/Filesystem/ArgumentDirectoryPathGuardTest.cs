@@ -3,7 +3,7 @@ using System.IO;
 using FluentAssertions;
 using Xunit;
 
-namespace oehen.arguard
+namespace oehen.arguard.Filesystem
 {
     public class ArgumentDirectoryPathGuardTest
     {
@@ -51,7 +51,7 @@ namespace oehen.arguard
             Action act = () => argument.ThrowIfDirectoryNotExists(nameof(argument));
             act.Should().NotThrow<DirectoryNotFoundException>();
         }
-        
+
         [Fact]
         public void
             ArgumentDirectoryPathGuardTest_ThrowIfDirectoryNotExists_When_DirectoryPath_Exists_Then_Should_Return_ArgumentValue()
