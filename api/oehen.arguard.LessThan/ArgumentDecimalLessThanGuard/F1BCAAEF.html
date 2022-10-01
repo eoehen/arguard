@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentLongLessThanGuard Class</title>
+        <title>oehen.arguard - API - ArgumentDecimalLessThanGuard.ThrowIfIsLessThan(decimal, decimal, string) Method</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -73,8 +73,9 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Methods">Methods</a></p>
-<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<p><a href="#Examples">Examples</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -134,22 +135,15 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
+		<li><a href="/arguard/api/oehen.arguard.LessThan">oehen<wbr>.arguard<wbr>.LessThan</a></li>
+		<li class="header">Type</li>
+		<li><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard">Argument<wbr>Decimal<wbr>Less<wbr>Than<wbr>Guard</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard">Argument<wbr>Date<wbr>Time<wbr>Now<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard">Argument<wbr>Date<wbr>Time<wbr>Today<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDecimalLessThanGuard">Argument<wbr>Decimal<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEqualGuard">ArgumentEqualGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentIntLessThanGuard">Argument<wbr>Int<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard">Argument<wbr>Long<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard/0EA25148">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>(decimal, <wbr>decimal, <wbr>string)<wbr></a></li>
+				<li><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard/3F331830">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>Zero<wbr>(decimal, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard/F1BCAAEF">ThrowIfIsLessThan<wbr>(decimal, <wbr>decimal, <wbr>string)<wbr></a></li>
+				<li><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard/8A4899AF">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Than<wbr>Zero<wbr>(decimal, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -164,148 +158,92 @@
 
 
 <section class="content-header">
-	<h1>Argument<wbr>Long<wbr>Less<wbr>Than<wbr>Guard <small>Class</small></h1>
+			<h3><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard">Argument<wbr>Decimal<wbr>Less<wbr>Than<wbr>Guard</a>.</h3>
+	<h1>ThrowIfIsLessThan<wbr>(decimal, <wbr>decimal, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-        <code class="cs"><a href="/arguard">long</a></code> argument validator.
+        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than
+        <span name="compareValue" class="paramref">compareValue</span>.
     </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-
-								<dt>Namespace</dt>
-								<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph BT
-	Type--&gt;Base0["object"]
-	Type["ArgumentLongLessThanGuard"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						
+						<dt>Namespace</dt>
+						<dd><a href="/arguard/api/oehen.arguard.LessThan">oehen<wbr>.arguard<wbr>.LessThan</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard">Argument<wbr>Decimal<wbr>Less<wbr>Than<wbr>Guard</a></dd>		
+					
+				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentLongLessThanGuard</code></pre>
+	<pre><code>public static decimal ThrowIfIsLessThan(this decimal argument, decimal compareValue, string nameOfArgument)</code></pre>
 
-
-
-
-
-
-
-
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/92DD1DF4">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>(long, <wbr>long, <wbr>string)<wbr></a></td>
-								<td>long</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less or equal
-        than <span name="compareValue" class="paramref">compareValue</span>.
+	<h1 id="Examples">Examples</h1>
+	<div>
+        <p>Throws when the decimal argument `decimalArgument` is less than 5.</p>
+        <pre><code class="cs">var localVar = decimalArgument.ThrowIfIsLessThan(nameof(decimalArgument), 5);</code></pre>
     </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/BFBBFE63">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>Zero<wbr>(long, <wbr>string)<wbr></a></td>
-								<td>long</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less or equal
-        than 0.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/46E0F564">ThrowIfIsLessThan<wbr>(long, <wbr>long, <wbr>string)<wbr></a></td>
-								<td>long</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than
-        <span name="compareValue" class="paramref">compareValue</span>.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard/26E9FA93">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Than<wbr>Zero<wbr>(long, <wbr>string)<wbr></a></td>
-								<td>long</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than 0.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 
-			<h1 id="ExtensionMethods">Extension Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard/78453FDA">ThrowIfNotTypeOf<wbr>&lt;T&gt;<wbr><wbr>(string)<wbr></a></td>
-								<td>T</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is not type of
-        <span name="T" class="typeparamref">T</span>.
-    </div>
-										<div><small><em>From <a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>argument</td>
+						<td>decimal</td>
+						<td>Argument value.</td>
+					</tr>
+					<tr>
+						<td>compareValue</td>
+						<td>decimal</td>
+						<td>Value to compare.</td>
+					</tr>
+					<tr>
+						<td>nameOfArgument</td>
+						<td>string</td>
+						<td>Name of the argument.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>decimal</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
 
 	
 </section>

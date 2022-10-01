@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentFilePathGuard Class</title>
+        <title>oehen.arguard - API - ArgumentIntLessThanGuard Class</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -134,19 +134,12 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
+		<li><a href="/arguard/api/oehen.arguard.LessThan">oehen<wbr>.arguard<wbr>.LessThan</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard">Argument<wbr>Date<wbr>Time<wbr>Now<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard">Argument<wbr>Date<wbr>Time<wbr>Today<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEqualGuard">ArgumentEqualGuard</a></li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></li>
+				<li><a href="/arguard/api/oehen.arguard.LessThan/ArgumentDecimalLessThanGuard">Argument<wbr>Decimal<wbr>Less<wbr>Than<wbr>Guard</a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard.LessThan/ArgumentIntLessThanGuard">Argument<wbr>Int<wbr>Less<wbr>Than<wbr>Guard</a></li>
+				<li><a href="/arguard/api/oehen.arguard.LessThan/ArgumentLongLessThanGuard">Argument<wbr>Long<wbr>Less<wbr>Than<wbr>Guard</a></li>
 
 
                     </ul>
@@ -161,14 +154,14 @@
 
 
 <section class="content-header">
-	<h1>Argument<wbr>File<wbr>Path<wbr>Guard <small>Class</small></h1>
+	<h1>Argument<wbr>Int<wbr>Less<wbr>Than<wbr>Guard <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-        Argument file path validator.
+        <code class="cs">System.Int32</code> argument validator.
     </div>
 
 		<div class="panel panel-default">
@@ -178,7 +171,7 @@
 						<dl class="dl-horizontal">		
 
 								<dt>Namespace</dt>
-								<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
+								<dd><a href="/arguard/api/oehen.arguard.LessThan">oehen<wbr>.arguard<wbr>.LessThan</a></dd>
 											
 							
 								<dt>Base Types</dt>
@@ -195,7 +188,7 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["object"]
-	Type["ArgumentFilePathGuard"]
+	Type["ArgumentIntLessThanGuard"]
 class Type type-node
 
 						</div>
@@ -205,7 +198,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentFilePathGuard</code></pre>
+	<pre><code>public static class ArgumentIntLessThanGuard</code></pre>
 
 
 
@@ -229,11 +222,44 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard/E731AB2D">ThrowIfFileNotExists<wbr>(string, <wbr>string)<wbr></a></td>
-								<td>string</td>
+								<td><a href="/arguard/api/oehen.arguard.LessThan/ArgumentIntLessThanGuard/03C405BB">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>(int, <wbr>int, <wbr>string)<wbr></a></td>
+								<td>int</td>
 								<td>
 									<div>
-        Throws an <code class="cs">System.IO.FileNotFoundException</code> if <span name="filePath" class="paramref">filePath</span> filepath not exists.
+        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less or equal
+        than <span name="compareValue" class="paramref">compareValue</span>.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/arguard/api/oehen.arguard.LessThan/ArgumentIntLessThanGuard/56B6EF92">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Or<wbr>Equal<wbr>Than<wbr>Zero<wbr>(int, <wbr>string)<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div>
+        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less or equal
+        than 0.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/arguard/api/oehen.arguard.LessThan/ArgumentIntLessThanGuard/A92EB35E">ThrowIfIsLessThan<wbr>(int, <wbr>int, <wbr>string)<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div>
+        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than
+        <span name="compareValue" class="paramref">compareValue</span>.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/arguard/api/oehen.arguard.LessThan/ArgumentIntLessThanGuard/C8652A9D">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Than<wbr>Zero<wbr>(int, <wbr>string)<wbr></a></td>
+								<td>int</td>
+								<td>
+									<div>
+        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is less than 0.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
