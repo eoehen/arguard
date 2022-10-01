@@ -2,7 +2,7 @@ using System;
 using FluentAssertions;
 using Xunit;
 
-namespace oehen.arguard
+namespace oehen.arguard.LessThan
 {
     [UseCulture("en-US")]
     public class ArgumentLongLessThanGuardTest

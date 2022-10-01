@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace oehen.arguard
+namespace oehen.arguard.LessThan
 {
     /// <summary>
     ///     <see cref="decimal" /> argument validator.
