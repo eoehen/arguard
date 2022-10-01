@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentBooleanGuard Class</title>
+        <title>oehen.arguard - API - ArgumentLongBetweenGuard Class</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -134,22 +134,11 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Namespace</li>
-		<li><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></li>
+		<li><a href="/arguard/api/oehen.arguard.Between">oehen<wbr>.arguard<wbr>.Between</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard">ArgumentBooleanGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeNowGuard">Argument<wbr>Date<wbr>Time<wbr>Now<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard">Argument<wbr>Date<wbr>Time<wbr>Today<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDecimalLessThanGuard">Argument<wbr>Decimal<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDirectoryPathGuard">Argument<wbr>Directory<wbr>Path<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEmtpyGuard">ArgumentEmtpyGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEnumerableGuard">Argument<wbr>Enumerable<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentEqualGuard">ArgumentEqualGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentFilePathGuard">Argument<wbr>File<wbr>Path<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentIntLessThanGuard">Argument<wbr>Int<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentLongLessThanGuard">Argument<wbr>Long<wbr>Less<wbr>Than<wbr>Guard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentNullGuard">ArgumentNullGuard</a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentTypeGuard">ArgumentTypeGuard</a></li>
+				<li><a href="/arguard/api/oehen.arguard.Between/ArgumentIntBetweenGuard">Argument<wbr>Int<wbr>Between<wbr>Guard</a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard.Between/ArgumentLongBetweenGuard">Argument<wbr>Long<wbr>Between<wbr>Guard</a></li>
 
 
                     </ul>
@@ -164,14 +153,14 @@
 
 
 <section class="content-header">
-	<h1>ArgumentBooleanGuard <small>Class</small></h1>
+	<h1>Argument<wbr>Long<wbr>Between<wbr>Guard <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-        Argument <code class="cs"><a href="/arguard">bool</a></code> validator.
+        <code class="cs"><a href="/arguard">long</a></code> argument between validator.
     </div>
 
 		<div class="panel panel-default">
@@ -181,7 +170,7 @@
 						<dl class="dl-horizontal">		
 
 								<dt>Namespace</dt>
-								<dd><a href="/arguard/api/oehen.arguard">oehen<wbr>.arguard</a></dd>
+								<dd><a href="/arguard/api/oehen.arguard.Between">oehen<wbr>.arguard<wbr>.Between</a></dd>
 											
 							
 								<dt>Base Types</dt>
@@ -198,7 +187,7 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["object"]
-	Type["ArgumentBooleanGuard"]
+	Type["ArgumentLongBetweenGuard"]
 class Type type-node
 
 						</div>
@@ -208,7 +197,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class ArgumentBooleanGuard</code></pre>
+	<pre><code>public static class ArgumentLongBetweenGuard</code></pre>
 
 
 
@@ -232,21 +221,12 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard/2F427A35">ThrowIfFalse<wbr>(bool, <wbr>string)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/arguard/api/oehen.arguard.Between/ArgumentLongBetweenGuard/2DE4FA20">ThrowIfIsBetween<wbr>(long, <wbr>long, <wbr>long, <wbr>string)<wbr></a></td>
+								<td>long</td>
 								<td>
 									<div>
-        Throws an <code class="cs">System.ArgumentException</code> if <span name="argument" class="paramref">argument</span> is false.
-    </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/arguard/api/oehen.arguard/ArgumentBooleanGuard/868AE52E">ThrowIfTrue<wbr>(bool, <wbr>string)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div>
-        Throws an <code class="cs">System.ArgumentException</code> if <span name="argument" class="paramref">argument</span> is true.
+        Throws an <code class="cs">System.ArgumentOutOfRangeException</code> exception if the <span name="argument" class="paramref">argument</span> is between
+        <span name="compareValueStart" class="paramref">compareValueStart</span> and <span name="compareValueEnd" class="paramref">compareValueEnd</span>.
     </div>
 											<div><small><em>static</em></small></div>
 								</td>
