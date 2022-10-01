@@ -13,8 +13,8 @@ namespace oehen.arguard.Between
         ///     <paramref name="compareValueStart" /> and <paramref name="compareValueEnd"/>.
         /// </summary>
         /// <param name="argument">Argument value.</param>
-        /// <param name="compareValueStart">Value to compare.</param>
-        /// <param name="compareValueEnd">Value to compare.</param>
+        /// <param name="compareValueStart">Start range to compare.</param>
+        /// <param name="compareValueEnd">End range to compare.</param>
         /// <param name="nameOfArgument">Name of the argument.</param>
         /// <example>
         ///     <para>Throws when the argument `longArgument` is between 5 and 10.</para>
