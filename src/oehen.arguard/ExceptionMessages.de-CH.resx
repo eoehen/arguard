@@ -162,4 +162,7 @@
   <data name="ThrowIfIsLessThanNow" xml:space="preserve">
     <value>Argument {0} ist früher als jetzt.</value>
   </data>
+  <data name="ThrowIfIsBetween" xml:space="preserve">
+    <value>Argument ist zwischen {0} und {1}.</value>
+  </data>
 </root>
