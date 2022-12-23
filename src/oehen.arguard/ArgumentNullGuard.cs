@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace oehen.arguard
 {
@@ -22,7 +23,7 @@ namespace oehen.arguard
         /// </example>
         public static T ThrowIfNull<T>([ArgumentValidatedNotNull] this T argument, string nameOfArgument)
         {
-            if (object.Equals(argument, default(T)))
+            if (!typeof(T).IsEnum && EqualityComparer<T>.Default.Equals(argument, default))
             {
                 throw new ArgumentNullException(nameOfArgument);
             }
