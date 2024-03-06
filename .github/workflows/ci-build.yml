@@ -78,7 +78,7 @@ jobs:
     
     # Publish artifacts
     - name: Publish Issues-Report as build artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       if: matrix.os == 'windows-latest'
       with:
         if-no-files-found: warn
@@ -86,7 +86,7 @@ jobs:
         path: BuildArtifacts/report.html
 
     - name: Publish NuGet package as build artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       if: matrix.os == 'ubuntu-22.04'
       with:
         if-no-files-found: warn
@@ -94,7 +94,7 @@ jobs:
         path: BuildArtifacts/Packages/**/*
 
     - name: Publish coverage artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       if: matrix.os == 'ubuntu-22.04'
       with:
         if-no-files-found: warn
