@@ -17,42 +17,42 @@ jobs:
       
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
     - name: Fetch all tags and branches
       run: git fetch --prune --unshallow
 
     # .net Core setup
     - name: Setup .NET Core 2.1
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@4d6c8fcf3c8f7a60068d26b594648e99df24cee3 # v4
       with:
         dotnet-version: 2.1
 
     - name: Setup .NET Core 3.1
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@4d6c8fcf3c8f7a60068d26b594648e99df24cee3 # v4
       with:
         dotnet-version: 3.1
 
     - name: Setup .NET 5.x
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@4d6c8fcf3c8f7a60068d26b594648e99df24cee3 # v4
       with:
         dotnet-version: 5.x
 
     - name: Setup .NET 6.x
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@4d6c8fcf3c8f7a60068d26b594648e99df24cee3 # v4
       with:
         dotnet-version: 6.x
 
       # Caching Tools
     - name: Cache Tools
-      uses: actions/cache@v4.0.1
+      uses: actions/cache@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
       with:
         path: tools
         key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
   
     # Build
     - name: Build Project
-      uses: cake-build/cake-action@v1
+      uses: cake-build/cake-action@a6eb054329257c9e70a6c6bf01747ad6e1d9d52b # v1
       with:
         script-path: recipe.cake
         target: CI
@@ -62,7 +62,7 @@ jobs:
     
     # Publish
     - name: Publish Issues-Report as build artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4
       if: matrix.os == 'windows-latest'
       with:
         if-no-files-found: warn
@@ -70,7 +70,7 @@ jobs:
         path: BuildArtifacts/report.html
 
     - name: Publish NuGet package as build artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4
       if: matrix.os == 'ubuntu-22.04'
       with:
         if-no-files-found: warn
@@ -78,7 +78,7 @@ jobs:
         path: BuildArtifacts/Packages/**/*
 
     - name: Publish coverage artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4
       if: matrix.os == 'ubuntu-22.04'
       with:
         if-no-files-found: warn
