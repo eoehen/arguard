@@ -16,7 +16,13 @@ namespace oehen.arguard
                 // ReSharper disable once ExpressionIsAlwaysNull
                 argument.ThrowIfIsNullOrEmpty(nameof(argument));
             });
+
+#if NET472  
+#elif NET48
+            exception.Message.Should().Be("Argument is null or empty." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Argument is null or empty. (Parameter 'argument')");
+#endif
         }
 
         [Fact]
@@ -36,7 +42,14 @@ namespace oehen.arguard
                 // ReSharper disable once ExpressionIsAlwaysNull
                 argument.ThrowIfIsNullOrWhiteSpace(nameof(argument));
             });
+
+#if NET472  
+#elif NET48
+            exception.Message.Should().Be("Argument is null or whitespace." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Argument is null or whitespace. (Parameter 'argument')");
+#endif
+
         }
 
         [Fact]
@@ -48,7 +61,13 @@ namespace oehen.arguard
                 // ReSharper disable once ExpressionIsAlwaysNull
                 argument.ThrowIfIsNullOrWhiteSpace(nameof(argument));
             });
+
+#if NET472  
+#elif NET48
+            exception.Message.Should().Be("Argument is null or whitespace." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Argument is null or whitespace. (Parameter 'argument')");
+#endif
         }
 
         [Fact]
