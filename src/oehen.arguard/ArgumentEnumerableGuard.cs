@@ -27,7 +27,7 @@ namespace oehen.arguard
         {
             var argumentAsArray = argument.ToArray();
             argumentAsArray.ThrowIfNull(nameOfArgument);
-            if (!argumentAsArray.Any())
+            if (argumentAsArray.Length == 0)
             {
                 throw new ArgumentNullException(nameOfArgument,
                     ArgumentExceptionMessageResourceManager.GetMessage("ArgumentNullOrEmpty"));

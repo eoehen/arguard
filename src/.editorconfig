@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CA1863: Use 'CompositeFormat'
+dotnet_diagnostic.CA1863.severity = none
