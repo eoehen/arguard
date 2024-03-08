@@ -16,7 +16,7 @@ namespace oehen.arguard
         [Fact]
         public void ThrowArgumentNullException_If_Enum_Is_Default()
         {
-            TestEnum argument = default(TestEnum);
+            TestEnum argument = default;
 
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = argument.ThrowIfNull(nameof(argument));

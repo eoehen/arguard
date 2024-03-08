@@ -25,7 +25,7 @@ namespace oehen.arguard
         /// </example>
         public static T ThrowIfNotTypeOf<T>(this object argument, string nameOfArgument)
         {
-            if (!(argument is T typedArgument))
+            if (argument is not T typedArgument)
             {
                 throw new InvalidOperationException(string.Format(CultureInfo.CurrentCulture,
                     ArgumentExceptionMessageResourceManager.GetMessage("ThrowIfNotTypeOf"),
