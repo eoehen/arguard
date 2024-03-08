@@ -3,5 +3,6 @@
   "extends": [ 
     "github>eoehen/renovate-presets", 
     "github>eoehen/renovate-presets:github-actions" 
-  ]
+  ],
+  "ignoreDeps": [ "cake.tool" ]
 }
