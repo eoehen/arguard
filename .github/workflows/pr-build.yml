@@ -51,6 +51,11 @@ jobs:
       with:
         dotnet-version: 8.x
 
+    - name: Use Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
     # Caching Tools
     - name: Cache Tools
       uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
@@ -60,7 +65,8 @@ jobs:
   
     # Build
     - name: Build Project
-      uses: cake-build/cake-action@a6eb054329257c9e70a6c6bf01747ad6e1d9d52b # v1
+      uses: cake-build/cake-action@v2
+      using: 'node20'
       with:
         script-path: recipe.cake
         target: CI

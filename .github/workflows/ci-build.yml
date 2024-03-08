@@ -40,6 +40,12 @@ jobs:
     - name: Fetch all tags and branches
       run: git fetch --prune --unshallow
 
+    # node setup
+    - name: Setup node 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
     # .net Core setup
     - name: Setup .NET Core 2.1
       uses: actions/setup-dotnet@4d6c8fcf3c8f7a60068d26b594648e99df24cee3 # v4
@@ -76,13 +82,14 @@ jobs:
     # Build
     - name: Build Project
       uses: cake-build/cake-action@a6eb054329257c9e70a6c6bf01747ad6e1d9d52b # v1
+      using: 'node20'
       with:
         script-path: recipe.cake
         target: CI
         verbosity: Verbose
         cake-version: 1.3.0
         cake-bootstrap: true
-    
+
     # Publish artifacts
     - name: Publish Issues-Report as build artifact
       uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4
