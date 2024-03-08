@@ -18,8 +18,13 @@ namespace oehen.arguard.LessThan
             {
                 argument.ThrowIfIsLessThanZero(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().StartWith($"Argument is less than 0.");
+#else
             exception.Message.Should().Be("Argument is less than 0. (Parameter 'argument')" +
                                           Environment.NewLine + $"Actual value was {argument}.");
+#endif
         }
 
         [Theory]

@@ -16,7 +16,12 @@ namespace oehen.arguard
             {
                 argument.ThrowIfIsNullOrEmpty(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().Be("Argument is null or empty." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Argument is null or empty. (Parameter 'argument')");
+#endif
         }
 
         [Fact]

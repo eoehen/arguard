@@ -16,7 +16,7 @@ namespace oehen.arguard
         [Fact]
         public void ThrowArgumentNullException_If_Enum_Is_Default()
         {
-            TestEnum argument = default(TestEnum);
+            TestEnum argument = default;
 
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = argument.ThrowIfNull(nameof(argument));
@@ -45,7 +45,12 @@ namespace oehen.arguard
                 // ReSharper disable once ExpressionIsAlwaysNull
                 argument.ThrowIfNull(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+#endif
         }
 
         [Fact]
@@ -57,7 +62,12 @@ namespace oehen.arguard
                 // ReSharper disable once ExpressionIsAlwaysNull
                 argument.ThrowIfNull(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+#endif
         }
 
         [Fact]
@@ -69,7 +79,12 @@ namespace oehen.arguard
                 // ReSharper disable once ExpressionIsAlwaysNull
                 argument.ThrowIfNull(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+#endif
         }
 
         [Fact]
@@ -81,7 +96,12 @@ namespace oehen.arguard
                 // ReSharper disable once ExpressionIsAlwaysNull
                 argument.ThrowIfNull(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+#else
             exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+#endif
         }
 
         [Fact]

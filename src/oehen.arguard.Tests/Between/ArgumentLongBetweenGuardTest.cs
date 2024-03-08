@@ -18,8 +18,13 @@ namespace oehen.arguard.Between
             {
                 argument.ThrowIfIsBetween(compareValueStart, compareValueEnd, nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().StartWith($"Argument is between {compareValueStart} and {compareValueEnd}.");
+#else
             exception.Message.Should().Be($"Argument is between {compareValueStart} and {compareValueEnd}. (Parameter 'argument')" +
                                           Environment.NewLine + $"Actual value was {argument}.");
+#endif
         }
 
         [Theory]

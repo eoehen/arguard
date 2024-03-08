@@ -20,8 +20,13 @@ namespace oehen.arguard.LessThan
             {
                 argument.ThrowIfIsLessOrEqualThan(compareValue, nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().StartWith($"Argument is less or equal than {compareValue}.");
+#else
             exception.Message.Should().Be($"Argument is less or equal than {compareValue}. (Parameter 'argument')" +
-                                          Environment.NewLine + $"Actual value was {argument}.");
+                Environment.NewLine + $"Actual value was {argument}.");
+#endif
         }
 
         [Theory]
@@ -36,8 +41,13 @@ namespace oehen.arguard.LessThan
             {
                 argument.ThrowIfIsLessThan(compareValue, nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().StartWith($"Argument is less than {compareValue}.");
+#else
             exception.Message.Should().Be($"Argument is less than {compareValue}. (Parameter 'argument')" +
-                                          Environment.NewLine + $"Actual value was {argument}.");
+                Environment.NewLine + $"Actual value was {argument}.");
+#endif        
         }
 
         [Theory]
