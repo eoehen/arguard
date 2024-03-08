@@ -19,8 +19,13 @@ namespace oehen.arguard.LessThan
             {
                 argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().StartWith($"Argument is less or equal than 0.");
+#else
             exception.Message.Should().Be("Argument is less or equal than 0. (Parameter 'argument')" +
                                           Environment.NewLine + $"Actual value was {argument}.");
+#endif
         }
 
         [Fact]
@@ -31,8 +36,13 @@ namespace oehen.arguard.LessThan
             {
                 argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
             });
+#if NET472
+#elif NET48
+            exception.Message.Should().StartWith($"Argument is less or equal than 0.");
+#else
             exception.Message.Should().Be("Argument is less or equal than 0. (Parameter 'argument')" +
-                                          Environment.NewLine + "Actual value was 0.");
+                                          Environment.NewLine + $"Actual value was {argument}.");
+#endif
         }
 
         [Theory]
