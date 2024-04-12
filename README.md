@@ -31,6 +31,8 @@ The latest documentation can find at [https://eoehen.github.io/arguard/](https:/
 |:--:|:--:|
 |![develop](https://github.com/eoehen/arguard/workflows/CI-Build/badge.svg?branch=develop)|![master](https://github.com/eoehen/arguard/workflows/CI-Build/badge.svg?branch=master)|
 
+https://codecov.io/gh/eoehen/arguard/graphs/sunburst.svg?token=9B8NT9L82D
+
 To build this package we are using [Cake.Recipe](https://github.com/cake-contrib/Cake.Recipe).
 
 On Windows PowerShell run:
