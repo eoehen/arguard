@@ -31,8 +31,6 @@ The latest documentation can find at [https://eoehen.github.io/arguard/](https:/
 |:--:|:--:|
 |![develop](https://github.com/eoehen/arguard/workflows/CI-Build/badge.svg?branch=develop)|![master](https://github.com/eoehen/arguard/workflows/CI-Build/badge.svg?branch=master)|
 
-<img src="[./controllers_brief.svg](https://codecov.io/gh/eoehen/arguard/graphs/sunburst.svg?token=9B8NT9L82D)">
-
 To build this package we are using [Cake.Recipe](https://github.com/cake-contrib/Cake.Recipe).
 
 On Windows PowerShell run:
@@ -60,6 +58,8 @@ On Windows PowerShell run:
 [![codecov](https://codecov.io/gh/eoehen/arguard/branch/develop/graph/badge.svg?token=9B8NT9L82D)](https://codecov.io/gh/eoehen/arguard)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b09d240a2f6a4a398a582ff7295f4830)](https://www.codacy.com/gh/eoehen/arguard/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eoehen/arguard&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b09d240a2f6a4a398a582ff7295f4830)](https://www.codacy.com/gh/eoehen/arguard/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eoehen/arguard&utm_campaign=Badge_Coverage)
+
+<img src="[https://codecov.io/gh/eoehen/arguard/graphs/sunburst.svg?token=9B8NT9L82D">
 
 ## Contributing
 
