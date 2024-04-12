@@ -14,7 +14,10 @@ jobs:
 
     env:
       src-directory: ./src
-      
+
+      # CODCOV
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
     steps:
     - name: Checkout the repository
       uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
