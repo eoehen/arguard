@@ -10,14 +10,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-22.04, windows-latest, macos-latest ]
+        os: [ ubuntu-22.04, windows-2022, macos-13 ]
 
     env:
       src-directory: ./src
-      
+
+      # CODCOV
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b # v4
 
     - name: Fetch all tags and branches
       run: git fetch --prune --unshallow
@@ -48,16 +51,21 @@ jobs:
       with:
         dotnet-version: 8.x
 
+    - name: Use Node.js 20
+      uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+      with:
+        node-version: 20
+
     # Caching Tools
     - name: Cache Tools
-      uses: actions/cache@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
+      uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
       with:
         path: tools
         key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
   
     # Build
     - name: Build Project
-      uses: cake-build/cake-action@a6eb054329257c9e70a6c6bf01747ad6e1d9d52b # v1
+      uses: cake-build/cake-action@v2
       with:
         script-path: recipe.cake
         target: CI
@@ -67,7 +75,7 @@ jobs:
     
     # Publish
     - name: Publish Issues-Report as build artifact
-      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4
       if: matrix.os == 'windows-latest'
       with:
         if-no-files-found: warn
@@ -75,7 +83,7 @@ jobs:
         path: BuildArtifacts/report.html
 
     - name: Publish NuGet package as build artifact
-      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4
       if: matrix.os == 'ubuntu-22.04'
       with:
         if-no-files-found: warn
@@ -83,7 +91,7 @@ jobs:
         path: BuildArtifacts/Packages/**/*
 
     - name: Publish coverage artifact
-      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4
       if: matrix.os == 'ubuntu-22.04'
       with:
         if-no-files-found: warn

@@ -55,9 +55,15 @@ On Windows PowerShell run:
 
 ## Code Coverage & Quality
 
-[![codecov](https://codecov.io/gh/eoehen/arguard/branch/develop/graph/badge.svg?token=9B8NT9L82D)](https://codecov.io/gh/eoehen/arguard)
+## Codacy
+
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b09d240a2f6a4a398a582ff7295f4830)](https://www.codacy.com/gh/eoehen/arguard/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eoehen/arguard&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b09d240a2f6a4a398a582ff7295f4830)](https://www.codacy.com/gh/eoehen/arguard/dashboard?utm_source=github.com&utm_medium=referral&utm_content=eoehen/arguard&utm_campaign=Badge_Coverage)
+
+### CodeCov
+
+[![codecov](https://codecov.io/gh/eoehen/arguard/branch/develop/graph/badge.svg?token=9B8NT9L82D)](https://codecov.io/gh/eoehen/arguard)
+<img src="https://codecov.io/gh/eoehen/arguard/graphs/sunburst.svg?token=9B8NT9L82D">
 
 ## Contributing
 
