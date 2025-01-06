@@ -1,36 +1,20 @@
 ---
 Title: oehen.arguard
-NoSidebar: true
 NoContainer: true
-NoGutter: true
+NoTitle: true
 ---
 
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="display-4"><img src='@Context.GetLink("/assets/img/Icon.png")' alt="oehen.arguard" width="80" height="80"/>oehen.arguard</h1>
-        <p>
-            Argument and parameter validation extension library for .NET.<br/>
-        </p>
-        <a class="btn btn-primary btn-lg" href="/arguard/docs" role="button">Learn more</a>
-        <a class="btn btn-primary btn-lg" href="/arguard/api/oehen.arguard" role="button">API documentation</a>
+@section Splash {
+    <div id="hero" class="jumbotron jumbotron-fluid mb-0">
+        <div class="container-xl">
+            <div class="row">
+                <div class=" offset-lg-2 col-12 col-lg-8">
+                    <div class="display-4 text-white"><img src='@Context.GetLink("/assets/img/Icon.png")' alt="oehen.arguard" width="80" height="80"/>oehen.arguard</div>
+                    <p class="lead text-white">
+                        Argument and parameter validation extension library for .NET.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="container">
-    <p style="height: 35px;">
-        <a href="https://github.com/eoehen/arguard"><img alt="GitHub" src="https://img.shields.io/github/license/eoehen/arguard"></a>
-        <a href="https://github.com/eoehen/arguard/releases"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/eoehen/arguard"></a>
-        <a href="https://www.nuget.org/packages/oehen.arguard"><img alt="Nuget" src="https://img.shields.io/nuget/dt/oehen.arguard"></a>
-        <a href="https://www.codacy.com/gh/eoehen/arguard/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eoehen/arguard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/b09d240a2f6a4a398a582ff7295f4830"/></a>
-        <a href="https://www.codacy.com/gh/eoehen/arguard/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eoehen/arguard&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/b09d240a2f6a4a398a582ff7295f4830"/></a>
-    </p>
-    <p>
-        oehen.arguard is a argument and parameter validation extension library for .NET.
-    </p>
-    <p>
-        <a href="https://www.nuget.org/packages/oehen.arguard">
-            <img class="ImgResponsibility" src='@Context.GetLink("/assets/images/nuget_button.png")' alt="oehen.arguard"/>
-        </a>
-    </p>
-    <img class="ImgResponsibility" src='@Context.GetLink("/assets/img/logo.png")' alt="oehen.arguard"/>
-</div>
+}
