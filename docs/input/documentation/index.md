@@ -2,6 +2,3 @@
 Order: 10
 Description: Documentation about the oehen.arguard argument validation library.
 ---
-<p>@Html.Raw(Model.String(DocsKeys.Description))</p>
-
-@Html.Partial("_ChildPages")
