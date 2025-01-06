@@ -330,6 +330,7 @@ ASALocalRun/
 .mfractor/
 
 # Project specific
-config.wyam.*
+docs/cache/
+docs/output/
 BuildArtifacts/
 .DS_Store

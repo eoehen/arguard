@@ -1,8 +1,0 @@
-#recipe Blog
-
-// Customize your settings and add new ones here
-Settings[Keys.Host] = "https://eoehen.github.io/arguard";
-Settings[BlogKeys.Title] = "oehen.arguard";
-Settings[BlogKeys.Description] = "oehen.arguard library";
-
-// Add any pipeline customizations here
