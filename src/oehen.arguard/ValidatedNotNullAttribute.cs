@@ -1,14 +1,12 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 
-namespace oehen.arguard
+namespace oehen.arguard;
+
+/// <summary>
+///     Validated not null attribute.
+/// </summary>
+[ExcludeFromCodeCoverage]
+[AttributeUsage(AttributeTargets.Parameter)]
+internal sealed class ArgumentValidatedNotNullAttribute : Attribute
 {
-    /// <summary>
-    ///     Validated not null attribute.
-    /// </summary>
-    [ExcludeFromCodeCoverage]
-    [AttributeUsage(AttributeTargets.Parameter)]
-    internal sealed class ArgumentValidatedNotNullAttribute : Attribute
-    {
-    }
 }

@@ -1,82 +1,82 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0;net472;net48</TargetFrameworks>
-    <PackageId>oehen.arguard</PackageId>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <IncludeSymbols>true</IncludeSymbols>
-    <RepositoryType>git</RepositoryType>
-    <LangVersion>10</LangVersion>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0;net472;net48</TargetFrameworks>
+        <PackageId>oehen.arguard</PackageId>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <IncludeSymbols>true</IncludeSymbols>
+        <RepositoryType>git</RepositoryType>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
 
-  <!-- package properties -->
-  <PropertyGroup>
-    <Authors>oehen.net</Authors>
-    <Company>oehen.net</Company>
-    <summary>Argument validation extension library for .NET core.</summary>
-    <PackageReadmeFile>readme.md</PackageReadmeFile>
-    <Description>
-      This library is an extension for the validation of arguments and parameters.
-    </Description>
-    <copyright>Copyright © oehen.net</copyright>
-    <PackageIcon>arguardlogo.png</PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>Argument;Parameter;Validation</PackageTags>
-    <PackageReleaseNotes>https://github.com/eoehen/arguard/releases/tag/$(Version)</PackageReleaseNotes>
-    <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
-    <PackageProjectUrl>https://eoehen.github.io/arguard/</PackageProjectUrl>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-  </PropertyGroup>
-  <!-- package properties -->
+    <!-- package properties -->
+    <PropertyGroup>
+        <Authors>oehen.net</Authors>
+        <Company>oehen.net</Company>
+        <summary>Argument validation extension library for .NET core.</summary>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <Description>
+            This library is an extension for the validation of arguments and parameters.
+        </Description>
+        <copyright>Copyright © oehen.net</copyright>
+        <PackageIcon>arguardlogo.png</PackageIcon>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>Argument;Parameter;Validation</PackageTags>
+        <PackageReleaseNotes>https://github.com/eoehen/arguard/releases/tag/$(Version)</PackageReleaseNotes>
+        <RepositoryUrl>https://github.com/eoehen/arguard.git</RepositoryUrl>
+        <PackageProjectUrl>https://eoehen.github.io/arguard/</PackageProjectUrl>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    </PropertyGroup>
+    <!-- package properties -->
 
-  <PropertyGroup>
-    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-    <EnableNETAnalyzers>True</EnableNETAnalyzers>
-    <AnalysisLevel>latest-recommended</AnalysisLevel>
-  </PropertyGroup>
+    <PropertyGroup>
+        <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+        <EnableNETAnalyzers>True</EnableNETAnalyzers>
+        <AnalysisLevel>latest-recommended</AnalysisLevel>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="arguardlogo.png" />
-    <None Include="arguardlogo.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="arguardlogo.png"/>
+        <None Include="arguardlogo.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Include="readme.md" Pack="true" PackagePath="" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="readme.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="ExceptionMessages.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ExceptionMessages.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Update="ExceptionMessages.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>ExceptionMessages.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="ExceptionMessages.de-CH.resx">
-      <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="ExceptionMessages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Update="ExceptionMessages.de-CH.resx">
+            <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+            <Generator>ResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="ExceptionMessages.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>ExceptionMessages.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
 
 </Project>

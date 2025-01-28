@@ -1,114 +1,114 @@
 using System;
+// ReSharper disable UnusedVariable
+// ReSharper disable UnusedMember.Local
 
+namespace oehen.arguard;
 
-namespace oehen.arguard
+public class ArgumentNullGuardTest
 {
-    public class ArgumentNullGuardTest
+    [Fact]
+    public void ThrowArgumentNullException_If_Enum_Is_Default()
     {
-        enum TestEnum
-        {
-            None,
-            Gruen,
-            Blau
-        }
+        const ArgumentTestEnum argument = default;
 
-        [Fact]
-        public void ThrowArgumentNullException_If_Enum_Is_Default()
-        {
-            TestEnum argument = default;
+        // ReSharper disable once ExpressionIsAlwaysNull
+        var result = argument.ThrowIfNull(nameof(argument));
 
+        result.ShouldBe(argument);
+    }
+
+    [Fact]
+    public void ThrowArgumentNullException_If_Nullable_Enum_Is_Default()
+    {
+        ArgumentTestEnum? argument = default(ArgumentTestEnum);
+
+        // ReSharper disable once ExpressionIsAlwaysNull
+        var result = argument.ThrowIfNull(nameof(argument));
+
+        result.ShouldBe(argument);
+    }
+
+    [Fact]
+    public void ThrowArgumentNullException_If_Nullable_Enum_Is_Null()
+    {
+        ArgumentTestEnum? argument = null;
+
+        var exception = Assert.Throws<ArgumentNullException>(() =>
+        {
             // ReSharper disable once ExpressionIsAlwaysNull
-            var result = argument.ThrowIfNull(nameof(argument));
+            argument.ThrowIfNull(nameof(argument));
+        });
+#if NET472
+#elif NET48
+            exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+#else
+            exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
+#endif
+    }
 
-            result.ShouldBe(argument);
-        }
-
-        [Fact]
-        public void ThrowArgumentNullException_If_Nullable_Enum_Is_Default()
+    [Fact]
+    public void ThrowArgumentNullException_If_ObjectArgumentIsNull()
+    {
+        object argument = null;
+        var exception = Assert.Throws<ArgumentNullException>(() =>
         {
-            TestEnum? argument = default(TestEnum);
-
             // ReSharper disable once ExpressionIsAlwaysNull
-            var result = argument.ThrowIfNull(nameof(argument));
-
-            result.ShouldBe(argument);
-        }
-
-        [Fact]
-        public void ThrowArgumentNullException_If_Nullable_Enum_Is_Null()
-        {
-            TestEnum? argument = null;
-
-            var exception = Assert.Throws<ArgumentNullException>(() =>
-            {
-                // ReSharper disable once ExpressionIsAlwaysNull
-                argument.ThrowIfNull(nameof(argument));
-            });
+            argument.ThrowIfNull(nameof(argument));
+        });
 #if NET472
 #elif NET48
             exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
 #else
             exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
 #endif
-        }
+    }
 
-        [Fact]
-        public void ThrowArgumentNullException_If_ObjectArgumentIsNull()
+    [Fact]
+    public void ThrowArgumentNullException_If_StringArgumentIsNull()
+    {
+        string argument = null;
+        var exception = Assert.Throws<ArgumentNullException>(() =>
         {
-            object argument = null;
-            var exception = Assert.Throws<ArgumentNullException>(() =>
-            {
-                // ReSharper disable once ExpressionIsAlwaysNull
-                argument.ThrowIfNull(nameof(argument));
-            });
+            // ReSharper disable once ExpressionIsAlwaysNull
+            argument.ThrowIfNull(nameof(argument));
+        });
 #if NET472
 #elif NET48
             exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
 #else
             exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
 #endif
-        }
+    }
 
-        [Fact]
-        public void ThrowArgumentNullException_If_StringArgumentIsNull()
+    [Fact]
+    public void ThrowArgumentNullException_If_NullableIntArgumentIsNull()
+    {
+        int? argument = null;
+        var exception = Assert.Throws<ArgumentNullException>(() =>
         {
-            string argument = null;
-            var exception = Assert.Throws<ArgumentNullException>(() =>
-            {
-                // ReSharper disable once ExpressionIsAlwaysNull
-                argument.ThrowIfNull(nameof(argument));
-            });
+            // ReSharper disable once ExpressionIsAlwaysNull
+            argument.ThrowIfNull(nameof(argument));
+        });
 #if NET472
 #elif NET48
             exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
 #else
             exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
 #endif
-        }
+    }
 
-        [Fact]
-        public void ThrowArgumentNullException_If_NullableIntArgumentIsNull()
-        {
-            int? argument = null;
-            var exception = Assert.Throws<ArgumentNullException>(() =>
-            {
-                // ReSharper disable once ExpressionIsAlwaysNull
-                argument.ThrowIfNull(nameof(argument));
-            });
-#if NET472
-#elif NET48
-            exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
-#else
-            exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
-#endif
-        }
+    [Fact]
+    public void NotThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsNotNull()
+    {
+        const string argument = "Hello";
+        var exception = Record.Exception(() => { argument.ThrowIfNull(nameof(argument)); });
+        Assert.Null(exception);
+    }
 
-        [Fact]
-        public void NotThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsNotNull()
-        {
-            const string argument = "Hello";
-            var exception = Record.Exception(() => { argument.ThrowIfNull(nameof(argument)); });
-            Assert.Null(exception);
-        }
+    private enum ArgumentTestEnum
+    {
+        None,
+        Green,
+        Blau
     }
 }
