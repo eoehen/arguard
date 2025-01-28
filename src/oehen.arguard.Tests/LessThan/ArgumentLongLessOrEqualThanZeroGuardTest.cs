@@ -1,23 +1,23 @@
+// ReSharper disable UnusedVariable
 using System;
 
+namespace oehen.arguard.LessThan;
 
-namespace oehen.arguard.LessThan
+[UseCulture("en-US")]
+public class ArgumentLongLessOrEqualThanZeroGuardTest
 {
-    [UseCulture("en-US")]
-    public class ArgumentLongLessOrEqualThanZeroGuardTest
+    [Theory]
+    [InlineData(-1)]
+    [InlineData(-2)]
+    [InlineData(-3)]
+    [InlineData(-123456)]
+    public void Long_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(
+        long argument)
     {
-        [Theory]
-        [InlineData(-1)]
-        [InlineData(-2)]
-        [InlineData(-3)]
-        [InlineData(-123456)]
-        public void Long_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentValueIsNegative(
-            long argument)
+        var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
-            var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
-            {
-                argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
-            });
+            argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
+        });
 #if NET472
 #elif NET48
             exception.Message.ShouldStartWith($"Argument is less or equal than 0.");
@@ -25,16 +25,16 @@ namespace oehen.arguard.LessThan
             exception.Message.ShouldBe("Argument is less or equal than 0. (Parameter 'argument')" +
                                           Environment.NewLine + $"Actual value was {argument}.");
 #endif
-        }
+    }
 
-        [Fact]
-        public void Long_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentIsZero()
+    [Fact]
+    public void Long_ThrowIfIsLessOrEqualThanZero_ShouldThrowArgumentOutOfRangeException_IfArgumentIsZero()
+    {
+        const long argument = 0;
+        var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
         {
-            const long argument = 0;
-            var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
-            {
-                argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
-            });
+            argument.ThrowIfIsLessOrEqualThanZero(nameof(argument));
+        });
 #if NET472
 #elif NET48
             exception.Message.ShouldStartWith($"Argument is less or equal than 0.");
@@ -42,19 +42,18 @@ namespace oehen.arguard.LessThan
             exception.Message.ShouldBe("Argument is less or equal than 0. (Parameter 'argument')" +
                                           Environment.NewLine + "Actual value was 0.");
 #endif
-        }
+    }
 
-        [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
-        [InlineData(3)]
-        [InlineData(123456)]
-        [InlineData(int.MaxValue)]
-        public void Long_ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(
-            long argument)
-        {
-            var exception = Record.Exception(() => { argument.ThrowIfIsLessOrEqualThanZero(nameof(argument)); });
-            Assert.Null(exception);
-        }
+    [Theory]
+    [InlineData(1)]
+    [InlineData(2)]
+    [InlineData(3)]
+    [InlineData(123456)]
+    [InlineData(int.MaxValue)]
+    public void Long_ThrowIfIsLessOrEqualThanZero_ShouldNotThrowArgumentOutOfRangeException_IfArgumentIsMoreThanZero(
+        long argument)
+    {
+        var exception = Record.Exception(() => { argument.ThrowIfIsLessOrEqualThanZero(nameof(argument)); });
+        Assert.Null(exception);
     }
 }
