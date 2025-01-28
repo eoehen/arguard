@@ -1,34 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace oehen.arguard
+namespace oehen.arguard;
+
+/// <summary>
+///     <see cref="object" /> argument null validator.
+/// </summary>
+public static class ArgumentNullGuard
 {
     /// <summary>
-    ///     <see cref="object" /> argument null validator.
+    ///     Throws an <see cref="ArgumentNullException" /> if <paramref name="argument" /> is null.
     /// </summary>
-    public static class ArgumentNullGuard
+    /// <param name="argument">Argument value.</param>
+    /// <param name="nameOfArgument">Name of the argument.</param>
+    /// <example>
+    ///     <para>Throws when the argument `objArgument` is null.</para>
+    ///     <code>
+    /// <![CDATA[
+    ///     var localVar = objArgument.ThrowIfNull(nameof(objArgument));
+    /// ]]>
+    /// </code>
+    /// </example>
+    public static T ThrowIfNull<T>([ArgumentValidatedNotNull] this T argument, string nameOfArgument)
     {
-        /// <summary>
-        ///     Throws an <see cref="ArgumentNullException" /> if <paramref name="argument" /> is null.
-        /// </summary>
-        /// <param name="argument">Argument value.</param>
-        /// <param name="nameOfArgument">Name of the argument.</param>
-        /// <example>
-        ///     <para>Throws when the argument `objArgument` is null.</para>
-        ///     <code>
-        /// <![CDATA[
-        ///     var localVar = objArgument.ThrowIfNull(nameof(objArgument));
-        /// ]]>
-        /// </code>
-        /// </example>
-        public static T ThrowIfNull<T>([ArgumentValidatedNotNull] this T argument, string nameOfArgument)
+        if (!typeof(T).IsEnum && EqualityComparer<T>.Default.Equals(argument, default))
         {
-            if (!typeof(T).IsEnum && EqualityComparer<T>.Default.Equals(argument, default))
-            {
-                throw new ArgumentNullException(nameOfArgument);
-            }
-
-            return argument;
+            throw new ArgumentNullException(nameOfArgument);
         }
+
+        return argument;
     }
 }
