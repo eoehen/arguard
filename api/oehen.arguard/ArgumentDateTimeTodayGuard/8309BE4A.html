@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/arguard/assets/img/favicon.ico" type="image/x-icon">
-        <title>oehen.arguard - API - ArgumentDateTimeTodayGuard.ThrowIfIsLaterThanToday(DateTime, string) Method</title>
+        <title>oehen.arguard - API - ArgumentDateTimeTodayGuard.ThrowIfIsNotToday(DateTime, string) Method</title>
         <link href="/arguard/assets/css/highlight.css" rel="stylesheet">
         <link href="/arguard/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/arguard/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -140,9 +140,9 @@
 		<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard">Argument<wbr>Date<wbr>Time<wbr>Today<wbr>Guard</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Method Members</li>
-				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard/03A81FA8">Throw<wbr>If<wbr>Is<wbr>Later<wbr>Than<wbr>Today<wbr>(DateTime, <wbr>string)<wbr></a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard/C036427D">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Than<wbr>Today<wbr>(DateTime, <wbr>string)<wbr></a></li>
-				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard/AE7DE295">ThrowIfIsNotToday<wbr>(DateTime, <wbr>string)<wbr></a></li>
+				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard/682C4928">Throw<wbr>If<wbr>Is<wbr>Later<wbr>Than<wbr>Today<wbr>(DateTime, <wbr>string)<wbr></a></li>
+				<li><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard/AAD083B5">Throw<wbr>If<wbr>Is<wbr>Less<wbr>Than<wbr>Today<wbr>(DateTime, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard/8309BE4A">ThrowIfIsNotToday<wbr>(DateTime, <wbr>string)<wbr></a></li>
 
 
                     </ul>
@@ -158,15 +158,15 @@
 
 <section class="content-header">
 			<h3><a href="/arguard/api/oehen.arguard/ArgumentDateTimeTodayGuard">Argument<wbr>Date<wbr>Time<wbr>Today<wbr>Guard</a>.</h3>
-	<h1>Throw<wbr>If<wbr>Is<wbr>Later<wbr>Than<wbr>Today<wbr>(DateTime, <wbr>string)<wbr> <small>Method</small></h1>
+	<h1>ThrowIfIsNotToday<wbr>(DateTime, <wbr>string)<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-        Throws an <code class="cs">System.InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is
-        later than<code class="cs">System.DateTime.Today</code>.
+        Throws an <code class="cs">InvalidOperationException</code> if <span name="argument" class="paramref">argument</span> is
+        not <code class="cs">DateTime.Today</code>.
     </div>
 
 		<div class="panel panel-default">
@@ -184,12 +184,12 @@
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static DateTime ThrowIfIsLaterThanToday(this DateTime argument, string nameOfArgument)</code></pre>
+	<pre><code>public static DateTime ThrowIfIsNotToday(this DateTime argument, string nameOfArgument)</code></pre>
 
 	<h1 id="Examples">Examples</h1>
 	<div>
-        <p>Throws when <span name="argument" class="paramref">argument</span> is later than <code class="cs">System.DateTime.Today</code>.</p>
-        <pre><code class="cs">var localVar = argument.ThrowIfNotLaterThanToday(nameof(argument));</code></pre>
+        <p>Throws when <span name="argument" class="paramref">argument</span> is not <code class="cs">DateTime.Today</code>.</p>
+        <pre><code class="cs">var localVar = argument.ThrowIfNotToday(nameof(argument));</code></pre>
     </div>
 
 
