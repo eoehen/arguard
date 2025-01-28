@@ -1,6 +1,5 @@
 using System.Globalization;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -25,7 +24,7 @@ namespace oehen.arguard
             foreach (var key in keys)
             {
                 var locMessage = ArgumentExceptionMessageResourceManager.GetMessage(key);
-                locMessage.Should().NotBeNullOrEmpty();
+                locMessage.ShouldNotBeNullOrEmpty();
             }
         }
     }

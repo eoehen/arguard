@@ -1,6 +1,5 @@
 using System;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -11,7 +10,7 @@ namespace oehen.arguard
         {
             const string argument = "England";
             Action act = () => argument.ThrowIfNotTypeOf<int>(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -19,7 +18,7 @@ namespace oehen.arguard
         {
             const string argument = "England";
             Action act = () => argument.ThrowIfNotTypeOf<string>(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -28,7 +27,7 @@ namespace oehen.arguard
         {
             const string argument = "England";
             Action act = () => argument.ThrowIfNotTypeOf(typeof(int), nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -37,7 +36,7 @@ namespace oehen.arguard
         {
             const string argument = "England";
             Action act = () => argument.ThrowIfNotTypeOf(typeof(string), nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -11,7 +10,7 @@ namespace oehen.arguard
         {
             const bool argument = true;
             Action act = () => argument.ThrowIfTrue(nameof(argument));
-            act.Should().Throw<ArgumentException>();
+            act.ShouldThrow<ArgumentException>();
         }
 
         [Fact]
@@ -19,7 +18,7 @@ namespace oehen.arguard
         {
             const bool argument = false;
             Action act = () => argument.ThrowIfFalse(nameof(argument));
-            act.Should().Throw<ArgumentException>();
+            act.ShouldThrow<ArgumentException>();
         }
 
         [Fact]
@@ -28,7 +27,7 @@ namespace oehen.arguard
         {
             const bool argument = false;
             Action act = () => argument.ThrowIfTrue(nameof(argument));
-            act.Should().NotThrow<ArgumentException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -37,7 +36,7 @@ namespace oehen.arguard
         {
             const bool argument = true;
             Action act = () => argument.ThrowIfFalse(nameof(argument));
-            act.Should().NotThrow<ArgumentException>();
+            act.ShouldNotThrow();
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -21,7 +20,7 @@ namespace oehen.arguard
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = argument.ThrowIfNull(nameof(argument));
 
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
 
         [Fact]
@@ -32,7 +31,7 @@ namespace oehen.arguard
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = argument.ThrowIfNull(nameof(argument));
 
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
 
         [Fact]
@@ -47,9 +46,9 @@ namespace oehen.arguard
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+            exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
 #endif
         }
 
@@ -64,9 +63,9 @@ namespace oehen.arguard
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+            exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
 #endif
         }
 
@@ -81,9 +80,9 @@ namespace oehen.arguard
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+            exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
 #endif
         }
 
@@ -98,9 +97,9 @@ namespace oehen.arguard
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().Be("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Value cannot be null." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Value cannot be null. (Parameter 'argument')");
+            exception.Message.ShouldBe("Value cannot be null. (Parameter 'argument')");
 #endif
         }
 

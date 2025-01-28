@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -18,9 +17,9 @@ namespace oehen.arguard
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().Be("Argument is null or empty." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Argument is null or empty." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Argument is null or empty. (Parameter 'argument')");
+            exception.Message.ShouldBe("Argument is null or empty. (Parameter 'argument')");
 #endif
         }
 
@@ -38,12 +37,12 @@ namespace oehen.arguard
         [Fact]
         public void ThrowIfIsNullOrEmpty_When_IEnumerable_Has_One_Entry_Should_Return_ArgumentValue()
         {
-            IEnumerable<string> argument = new List<string>
+            var argument = new []
             {
                 "entry one"
             };
             var result = argument.ThrowIfIsNullOrEmpty(nameof(argument));
-            result.Should().BeEquivalentTo(argument);
+            result.ShouldBeEquivalentTo(argument);
         }
         
         [Fact]
@@ -62,14 +61,14 @@ namespace oehen.arguard
         [Fact]
         public void ThrowIfIsNullOrEmpty_When_IEnumerable_Has_Many_Entries_Should_Return_ArgumentValue()
         {
-            IEnumerable<string> argument = new List<string>
+            var argument = new []
             {
                 "entry one",
                 "entry two",
                 "entry three"
             };
             var result = argument.ThrowIfIsNullOrEmpty(nameof(argument));
-            result.Should().BeEquivalentTo(argument);
+            result.ShouldBeEquivalentTo(argument);
         }
     }
 }
