@@ -1,7 +1,6 @@
 using System;
 using System.IO;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard.Filesystem
 {
@@ -13,7 +12,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = "";
             Action act = () => argument.ThrowIfDirectoryNotExists(nameof(argument));
-            act.Should().Throw<DirectoryNotFoundException>();
+            act.ShouldThrow<DirectoryNotFoundException>();
         }
 
         [Fact]
@@ -22,7 +21,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = null;
             Action act = () => argument.ThrowIfDirectoryNotExists(nameof(argument));
-            act.Should().Throw<DirectoryNotFoundException>();
+            act.ShouldThrow<DirectoryNotFoundException>();
         }
 
         [Fact]
@@ -31,7 +30,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = @"./testfiles/ArgumentFilePathTestFile.txt";
             Action act = () => argument.ThrowIfDirectoryNotExists(nameof(argument));
-            act.Should().Throw<DirectoryNotFoundException>();
+            act.ShouldThrow<DirectoryNotFoundException>();
         }
 
         [Fact]
@@ -40,7 +39,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = @"./testfilesNotExists/";
             Action act = () => argument.ThrowIfDirectoryNotExists(nameof(argument));
-            act.Should().Throw<DirectoryNotFoundException>();
+            act.ShouldThrow<DirectoryNotFoundException>();
         }
 
         [Fact]
@@ -49,7 +48,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = @"./testfiles";
             Action act = () => argument.ThrowIfDirectoryNotExists(nameof(argument));
-            act.Should().NotThrow<DirectoryNotFoundException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -58,7 +57,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = @"./testfiles";
             var result = argument.ThrowIfDirectoryNotExists(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
     }
 }

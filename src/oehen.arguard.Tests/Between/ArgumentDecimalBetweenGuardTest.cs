@@ -1,6 +1,4 @@
 using System;
-using FluentAssertions;
-using Xunit;
 
 namespace oehen.arguard.Between
 {
@@ -20,9 +18,9 @@ namespace oehen.arguard.Between
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().StartWith($"Argument is between {compareValueStart} and {compareValueEnd}.");
+            exception.Message.ShouldStartWith($"Argument is between {compareValueStart} and {compareValueEnd}.");
 #else
-            exception.Message.Should().Be($"Argument is between {compareValueStart} and {compareValueEnd}. (Parameter 'argument')" +
+            exception.Message.ShouldBe($"Argument is between {compareValueStart} and {compareValueEnd}. (Parameter 'argument')" +
                                           Environment.NewLine + $"Actual value was {argument}.");
 #endif
         }

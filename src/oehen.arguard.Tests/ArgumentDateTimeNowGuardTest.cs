@@ -1,7 +1,4 @@
 using System;
-using FluentAssertions;
-using FluentAssertions.Primitives;
-using Xunit;
 
 namespace oehen.arguard
 {
@@ -13,7 +10,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(-1);
             Action act = () => argument.ThrowIfIsLessThanNow(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -22,7 +19,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             Action act = () => argument.ThrowIfIsLessThanNow(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -31,7 +28,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             Action act = () => argument.ThrowIfIsLessThanNow(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -40,7 +37,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(1);
             Action act = () => argument.ThrowIfIsLessThanNow(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -49,7 +46,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(1);
             var result = argument.ThrowIfIsLessThanNow(nameof(argument));
-            result.Should().Be((argument));
+            result.ShouldBe((argument));
         }
 
         [Fact]
@@ -58,7 +55,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(-1);
             Action act = () => argument.ThrowIfIsLaterThanNow(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
         
         [Fact]
@@ -67,7 +64,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(-1);
             var result = argument.ThrowIfIsLaterThanNow(nameof(argument));
-            result.Should().Be((argument));
+            result.ShouldBe((argument));
         }
         
         [Fact]
@@ -76,7 +73,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             Action act = () => argument.ThrowIfIsLaterThanNow(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -85,7 +82,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             var result = argument.ThrowIfIsLaterThanNow(nameof(argument));
-            result.Should().Be((argument));
+            result.ShouldBe((argument));
         }
         
         [Fact]
@@ -94,7 +91,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             Action act = () => argument.ThrowIfIsLaterThanNow(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -103,7 +100,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             var result = argument.ThrowIfIsLaterThanNow(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
         
         [Fact]
@@ -112,7 +109,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(1);
             Action act = () => argument.ThrowIfIsLaterThanNow(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
     }
 }

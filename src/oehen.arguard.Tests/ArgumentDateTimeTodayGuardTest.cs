@@ -1,6 +1,5 @@
 using System;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -12,7 +11,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(-1);
             Action act = () => argument.ThrowIfIsNotToday(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -21,7 +20,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(1);
             Action act = () => argument.ThrowIfIsNotToday(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -30,7 +29,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             Action act = () => argument.ThrowIfIsNotToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -39,7 +38,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             var result = argument.ThrowIfIsNotToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
 
         [Fact]
@@ -48,7 +47,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             Action act = () => argument.ThrowIfIsNotToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -57,7 +56,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             var result = argument.ThrowIfIsNotToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
         
         [Fact]
@@ -66,7 +65,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(-1);
             Action act = () => argument.ThrowIfIsLessThanToday(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
 
         [Fact]
@@ -75,7 +74,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             Action act = () => argument.ThrowIfIsLessThanToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
         
         [Fact]
@@ -84,7 +83,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             var result = argument.ThrowIfIsLessThanToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
         
         [Fact]
@@ -93,7 +92,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             Action act = () => argument.ThrowIfIsLessThanToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -102,7 +101,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             var result = argument.ThrowIfIsLessThanToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
 
         [Fact]
@@ -111,7 +110,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(1);
             Action act = () => argument.ThrowIfIsLessThanToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
         
         [Fact]
@@ -120,7 +119,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(1);
             var result = argument.ThrowIfIsLessThanToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
         
         [Fact]
@@ -129,7 +128,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(-1);
             Action act = () => argument.ThrowIfIsLaterThanToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -138,7 +137,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(-1);
             var result = argument.ThrowIfIsLaterThanToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
 
         [Fact]
@@ -147,7 +146,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             Action act = () => argument.ThrowIfIsLaterThanToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -156,7 +155,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now;
             var result = argument.ThrowIfIsLaterThanToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
 
         [Fact]
@@ -165,7 +164,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             Action act = () => argument.ThrowIfIsLaterThanToday(nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -174,7 +173,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Today;
             var result = argument.ThrowIfIsLaterThanToday(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
 
         [Fact]
@@ -183,7 +182,7 @@ namespace oehen.arguard
         {
             var argument = DateTime.Now.AddDays(1);
             Action act = () => argument.ThrowIfIsLaterThanToday(nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
     }
 }
