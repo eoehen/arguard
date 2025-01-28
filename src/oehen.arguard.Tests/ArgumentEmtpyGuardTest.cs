@@ -1,6 +1,5 @@
 using System;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -19,9 +18,9 @@ namespace oehen.arguard
 
 #if NET472  
 #elif NET48
-            exception.Message.Should().Be("Argument is null or empty." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Argument is null or empty." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Argument is null or empty. (Parameter 'argument')");
+            exception.Message.ShouldBe("Argument is null or empty. (Parameter 'argument')");
 #endif
         }
 
@@ -45,9 +44,9 @@ namespace oehen.arguard
 
 #if NET472  
 #elif NET48
-            exception.Message.Should().Be("Argument is null or whitespace." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Argument is null or whitespace." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Argument is null or whitespace. (Parameter 'argument')");
+            exception.Message.ShouldBe("Argument is null or whitespace. (Parameter 'argument')");
 #endif
 
         }
@@ -64,9 +63,9 @@ namespace oehen.arguard
 
 #if NET472  
 #elif NET48
-            exception.Message.Should().Be("Argument is null or whitespace." + Environment.NewLine + "Parameter name: argument");
+            exception.Message.ShouldBe("Argument is null or whitespace." + Environment.NewLine + "Parameter name: argument");
 #else
-            exception.Message.Should().Be("Argument is null or whitespace. (Parameter 'argument')");
+            exception.Message.ShouldBe("Argument is null or whitespace. (Parameter 'argument')");
 #endif
         }
 

@@ -1,6 +1,5 @@
 using System;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard
 {
@@ -13,7 +12,7 @@ namespace oehen.arguard
             var argument = "xxxxx";
             var compareValue = argument;
             Action act = () => argument.ThrowIfNotEqual(compareValue, nameof(argument));
-            act.Should().NotThrow<InvalidOperationException>();
+            act.ShouldNotThrow();
         }
         
         [Fact]
@@ -23,7 +22,7 @@ namespace oehen.arguard
             var argument = "xxxxx";
             var compareValue = argument;
             var result = argument.ThrowIfNotEqual(compareValue, nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
         
         [Fact]
@@ -33,7 +32,7 @@ namespace oehen.arguard
             var argument = "xxxxx";
             var compareValue = "aaaaa";
             Action act = () => argument.ThrowIfNotEqual(compareValue, nameof(argument));
-            act.Should().Throw<InvalidOperationException>();
+            act.ShouldThrow<InvalidOperationException>();
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard.LessThan
 {
@@ -22,9 +21,9 @@ namespace oehen.arguard.LessThan
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().StartWith($"Argument is less or equal than {compareValue}.");
+            exception.Message.ShouldStartWith($"Argument is less or equal than {compareValue}.");
 #else
-            exception.Message.Should().Be($"Argument is less or equal than {compareValue}. (Parameter 'argument')" +
+            exception.Message.ShouldBe($"Argument is less or equal than {compareValue}. (Parameter 'argument')" +
                                           Environment.NewLine + $"Actual value was {argument}.");
 #endif
         }
@@ -43,9 +42,9 @@ namespace oehen.arguard.LessThan
             });
 #if NET472
 #elif NET48
-            exception.Message.Should().StartWith($"Argument is less than {compareValue}.");
+            exception.Message.ShouldStartWith($"Argument is less than {compareValue}.");
 #else
-            exception.Message.Should().Be($"Argument is less than {compareValue}. (Parameter 'argument')" +
+            exception.Message.ShouldBe($"Argument is less than {compareValue}. (Parameter 'argument')" +
                                           Environment.NewLine + $"Actual value was {argument}.");
 #endif
         }

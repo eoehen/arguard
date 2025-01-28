@@ -1,7 +1,6 @@
 using System;
 using System.IO;
-using FluentAssertions;
-using Xunit;
+
 
 namespace oehen.arguard.Filesystem
 {
@@ -13,7 +12,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = "";
             Action act = () => argument.ThrowIfFileNotExists(nameof(argument));
-            act.Should().Throw<FileNotFoundException>();
+            act.ShouldThrow<FileNotFoundException>();
         }
 
         [Fact]
@@ -22,7 +21,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = null;
             Action act = () => argument.ThrowIfFileNotExists(nameof(argument));
-            act.Should().Throw<FileNotFoundException>();
+            act.ShouldThrow<FileNotFoundException>();
         }
 
         [Fact]
@@ -31,7 +30,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = @"./testfiles/ArgumentFilePathTestFileNotExists.txt";
             Action act = () => argument.ThrowIfFileNotExists(nameof(argument));
-            act.Should().Throw<FileNotFoundException>();
+            act.ShouldThrow<FileNotFoundException>();
         }
 
         [Fact]
@@ -40,7 +39,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = @"./testfiles/ArgumentFilePathTestFile.txt";
             Action act = () => argument.ThrowIfFileNotExists(nameof(argument));
-            act.Should().NotThrow<FileNotFoundException>();
+            act.ShouldNotThrow();
         }
 
         [Fact]
@@ -49,7 +48,7 @@ namespace oehen.arguard.Filesystem
         {
             const string argument = @"./testfiles/ArgumentFilePathTestFile.txt";
             var result = argument.ThrowIfFileNotExists(nameof(argument));
-            result.Should().Be(argument);
+            result.ShouldBe(argument);
         }
     }
 }
