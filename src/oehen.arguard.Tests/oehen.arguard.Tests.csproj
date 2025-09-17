@@ -1,18 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-
         <IsPackable>false</IsPackable>
-
         <RootNamespace>oehen.arguard</RootNamespace>
-
         <AssemblyName>oehen.arguard.Tests</AssemblyName>
-
         <LangVersion>10</LangVersion>
-
         <OutputType>Library</OutputType>
-
-        <TargetFrameworks>net6.0;net8.0;net48;net472</TargetFrameworks>
+        <TargetFrameworks>net8.0;net48;net472</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
