@@ -24,6 +24,11 @@ jobs:
       - name: Fetch all tags and branches
         run: git fetch --prune --unshallow
 
+      - name: Use Node.js 20
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20
+
       # .net Core setup
       - name: Setup .NET Core 2.1
         uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
@@ -50,10 +55,10 @@ jobs:
         with:
           dotnet-version: 8.x
 
-      - name: Use Node.js 20
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+      - name: Setup .NET 9.x
+        uses: actions/setup-dotnet@v4
         with:
-          node-version: 20
+          dotnet-version: 9.x
 
       # Caching Tools
       - name: Cache Tools

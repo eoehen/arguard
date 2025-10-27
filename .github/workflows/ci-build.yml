@@ -71,6 +71,11 @@ jobs:
         with:
           dotnet-version: 8.x
 
+      - name: Setup .NET 9.x
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.x
+
       # Caching Tools
       - name: Cache Tools
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
